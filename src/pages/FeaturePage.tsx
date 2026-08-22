@@ -1,0 +1,121 @@
+import { useParams } from "react-router-dom";
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import SeoHead from "@/components/SeoHead";
+
+import { features } from "@/content/features";
+import { absoluteUrl } from "@/config/product";
+import { trackEvent } from "@/lib/analytics";
+
+const FeaturePage = () => {
+  const { slug } = useParams();
+
+  const post = features[slug as keyof typeof features];
+
+  if (!post) {
+    return (
+      <>
+        <Navbar />
+
+        <main className="min-h-screen bg-background">
+          <div className="container py-32">
+            <h1 className="text-5xl font-bold">
+              Feature not found
+            </h1>
+          </div>
+        </main>
+
+        <Footer />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <SeoHead
+        title={`${post.title} | Galoria AI`}
+        description={post.description}
+        canonical={absoluteUrl(`features/${slug}`)}
+        robots="noindex,follow"
+      />
+
+      <Navbar />
+
+      <main className="min-h-screen bg-background">
+
+        <section className="border-b border-border">
+          <div className="container max-w-4xl py-32">
+
+            <div className="inline-flex items-center rounded-full border border-border bg-secondary px-4 py-1.5 text-sm text-muted-foreground">
+              Feature
+            </div>
+
+            <h1 className="mt-6 text-5xl font-extrabold md:text-6xl">
+              {post.title}
+            </h1>
+
+            <p className="mt-6 text-xl text-muted-foreground">
+              {post.description}
+            </p>
+
+          </div>
+        </section>
+
+        <section>
+          <div className="container max-w-4xl py-20">
+
+            <article className="space-y-16">
+
+              {post.sections.map((section, index) => (
+                <div key={index}>
+
+                  <h2 className="text-3xl font-bold">
+                    {section.title}
+                  </h2>
+
+                  <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-muted-foreground">
+                    {section.content}
+                  </p>
+
+                </div>
+              ))}
+
+            </article>
+
+            <div className="mt-24 rounded-3xl border border-border bg-card p-10 text-center">
+
+              <h2 className="text-3xl font-bold">
+                Organize your files automatically
+              </h2>
+
+              <p className="mt-4 text-muted-foreground">
+                Galoria uses local AI to organize messy folders with a preview step.
+              </p>
+
+              <a
+                href="/#download"
+                onClick={() =>
+                  trackEvent("download_cta_clicked", {
+                    location: `features/${slug}`,
+                  })
+                }
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition-opacity hover:opacity-90 glow-shadow"
+              >
+                Download for Windows
+              </a>
+
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+      <Footer />
+    </>
+  );
+};
+
+export default FeaturePage;
+
