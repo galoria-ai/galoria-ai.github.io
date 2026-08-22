@@ -9,7 +9,7 @@
     "seo:check": "tsx scripts/generate-static-pages.ts && tsx scripts/audit-static-pages.ts",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "deploy": "npm run build && shx cp -r dist/* docs/",
+    "deploy": "npm run build && tsx scripts/prepare-pages.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
