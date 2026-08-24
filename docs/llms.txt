@@ -4,17 +4,17 @@
 
 ## Core pages
 
-- [AI Photo Organizer for Windows](https://galoriaai.com/ai-photo-organizer/): Organize mixed photo libraries on Windows with local AI, preview-first review, and a folder plan you can approve before anything moves.
-- [Photo Organizer for Windows](https://galoriaai.com/photo-organizer-windows/): Sort photo folders on Windows with local AI, straightforward preview steps, and destinations that help you browse mixed image libraries later.
-- [Automatic Photo Organizer](https://galoriaai.com/automatic-photo-organizer/): Automatically organize photo folders on Windows with local AI, previewed folder moves, and safer cleanup for mixed image libraries.
-- [Automatic Photo Sorting](https://galoriaai.com/automatic-photo-sorting/): Sort screenshots, exports, and mixed image folders automatically on Windows with local AI and a preview before any move happens.
-- [Windows Photo Organizer](https://galoriaai.com/windows-photo-organizer/): A Windows photo organizer for local image libraries, screenshot folders, and mixed downloads that need a preview-first sort order.
-- [Offline AI Photo Organizer](https://galoriaai.com/offline-ai-photo-organizer/): Compare local Windows photo organization with cloud services by privacy, preview control, and whether your images need to leave the device.
-- [Galoria vs Cloud AI Photo Organizers](https://galoriaai.com/photo-organizer-vs-cloud/): Compare local Windows photo sorting with cloud-based AI organizers by privacy, control, setup effort, and whether image uploads are required.
-- [Automatic vs Manual Photo Organization](https://galoriaai.com/photo-organizer-vs-manual/): Compare automatic and manual photo organization by setup time, review, control, scale, and whether you want repeated cleanup work.
+- [AI Photo Organizer for Windows](https://galoria-ai.github.io/ai-photo-organizer/): Organize mixed photo libraries on Windows with local AI, preview-first review, and a folder plan you can approve before anything moves.
+- [Photo Organizer for Windows](https://galoria-ai.github.io/photo-organizer-windows/): Sort photo folders on Windows with local AI, straightforward preview steps, and destinations that help you browse mixed image libraries later.
+- [Automatic Photo Organizer](https://galoria-ai.github.io/automatic-photo-organizer/): Automatically organize photo folders on Windows with local AI, previewed folder moves, and safer cleanup for mixed image libraries.
+- [Automatic Photo Sorting](https://galoria-ai.github.io/automatic-photo-sorting/): Sort screenshots, exports, and mixed image folders automatically on Windows with local AI and a preview before any move happens.
+- [Windows Photo Organizer](https://galoria-ai.github.io/windows-photo-organizer/): A Windows photo organizer for local image libraries, screenshot folders, and mixed downloads that need a preview-first sort order.
+- [Offline AI Photo Organizer](https://galoria-ai.github.io/offline-ai-photo-organizer/): Compare local Windows photo organization with cloud services by privacy, preview control, and whether your images need to leave the device.
+- [Galoria vs Cloud AI Photo Organizers](https://galoria-ai.github.io/photo-organizer-vs-cloud/): Compare local Windows photo sorting with cloud-based AI organizers by privacy, control, setup effort, and whether image uploads are required.
+- [Automatic vs Manual Photo Organization](https://galoria-ai.github.io/photo-organizer-vs-manual/): Compare automatic and manual photo organization by setup time, review, control, scale, and whether you want repeated cleanup work.
 
 ## Documentation
 
-- [Privacy](https://galoriaai.com/docs/privacy/)
-- [How Galoria works](https://galoriaai.com/docs/how-it-works/)
-- [Supported image types](https://galoriaai.com/docs/supported-file-types/)
+- [Privacy](https://galoria-ai.github.io/docs/privacy/)
+- [How Galoria works](https://galoria-ai.github.io/docs/how-it-works/)
+- [Supported image types](https://galoria-ai.github.io/docs/supported-file-types/)
