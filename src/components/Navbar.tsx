@@ -13,7 +13,7 @@ const Navbar = () => {
     >
       <div className="container flex h-16 items-center justify-between">
         <a href="/" className="flex items-center gap-2 text-lg font-bold text-foreground">
-          <img src="/favicon.ico" alt="Galoria AI" className="h-8 w-8 object-contain" />
+          <img src="/icon-192.png" alt="Galoria AI" className="h-8 w-8 object-contain" />
           Galoria AI
         </a>
         <div className="hidden items-center gap-8 md:flex">

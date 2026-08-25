@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <a href="/" className="flex items-center gap-2 text-lg font-bold text-foreground">
-            <img src="/favicon.ico" alt="" className="h-8 w-8 object-contain" />
+            <img src="/icon-192.png" alt="" className="h-8 w-8 object-contain" />
             Galoria AI
           </a>
 

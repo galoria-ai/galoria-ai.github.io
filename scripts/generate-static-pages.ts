@@ -478,14 +478,17 @@ function renderMainPage(page: SeoPage): string {
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="${canonical}">
   <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="${page.kind === "landing" ? "website" : "article"}">
   <meta property="og:title" content="${escapeHtml(page.title)}">
   <meta property="og:description" content="${escapeHtml(page.description)}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:site_name" content="Galoria AI">
+  <meta property="og:image" content="${SITE_URL}/icon-512.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="${escapeHtml(page.title)}">
+  <meta name="twitter:image" content="${SITE_URL}/icon-512.png">
   <meta name="twitter:description" content="${escapeHtml(page.description)}">
   <script type="application/ld+json">${schema}</script>
 ${analyticsHead()}
@@ -670,14 +673,17 @@ function renderSupportPage(page: SupportPage): string {
   <meta name="robots" content="${robots}">
   <link rel="canonical" href="${canonical}">
   <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${escapeHtml(page.title)}">
   <meta property="og:description" content="${escapeHtml(metaDescription)}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:site_name" content="Galoria AI">
+  <meta property="og:image" content="${SITE_URL}/icon-512.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="${escapeHtml(page.title)}">
+  <meta name="twitter:image" content="${SITE_URL}/icon-512.png">
   <meta name="twitter:description" content="${escapeHtml(metaDescription)}">
   <script type="application/ld+json">${schema}</script>
 ${analyticsHead()}
@@ -720,14 +726,17 @@ function renderCategoryPage(slug: string): string {
   <meta name="robots" content="index,follow,max-snippet:-1">
   <link rel="canonical" href="${absoluteUrl(route)}">
   <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${escapeHtml(category.title)}">
   <meta property="og:description" content="${escapeHtml(metaDescription)}">
   <meta property="og:url" content="${absoluteUrl(route)}">
   <meta property="og:site_name" content="Galoria AI">
+  <meta property="og:image" content="${SITE_URL}/icon-512.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="${escapeHtml(category.title)}">
+  <meta name="twitter:image" content="${SITE_URL}/icon-512.png">
   <meta name="twitter:description" content="${escapeHtml(metaDescription)}">
   <script type="application/ld+json">${schema}</script>
 ${analyticsHead()}

@@ -13,7 +13,7 @@ const SeoHead = ({
   title,
   description,
   canonical,
-  image = "/favicon.ico",
+  image = "/icon-512.png",
   robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
   schema,
 }: SeoHeadProps) => {
