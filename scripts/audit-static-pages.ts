@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE_URL = "https://galoria-ai.github.io";
+const SITE_URL = "https://galoriaai.com";
 const PUBLIC_DIR = path.resolve("public");
 const ROOT_INDEX = path.resolve("index.html");
 

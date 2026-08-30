@@ -1,7 +1,7 @@
 export const site = {
   name: "Galoria AI",
   productName: "Galoria",
-  url: "https://galoria-ai.github.io",
+  url: "https://galoriaai.com",
   helpHref: "/#faq",
   analyticsMeasurementId: "",
 };
