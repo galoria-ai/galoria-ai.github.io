@@ -1,5 +1,6 @@
 import { CheckCircle2, Eye, FolderSearch } from "lucide-react";
-import demoGif from "../assets/galoria-real-demo.gif";
+import firstTabImage from "../assets/galoria-first-tab.png";
+import resultsImage from "../assets/galoria-results.png";
 
 const workflow = [
   {
@@ -33,14 +34,19 @@ const DemoSection = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-5xl">
-          <div className="overflow-hidden rounded-xl border border-primary/20 bg-card shadow-2xl">
-            <img src={demoGif} alt="Real Galoria AI app opening screen followed by an organized output folder" width="1280" height="900" loading="lazy" className="h-auto w-full bg-background" />
-          </div>
+        <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2">
+          <figure className="overflow-hidden rounded-xl border border-primary/20 bg-card shadow-2xl">
+            <img src={firstTabImage} alt="Galoria AI opening screen for choosing a picture folder" width="1280" height="900" loading="lazy" className="h-auto w-full bg-background" />
+            <figcaption className="px-5 py-4 text-sm text-muted-foreground">Galoria AI — first tab</figcaption>
+          </figure>
+          <figure className="overflow-hidden rounded-xl border border-primary/20 bg-card shadow-2xl">
+            <img src={resultsImage} alt="Galoria AI organized image output folder showing categories" width="1875" height="963" loading="lazy" className="h-auto w-full bg-background" />
+            <figcaption className="px-5 py-4 text-sm text-muted-foreground">Galoria AI — organized results</figcaption>
+          </figure>
         </div>
 
         <p className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-foreground/90">
-          Real Galoria app views: the opening screen followed by an organized output folder.
+          Real Galoria app screenshots: the opening screen and the organized output folder.
         </p>
       </div>
     </section>
