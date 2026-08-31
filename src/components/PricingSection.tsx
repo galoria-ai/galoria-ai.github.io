@@ -1,6 +1,6 @@
 import { Check, Download, ShieldCheck } from "lucide-react";
 
-import { site } from "@/config/product";
+import { product, site } from "@/config/product";
 import { trackEvent } from "@/lib/analytics";
 
 const included = [
@@ -37,34 +37,36 @@ const PricingSection = () => {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-foreground md:text-5xl">
-            Download and <span className="text-gradient">license</span>
+            Get Galoria for <span className="text-gradient">{product.price.display}</span>
           </h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
-            Galoria uses desktop-app license activation. No price or subscription terms are published in the repository.
+            Launch pricing is available now. Secure card checkout is handled by Gumroad.
           </p>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-xl border border-primary/30 bg-card p-8">
+          <div className="rounded-xl border border-yellow-300/70 bg-yellow-300 p-8 text-yellow-950">
             <div className="text-sm font-semibold uppercase tracking-wide text-primary">
-              Windows download
+              Launch price · Windows app
             </div>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-sm text-yellow-950/80">
               Install the Windows desktop app, scan a folder locally, and review the exact move plan before you confirm anything.
             </p>
 
             <a
-              href="#download"
+              href={product.checkoutUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => trackEvent("platform_download_cta_clicked", { platform: "windows", location: "download" })}
-              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-gradient-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-yellow-950 px-6 py-3 text-base font-semibold text-yellow-100 transition-opacity hover:opacity-90"
             >
               <Download className="h-5 w-5" />
-              Download for Windows
+              Buy with card · {product.price.display}
             </a>
 
             <div className="mt-6 flex items-start gap-2 text-sm text-muted-foreground">
               <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <p>
+              <p className="text-yellow-950/80">
                 Galoria analyzes supported images locally after installation. License activation is the separate network-dependent step.
               </p>
             </div>
