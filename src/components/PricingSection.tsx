@@ -1,4 +1,4 @@
-import { Check, Download, ShieldCheck } from "lucide-react";
+import { Check, CreditCard, ShieldCheck } from "lucide-react";
 
 import { product, site } from "@/config/product";
 import { trackEvent } from "@/lib/analytics";
@@ -62,8 +62,8 @@ const PricingSection = () => {
               onClick={() => trackEvent("platform_download_cta_clicked", { platform: "windows", location: "download" })}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-gradient-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               >
-              <Download className="h-5 w-5" />
-              Buy with card · {product.price.display}
+              <CreditCard className="h-5 w-5" />
+              Buy with card
               </a>
 
             <a
