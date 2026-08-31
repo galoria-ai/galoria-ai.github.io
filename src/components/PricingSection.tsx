@@ -54,16 +54,17 @@ const PricingSection = () => {
               Install the Windows desktop app, scan a folder locally, and review the exact move plan before you confirm anything.
             </p>
 
-            <a
+            <div className="mt-8 flex flex-col gap-3">
+              <a
               href={product.checkoutUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("platform_download_cta_clicked", { platform: "windows", location: "download" })}
-              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-gradient-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-            >
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
               <Download className="h-5 w-5" />
               Buy with card · {product.price.display}
-            </a>
+              </a>
 
             <a
               href={product.paypalUrl}
@@ -73,10 +74,11 @@ const PricingSection = () => {
                 trackEvent("buy_button_clicked", { provider: "paypal", location: "pricing" });
                 trackEvent("checkout_link_clicked", { provider: "paypal", location: "pricing" });
               }}
-              className="mt-3 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-[#FFC439] px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-90"
-            >
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-[#FFC439] px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-90"
+              >
               Pay with PayPal
-            </a>
+              </a>
+            </div>
 
             <div className="mt-6 flex items-start gap-2 text-sm text-muted-foreground">
               <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
