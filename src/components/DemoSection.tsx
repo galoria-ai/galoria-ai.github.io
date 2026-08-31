@@ -1,4 +1,5 @@
 import { CheckCircle2, Eye, FolderSearch } from "lucide-react";
+import demoGif from "../assets/galoria-real-demo.gif";
 
 const workflow = [
   {
@@ -33,24 +34,13 @@ const DemoSection = () => {
         </div>
 
         <div className="mx-auto mt-12 max-w-5xl">
-          <div className="overflow-hidden rounded-xl border border-primary/20 bg-card p-6 shadow-2xl md:p-10">
-            <div className="grid gap-5 md:grid-cols-3">
-              {workflow.map((step, index) => (
-                <article key={step.title} className="rounded-xl border border-border bg-secondary/40 p-6">
-                  <div className="flex items-center justify-between">
-                    <step.icon className="h-6 w-6 text-primary" />
-                    <span className="text-xs font-semibold text-muted-foreground">0{index + 1}</span>
-                  </div>
-                  <h3 className="mt-6 text-lg font-semibold text-foreground">{step.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
-                </article>
-              ))}
-            </div>
+          <div className="overflow-hidden rounded-xl border border-primary/20 bg-card shadow-2xl">
+            <img src={demoGif} alt="Real Galoria AI app workflow showing a selected picture folder, proposed categories, and the review screen" width="1280" height="900" loading="lazy" className="h-auto w-full bg-background" />
           </div>
         </div>
 
         <p className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-foreground/90">
-          Workflow illustration based on the current app behavior. It is not a product screenshot.
+          Real Galoria app recording: choose a picture folder, inspect proposed categories, and review every move before approval.
         </p>
       </div>
     </section>
@@ -58,4 +48,3 @@ const DemoSection = () => {
 };
 
 export default DemoSection;
-
