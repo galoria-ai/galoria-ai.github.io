@@ -10,6 +10,9 @@ const Footer = () => {
             <img src="/icon-192.png" alt="" className="h-8 w-8 object-contain" />
             Galoria AI
           </a>
+          <a href="https://computoraai.com/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            By Computora AI
+          </a>
 
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground" aria-label="Footer navigation">
             <a
@@ -45,11 +48,11 @@ const Footer = () => {
           </nav>
 
           <a
-            href={site.helpHref}
+            href={`mailto:${site.supportEmail}`}
             onClick={() => trackEvent("contact_support_clicked", { location: "footer" })}
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            FAQ
+            {site.supportEmail}
           </a>
         </div>
 
@@ -62,4 +65,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

@@ -3,6 +3,7 @@ export const site = {
   productName: "Galoria",
   url: "https://galoriaai.com",
   helpHref: "/#faq",
+  supportEmail: "support@computoraai.com",
   analyticsMeasurementId: "",
 };
 
