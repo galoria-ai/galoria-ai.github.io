@@ -17,6 +17,7 @@ const Navbar = () => {
           Galoria AI
         </a>
         <div className="hidden items-center gap-8 md:flex">
+          <a href="https://computoraai.com/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Computora AI</a>
           <a href="/#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Features</a>
           <a href="/#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">How It Works</a>
           <a href="/#download" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Download</a>

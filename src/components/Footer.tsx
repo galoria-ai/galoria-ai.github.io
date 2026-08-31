@@ -33,6 +33,15 @@ const Footer = () => {
             <a href="/docs/troubleshooting/" className="transition-colors hover:text-foreground">
               Support
             </a>
+            <a href="https://computoraai.com/" className="transition-colors hover:text-foreground">
+              Computora AI
+            </a>
+            <a href="https://foldoraai.com/" className="transition-colors hover:text-foreground">
+              Foldora AI
+            </a>
+            <a href="https://cleanoraai.com/" className="transition-colors hover:text-foreground">
+              Cleanora AI
+            </a>
           </nav>
 
           <a
