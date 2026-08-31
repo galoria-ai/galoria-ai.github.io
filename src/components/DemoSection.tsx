@@ -29,18 +29,18 @@ const DemoSection = () => {
           </h2>
 
           <p className="mt-4 text-muted-foreground md:text-lg">
-            Galoria does not hide image moves. Review the analyze, preview, and apply flow before using it on a large collection.
+            See the Galoria app first, then the organized output folder after your image collection is sorted.
           </p>
         </div>
 
         <div className="mx-auto mt-12 max-w-5xl">
           <div className="overflow-hidden rounded-xl border border-primary/20 bg-card shadow-2xl">
-            <img src={demoGif} alt="Real Galoria AI app workflow showing a selected picture folder, proposed categories, and the review screen" width="1280" height="900" loading="lazy" className="h-auto w-full bg-background" />
+            <img src={demoGif} alt="Real Galoria AI app opening screen followed by an organized output folder" width="1280" height="900" loading="lazy" className="h-auto w-full bg-background" />
           </div>
         </div>
 
         <p className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-foreground/90">
-          Real Galoria app recording: choose a picture folder, inspect proposed categories, and review every move before approval.
+          Real Galoria app views: the opening screen followed by an organized output folder.
         </p>
       </div>
     </section>
