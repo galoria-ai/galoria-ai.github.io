@@ -60,7 +60,7 @@ const PricingSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("platform_download_cta_clicked", { platform: "windows", location: "download" })}
-                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-gradient-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               >
               <Download className="h-5 w-5" />
               Buy with card · {product.price.display}
@@ -74,7 +74,7 @@ const PricingSection = () => {
                 trackEvent("buy_button_clicked", { provider: "paypal", location: "pricing" });
                 trackEvent("checkout_link_clicked", { provider: "paypal", location: "pricing" });
               }}
-                className="inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-[#FFC439] px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-90"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#FFC439] px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               >
               Pay with PayPal
               </a>
