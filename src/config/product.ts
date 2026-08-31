@@ -11,6 +11,7 @@ export const product = {
   productName: "Galoria",
   price: { amount: 10.99, display: "$10.99" },
   checkoutUrl: "https://computora.gumroad.com/l/galoria",
+  paypalUrl: "https://www.paypal.com/ncp/payment/PZLZBDJK2C6FE",
   downloadHref: "#download",
   platforms: {
     supported: ["Windows 10", "Windows 11"],
