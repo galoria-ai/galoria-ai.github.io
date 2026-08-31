@@ -1,4 +1,4 @@
-import{j as e}from"./animation-BRsySF4U.js";import{N as a,F as r,S as n,a as l}from"./SeoHead-CLduowpE.js";import{t as c}from"./index-BoggSR9E.js";import{d}from"./react-DK_JcHL8.js";import"./charts-C_KtFLeW.js";const m={"offline-processing":{title:"Offline AI Photo Organization",description:"Galoria processes image folders locally without cloud uploads.",sections:[{title:"Privacy-first architecture",content:`
+import{j as e}from"./animation-BRsySF4U.js";import{N as a,F as r,S as n,a as l}from"./SeoHead-D-Vv9jMo.js";import{t as c}from"./index-DztvK8qt.js";import{d}from"./react-DK_JcHL8.js";import"./charts-C_KtFLeW.js";const m={"offline-processing":{title:"Offline AI Photo Organization",description:"Galoria processes image folders locally without cloud uploads.",sections:[{title:"Privacy-first architecture",content:`
 Galoria processes images directly on your device.
 
 Your photos never need to leave your computer for the organization workflow.
