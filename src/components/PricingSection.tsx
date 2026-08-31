@@ -37,19 +37,20 @@ const PricingSection = () => {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-foreground md:text-5xl">
-            Get Galoria for <span className="text-gradient">{product.price.display}</span>
+            Simple <span className="text-gradient">pricing</span>
           </h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
-            Launch pricing is available now. Secure card checkout is handled by Gumroad.
+            Pay once, use forever. No subscriptions.
           </p>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-xl border border-yellow-300/70 bg-yellow-300 p-8 text-yellow-950">
+          <div className="rounded-xl border border-primary/30 bg-card p-8">
             <div className="text-sm font-semibold uppercase tracking-wide text-primary">
-              Launch price · Windows app
+              Launch price
             </div>
-            <p className="mt-4 text-sm text-yellow-950/80">
+            <div className="mt-4 flex items-end gap-2"><span className="text-5xl font-extrabold text-foreground">{product.price.display}</span><span className="pb-2 text-2xl font-bold text-muted-foreground line-through">$39</span></div>
+            <p className="mt-3 text-sm text-muted-foreground">
               Install the Windows desktop app, scan a folder locally, and review the exact move plan before you confirm anything.
             </p>
 
@@ -58,7 +59,7 @@ const PricingSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("platform_download_cta_clicked", { platform: "windows", location: "download" })}
-              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-yellow-950 px-6 py-3 text-base font-semibold text-yellow-100 transition-opacity hover:opacity-90"
+              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#FFC439] px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-90"
             >
               <Download className="h-5 w-5" />
               Buy with card · {product.price.display}
@@ -66,7 +67,7 @@ const PricingSection = () => {
 
             <div className="mt-6 flex items-start gap-2 text-sm text-muted-foreground">
               <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <p className="text-yellow-950/80">
+              <p>
                 Galoria analyzes supported images locally after installation. License activation is the separate network-dependent step.
               </p>
             </div>
