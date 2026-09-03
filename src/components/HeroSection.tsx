@@ -75,6 +75,7 @@ const HeroSection = () => {
             <div className="mt-3 text-sm text-white/60">
               Review first, apply approved changes, and keep a local audit trail.
             </div>
+            <div className="mt-3 text-sm font-medium text-primary">Launch price: $10.99 one-time</div>
           </div>
 
           <div className="mx-auto mt-7 grid max-w-3xl grid-cols-2 gap-2 text-left sm:grid-cols-4">
