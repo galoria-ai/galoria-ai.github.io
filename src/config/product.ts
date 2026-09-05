@@ -9,7 +9,12 @@ export const site = {
 
 export const product = {
   productName: "Galoria",
-  price: { amount: 10.99, display: "$10.99" },
+  price: {
+    amount: 14.99,
+    display: "$14.99",
+    referenceDisplay: "$24.99",
+    label: "Launch price",
+  },
   checkoutUrl: "https://computora.gumroad.com/l/galoria",
   paypalUrl: "https://www.paypal.com/ncp/payment/PZLZBDJK2C6FE",
   downloadHref: "#download",
