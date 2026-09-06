@@ -12,7 +12,7 @@ export const product = {
   price: {
     amount: 14.99,
     display: "$14.99",
-    referenceDisplay: "$24.99",
+    referenceDisplay: "$44",
     label: "Launch price",
   },
   checkoutUrl: "https://computora.gumroad.com/l/galoria",
