@@ -53,6 +53,7 @@ const App = () => (
             <Route path="/automatic-photo-sorting" element={<SeoContentPage />} />
             <Route path="/windows-photo-organizer" element={<SeoContentPage />} />
             <Route path="/offline-ai-photo-organizer" element={<SeoContentPage />} />
+            <Route path="/best-private-ai-photo-organizer" element={<SeoContentPage />} />
             <Route path="/photo-organizer-vs-cloud" element={<SeoContentPage />} />
             <Route path="/photo-organizer-vs-manual" element={<SeoContentPage />} />
             <Route path="/organize-screenshots-automatically" element={<SeoContentPage />} />

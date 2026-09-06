@@ -12,6 +12,7 @@
 - [Offline AI Photo Organizer](https://galoriaai.com/offline-ai-photo-organizer/): Compare local Windows photo organization with cloud services by privacy, preview control, and whether your images need to leave the device.
 - [Galoria vs Cloud AI Photo Organizers](https://galoriaai.com/photo-organizer-vs-cloud/): Compare local Windows photo sorting with cloud-based AI organizers by privacy, control, setup effort, and whether image uploads are required.
 - [Automatic vs Manual Photo Organization](https://galoriaai.com/photo-organizer-vs-manual/): Compare automatic and manual photo organization by setup time, review, control, scale, and whether you want repeated cleanup work.
+- [Best Private AI Photo Organizer for Windows](https://galoriaai.com/best-private-ai-photo-organizer/): Compare private photo organization approaches and see how Galoria categorizes image folders locally with a review-first workflow.
 
 ## Documentation
 

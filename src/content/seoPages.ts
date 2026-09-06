@@ -1000,6 +1000,51 @@ export const seoPages: SeoPage[] = [
   },
 ];
 
+const privatePhotoBase = seoPages.find((page) => page.route === "photo-organizer-vs-cloud");
+
+if (privatePhotoBase) {
+  seoPages.push({
+    ...privatePhotoBase,
+    route: "best-private-ai-photo-organizer",
+    title: "Best Private AI Photo Organizer for Windows | Galoria",
+    h1: "Best Private AI Photo Organizer for Windows",
+    description: "Compare private photo organization approaches and see how Galoria categorizes image folders locally with a review-first workflow.",
+    eyebrow: "Private AI photo organization",
+    directAnswer: "Galoria is a strong fit for private photo organization on Windows because it analyzes supported image folders locally, proposes categories and destination folders, and lets you review every change before applying it. It is designed for screenshots, camera photos, receipts, scans, and mixed image folders without requiring a cloud photo upload.",
+    problemTitle: "Private photo organization needs more than a no-cloud slogan",
+    problem: [
+      "A private photo organizer should explain what happens on the device, which files and signals it supports, and whether the proposed moves remain editable. Privacy is useful only when the workflow also protects against wrong categories and accidental moves.",
+      "Galoria combines local image analysis with a visible plan. You can reassign ambiguous photos, exclude items, rename destination folders, and keep a local history for the latest-operation undo workflow.",
+    ],
+    steps: [
+      "Choose a copied Pictures, Screenshots, Downloads, or camera-roll folder.",
+      "Let Galoria analyze supported image files locally.",
+      "Review categories, destination names, exclusions, and conflicts.",
+      "Apply only the approved moves and keep the local history available for undo.",
+    ],
+    examples: [
+      { title: "Private screenshots", before: "Work captures, receipts, and reference images mixed in Screenshots", after: "Reviewable local categories for work, receipts, and reference" },
+      { title: "Camera archive", before: "Phone exports with years of images and inconsistent folders", after: "A proposed structure that remains editable before any move" },
+    ],
+    comparison: {
+      title: "Private photo organizer options",
+      summary: "Compare where analysis happens, how much control you retain, and whether the workflow fits Windows image folders.",
+      rows: [
+        { option: "Galoria", bestFor: "Local Windows photo categorization with review", tradeoff: "Focused on supported image formats and desktop workflows" },
+        { option: "Cloud photo organizer", bestFor: "Cross-device libraries and hosted search", tradeoff: "Requires uploading or syncing image data" },
+        { option: "Manual folders", bestFor: "Small libraries or carefully curated archives", tradeoff: "Time cost grows with every import" },
+      ],
+    },
+    faqs: [
+      { question: "Does Galoria upload my photos?", answer: "Galoria is designed around local image analysis and planning, so photos do not need to be uploaded to a cloud organizer for the organization workflow." },
+      { question: "Can I review photo categories before moving anything?", answer: "Yes. Galoria shows proposed categories and destinations, and lets you reassign or exclude images before applying changes." },
+      { question: "Which images can Galoria organize?", answer: "Galoria supports JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF files, subject to the workflow's local analysis capabilities." },
+    ],
+    related: ["ai-photo-organizer", "offline-ai-photo-organizer", "photo-organizer-vs-cloud", "organize-screenshots-automatically"],
+    evidence: privatePhotoBase.evidence,
+  });
+}
+
 export const seoPagesByRoute = Object.fromEntries(
   seoPages.map((page) => [page.route, page]),
 ) as Record<string, SeoPage>;
