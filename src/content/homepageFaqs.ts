@@ -1,3 +1,5 @@
+import { product, site } from "@/config/product";
+
 export const homepageFaqs = [
   {
     q: "Does Galoria upload my photos?",
@@ -13,7 +15,7 @@ export const homepageFaqs = [
   },
   {
     q: "Does it require a subscription?",
-    a: "The website does not list a subscription plan. Galoria is activated separately in the desktop app.",
+    a: `No. Galoria is offered as a one-time ${product.price.display} purchase rather than a recurring subscription.`,
   },
   {
     q: "Which operating systems are supported?",
@@ -29,10 +31,10 @@ export const homepageFaqs = [
   },
   {
     q: "How do I install it?",
-    a: "Use the Windows installer link once it is published, run it on a supported PC, activate the app, choose a focused image folder, and review the proposed result before applying changes.",
+    a: "Open Download for Windows on this page, complete checkout, and use the Galoria installer supplied through the official purchase flow. Start with a copied or noncritical image folder and review the proposed result before applying changes.",
   },
   {
     q: "What happens if it does not work on my device?",
-    a: "Check the installation and troubleshooting pages on the site. The repository does not publish a dedicated support email or refund policy on the marketing site.",
+    a: `Check the installation and troubleshooting pages, then contact ${site.supportEmail} with your Windows version, downloaded filename, and exact error message if the problem continues.`,
   },
 ];

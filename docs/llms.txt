@@ -4,7 +4,7 @@
 
 ## Core pages
 
-- [AI Photo Organizer for Windows](https://galoriaai.com/ai-photo-organizer/): Organize mixed photo libraries on Windows with local AI, preview-first review, and a folder plan you can approve before anything moves.
+- [AI Photo Organizer for Windows](https://galoriaai.com/ai-photo-organizer/): Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.
 - [Photo Organizer for Windows](https://galoriaai.com/photo-organizer-windows/): Sort photo folders on Windows with local AI, straightforward preview steps, and destinations that help you browse mixed image libraries later.
 - [Automatic Photo Organizer](https://galoriaai.com/automatic-photo-organizer/): Automatically organize photo folders on Windows with local AI, previewed folder moves, and safer cleanup for mixed image libraries.
 - [Automatic Photo Sorting](https://galoriaai.com/automatic-photo-sorting/): Sort screenshots, exports, and mixed image folders automatically on Windows with local AI and a preview before any move happens.

@@ -17,7 +17,7 @@ const Footer = () => {
 
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground" aria-label="Footer navigation">
             <a
-              href="#download"
+              href="/#download"
               onClick={() => {
                 trackEvent("platform_download_cta_clicked", { platform: "windows", location: "footer" });
               }}
@@ -38,13 +38,13 @@ const Footer = () => {
               Support
             </a>
             <a href="https://computoraai.com/" className="transition-colors hover:text-foreground">
-              Computora AI
+              Computora AI desktop software
             </a>
             <a href="https://foldoraai.com/" className="transition-colors hover:text-foreground">
-              Foldora AI
+              Foldora AI file organizer
             </a>
             <a href="https://cleanoraai.com/" className="transition-colors hover:text-foreground">
-              Cleanora AI
+              Cleanora Downloads folder organizer
             </a>
           </nav>
 

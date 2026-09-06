@@ -1,4 +1,4 @@
-import { product } from "@/config/product";
+import { product, site } from "@/config/product";
 
 export const docs = {
   install: {
@@ -8,11 +8,15 @@ export const docs = {
     sections: [
       {
         title: "Download Galoria",
-        content: `Use the Windows download published on the product site, then run the setup file on a supported PC. A public Galoria release URL must be configured before deployment.`,
+        content: "Open the Download for Windows section on the official Galoria site, complete checkout with your preferred purchase option, and use the download instructions supplied with the purchase.",
       },
       {
         title: "Run the installer",
         content: `The supported systems are ${product.platforms.supported.join(", ")}. Use the installer provided for Windows.`,
+      },
+      {
+        title: "Current release information",
+        content: "These instructions apply to Galoria 0.2.0 and were reviewed on September 6, 2026. Use only a Galoria-labeled Windows package obtained through the official product flow.",
       },
       {
         title: "Choose a focused folder first",
@@ -24,7 +28,7 @@ export const docs = {
       },
       {
         title: "Need help",
-        content: "Use the installation and troubleshooting pages on this site for setup guidance.",
+        content: `Use the installation and troubleshooting pages on this site or contact ${site.supportEmail} for setup and purchase-delivery help.`,
       },
     ],
   },
@@ -67,8 +71,20 @@ export const docs = {
         content: `If suggestions do not match your workflow, do not apply them. Narrow the folder scope or organize a smaller batch.`,
       },
       {
+        title: "Download or installer does not match",
+        content: `Do not run a package that is not clearly labeled Galoria. Return to the official purchase library or contact ${site.supportEmail} with the order email and downloaded filename.`,
+      },
+      {
+        title: "AI engine does not start",
+        content: "Restart Windows after installation, confirm that security software has not quarantined a packaged runtime file, and reinstall from the official download. If the message names a missing DLL or dependency, include the complete error and Windows version when contacting support.",
+      },
+      {
+        title: "Release and platform details",
+        content: "This guide applies to Galoria 0.2.0 on Windows 10 and Windows 11. It was reviewed on September 6, 2026.",
+      },
+      {
         title: "Support",
-        content: "Use the documentation pages on this site for installation, privacy, and troubleshooting guidance.",
+        content: `For unresolved installation, purchase-delivery, or activation issues, contact ${site.supportEmail}.`,
       },
     ],
   },

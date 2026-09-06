@@ -19,6 +19,22 @@ export interface SeoComparison {
   rows: Array<{ option: string; bestFor: string; tradeoff: string }>;
 }
 
+export interface SeoEvidence {
+  title: string;
+  summary: string;
+  facts: Array<{
+    label: string;
+    value: string;
+  }>;
+  media: Array<{
+    kind: "image" | "video";
+    src: string;
+    alt: string;
+    caption: string;
+  }>;
+  note: string;
+}
+
 export interface SeoPage {
   route: string;
   kind: SeoPageKind;
@@ -36,6 +52,7 @@ export interface SeoPage {
   comparison: SeoComparison;
   faqs: SeoFaq[];
   related: string[];
+  evidence?: SeoEvidence;
   indexable?: boolean;
 }
 
@@ -49,11 +66,11 @@ export const seoPages: SeoPage[] = [
     title: "AI Photo Organizer for Windows | Local and Preview-First",
     h1: "AI Photo Organizer for Windows",
     description:
-      "Organize mixed photo libraries on Windows with local AI, preview-first review, and a folder plan you can approve before anything moves.",
+      "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
     eyebrow: "Local photo organization",
-    updatedAt,
+    updatedAt: "2026-09-06",
     directAnswer:
-      "Galoria analyzes image folders locally on Windows, groups screenshots and photos into sensible categories, and shows exact destinations before changes are applied.",
+      "Galoria is an AI photo organizer for Windows 10 and 11. It analyzes supported images locally, combines filename, folder, metadata, and visual signals when available, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Every destination remains visible for review before images move.",
     problemTitle: "Why photo libraries get hard to browse",
     problem: [
       "Windows photo folders often mix camera imports, screenshots, memes, wallpapers, receipts, scanned documents, design assets, and exports from other apps. A folder can contain useful images without revealing what any of them are for.",
@@ -116,8 +133,35 @@ export const seoPages: SeoPage[] = [
           "Mixed folders with screenshots, camera photos, memes, wallpapers, design assets, and scanned documents are the best fit.",
       },
     ],
+    evidence: {
+      title: "Real interface captures and tested classification cases",
+      summary:
+        "The captures below show Galoria's local picture-folder workflow and a resulting Windows folder structure. On September 6, 2026, all 26 backend tests passed, including 12 representative filename, metadata, and caption classification cases plus uncertainty and false-positive checks.",
+      facts: [
+        { label: "Backend regression suite", value: "26 of 26 tests passed" },
+        { label: "Representative category fixtures", value: "12 of 12 passed" },
+        { label: "Test-suite runtime", value: "1.986 seconds" },
+        { label: "Test computer", value: "Windows 11 Pro, Core i5-8350U, 8 GB RAM" },
+      ],
+      media: [
+        {
+          kind: "image",
+          src: "/evidence/galoria-folder-step.png",
+          alt: "Galoria AI photo organizer asking the user to choose a local picture folder",
+          caption: "Galoria begins with a local picture folder and states that nothing moves until the plan is approved.",
+        },
+        {
+          kind: "image",
+          src: "/evidence/galoria-output.png",
+          alt: "Windows File Explorer showing folders produced by a Galoria image organization run",
+          caption: "A local demonstration output with Design Assets, Documents, Miscellaneous, Photos, and Screenshots folders.",
+        },
+      ],
+      note:
+        "The 12 fixtures are curated regression cases, not a universal accuracy percentage. Test-suite runtime is also not end-to-end photo-library speed; image decoding, optional visual analysis, storage, and hardware affect real runs.",
+    },
     related: [
-      "photo-organizer-windows",
+      "blog/ai-photo-organizer-classification-test",
       "organize-photos-with-ai",
       "offline-ai-photo-organizer",
       "automatic-photo-organizer",
@@ -850,6 +894,108 @@ export const seoPages: SeoPage[] = [
       "automatic-photo-sorting",
       "offline-ai-photo-organizer",
       "ai-photo-organizer",
+    ],
+  },
+  {
+    route: "blog/ai-photo-organizer-classification-test",
+    kind: "guide",
+    topic: "photos",
+    title: "AI Photo Organizer Test | 12 Classification Cases",
+    h1: "Galoria AI Photo Organizer Classification Test",
+    description:
+      "Review Galoria's 12 representative photo-classification cases, 26 passing backend tests, Windows environment, real interface captures, and test limitations.",
+    eyebrow: "Reproducible product evidence",
+    updatedAt: "2026-09-06",
+    directAnswer:
+      "On September 6, 2026, Galoria passed all 26 backend tests in 1.986 seconds on Windows 11 Pro with a Core i5-8350U and 8 GB of RAM. A representative regression set correctly handled all 12 defined category cases, including work, people, travel, products, receipts, documents, screenshots, wallpapers, design assets, memes, and pets. This is a curated regression result, not a claim of 100% real-world accuracy.",
+    problemTitle: "Why photo-organizer evidence needs edge cases",
+    problem: [
+      "A useful image organizer must do more than match obvious words. Galoria's regression suite checks that a camera photo of a window is not treated as a screenshot, an abstract camera photo is not forced into Wallpapers, and a small unknown image can remain uncertain instead of receiving a confident but weak category.",
+      "The suite also covers preview capabilities, changed-file rejection, duplicate verification with a full hash, undo history, bounded progress updates, metadata workers, and caption limits. These checks reduce known regressions while leaving the final destination visible to the user.",
+    ],
+    steps: [
+      "Prepare representative filenames, image metadata, and optional local visual captions with an expected category for each case.",
+      "Run the classifier across 12 categories covering common photo-library and screenshot workflows.",
+      "Run edge cases designed to catch screenshot, wallpaper, design, and uncertainty false positives.",
+      "Run planner, duplicate, history, preview, changed-file, and performance-bound tests before publishing the result.",
+    ],
+    examples: [
+      {
+        title: "Screenshot classification",
+        before: "browser_dashboard.png with a browser-dashboard visual caption",
+        after: "Screenshots category",
+      },
+      {
+        title: "Receipt classification",
+        before: "receipt_204.jpg with printed receipt, subtotal, and tax signals",
+        after: "Receipts category",
+      },
+    ],
+    comparison: {
+      title: "Evidence, meaning, and limits",
+      summary: "The published result separates curated regression coverage from performance and real-library accuracy.",
+      rows: [
+        {
+          option: "12 category fixtures",
+          bestFor: "Preventing regressions in representative filename, metadata, and caption cases",
+          tradeoff: "A curated set is smaller and cleaner than a real photo library",
+        },
+        {
+          option: "26 backend tests",
+          bestFor: "Classifier, planner, duplicate, history, preview, and bounded-work checks",
+          tradeoff: "Test runtime is not end-to-end library speed",
+        },
+        {
+          option: "Copied-library acceptance test",
+          bestFor: "Checking categories against your own image collection",
+          tradeoff: "Requires reviewing ambiguous and irreplaceable images",
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Did Galoria score 100% accuracy?",
+        answer: "Galoria passed 12 of 12 defined regression fixtures. That is not the same as 100% accuracy across arbitrary real-world photo collections.",
+      },
+      {
+        question: "What happens when an image is uncertain?",
+        answer: "The classifier can retain uncertainty rather than forcing a weak category, and the proposed destination remains available for review.",
+      },
+      {
+        question: "Does the 1.986-second result measure a photo scan?",
+        answer: "No. It is the complete backend automated test-suite time on one computer. A real scan also depends on image count, format, storage, caching, and visual analysis.",
+      },
+    ],
+    evidence: {
+      title: "Observed Galoria test evidence",
+      summary: "The regression results and product captures document both machine-checked behavior and the user-visible workflow.",
+      facts: [
+        { label: "Backend tests", value: "26 passed, 0 failed" },
+        { label: "Representative fixtures", value: "12 passed, 0 failed" },
+        { label: "Automated suite time", value: "1.986 seconds" },
+        { label: "Environment", value: "Windows 11 Pro, Core i5-8350U, 8 GB RAM" },
+      ],
+      media: [
+        {
+          kind: "image",
+          src: "/evidence/galoria-folder-step.png",
+          alt: "Galoria local photo organizer folder-selection screen",
+          caption: "The first product step keeps the source folder and local-processing promise explicit.",
+        },
+        {
+          kind: "image",
+          src: "/evidence/galoria-output.png",
+          alt: "Galoria photo organization output shown in Windows File Explorer",
+          caption: "Observed demonstration output displayed directly in Windows File Explorer.",
+        },
+      ],
+      note: "No general accuracy percentage or guaranteed scan speed is inferred from these fixtures. A broader benchmark would require a labeled image dataset, repeated runs, and documented model/runtime versions.",
+    },
+    related: [
+      "ai-photo-organizer",
+      "organize-screenshots-automatically",
+      "offline-ai-photo-organizer",
+      "docs/troubleshooting",
     ],
   },
 ];

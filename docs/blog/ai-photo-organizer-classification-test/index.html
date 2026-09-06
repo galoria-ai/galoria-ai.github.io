@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Photo Organizer Test | 12 Classification Cases | Galoria AI</title>
+  <meta name="description" content="Review Galoria&#39;s 12 representative photo-classification cases, 26 passing backend tests, Windows environment, real interface captures, and test limitations.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://galoriaai.com/blog/ai-photo-organizer-classification-test/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI Photo Organizer Test | 12 Classification Cases">
+  <meta property="og:description" content="Review Galoria&#39;s 12 representative photo-classification cases, 26 passing backend tests, Windows environment, real interface captures, and test limitations.">
+  <meta property="og:url" content="https://galoriaai.com/blog/ai-photo-organizer-classification-test/">
+  <meta property="og:site_name" content="Galoria AI">
+  <meta property="og:image" content="https://galoriaai.com/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Photo Organizer Test | 12 Classification Cases">
+  <meta name="twitter:image" content="https://galoriaai.com/icon-512.png">
+  <meta name="twitter:description" content="Review Galoria&#39;s 12 representative photo-classification cases, 26 passing backend tests, Windows environment, real interface captures, and test limitations.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://galoriaai.com/#organization","name":"Galoria AI","url":"https://galoriaai.com/"},{"@type":"WebSite","@id":"https://galoriaai.com/#website","name":"Galoria AI","url":"https://galoriaai.com/","publisher":{"@id":"https://galoriaai.com/#organization"}},{"@type":"Article","@id":"https://galoriaai.com/blog/ai-photo-organizer-classification-test/#page","url":"https://galoriaai.com/blog/ai-photo-organizer-classification-test/","headline":"Galoria AI Photo Organizer Classification Test","name":"AI Photo Organizer Test | 12 Classification Cases","description":"Review Galoria's 12 representative photo-classification cases, 26 passing backend tests, Windows environment, real interface captures, and test limitations.","dateModified":"2026-09-06","inLanguage":"en","author":{"@id":"https://galoriaai.com/#organization"},"publisher":{"@id":"https://galoriaai.com/#organization"},"isPartOf":{"@id":"https://galoriaai.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://galoriaai.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://galoriaai.com/category/photos/"},{"@type":"ListItem","position":3,"name":"Galoria AI Photo Organizer Classification Test","item":"https://galoriaai.com/blog/ai-photo-organizer-classification-test/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Did Galoria score 100% accuracy?","acceptedAnswer":{"@type":"Answer","text":"Galoria passed 12 of 12 defined regression fixtures. That is not the same as 100% accuracy across arbitrary real-world photo collections."}},{"@type":"Question","name":"What happens when an image is uncertain?","acceptedAnswer":{"@type":"Answer","text":"The classifier can retain uncertainty rather than forcing a weak category, and the proposed destination remains available for review."}},{"@type":"Question","name":"Does the 1.986-second result measure a photo scan?","acceptedAnswer":{"@type":"Answer","text":"No. It is the complete backend automated test-suite time on one computer. A real scan also depends on image count, format, storage, caching, and visual analysis."}}]}]}</script>
+
+  <style>
+    :root{color-scheme:dark;--bg:#020817;--card:#0f172a;--line:#243244;--text:#e2e8f0;--muted:#a8b3c5;--green:#22c55e}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}
+    a{color:#86efac}
+    .container{width:min(100% - 40px,980px);margin-inline:auto}
+    header{border-bottom:1px solid var(--line);background:rgba(2,8,23,.96)}
+    nav{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:24px}
+    nav .links{display:flex;gap:20px;flex-wrap:wrap}
+    nav a{text-decoration:none;color:var(--text)}
+    .brand{font-weight:800}
+    .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+    .eyebrow{color:#86efac;font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:850px;margin:12px 0 20px;color:white;font-size:clamp(2.5rem,7vw,4.5rem);line-height:1.05;letter-spacing:-.04em}
+    h2{margin:0 0 18px;color:white;font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.2}
+    h3{color:white;line-height:1.3}
+    .lede{max-width:760px;color:var(--muted);font-size:1.2rem}
+    .breadcrumbs{padding-top:28px;color:var(--muted);font-size:.9rem}
+    .breadcrumbs a{color:var(--muted)}
+    main{padding:60px 0 90px}
+    section{margin-bottom:64px}
+    .answer,.card,.cta{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:28px}
+    .answer{border-left:4px solid var(--green)}
+    .answer p{font-size:1.1rem;margin:0}
+    .updated{margin-top:16px;color:#7f8ba0;font-size:.85rem}
+    ol{padding-left:24px}
+    li{margin-bottom:12px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card p{color:var(--muted)}
+    .label{margin-bottom:4px;color:#7f8ba0;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--line);background:var(--card)}
+    th,td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+    th{color:white}
+    td{color:var(--muted)}
+    .faq{padding:22px 0;border-bottom:1px solid var(--line)}
+    .faq h3{margin:0 0 8px}
+    .faq p{margin:0;color:var(--muted)}
+    .evidence-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
+    .evidence-fact{padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+    .evidence-fact dt{color:var(--green);font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .evidence-fact dd{margin:8px 0 0;color:white;font-size:1.05rem;font-weight:700}
+    .evidence-media{display:grid;gap:18px;margin-top:24px}
+    .evidence-media figure{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+    .evidence-media img,.evidence-media video{display:block;width:100%;height:auto;background:#000}
+    .evidence-media figcaption{padding:14px 18px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    .evidence-note{padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--muted);font-size:.9rem}
+    .related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .related a{display:block;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--card);text-decoration:none;color:white}
+    .cta{text-align:center}
+    .button{display:inline-block;margin-top:16px;padding:13px 22px;border-radius:999px;background:var(--green);color:#052e16;text-decoration:none;font-weight:800}
+    footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted)}
+    footer a{color:var(--muted)}
+    .footer-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+    @media(max-width:700px){.grid,.related,.evidence-facts{grid-template-columns:1fr}.links{display:none!important}th,td{padding:12px;font-size:.9rem}}</style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Primary navigation">
+      <a class="brand" href="/">Galoria AI</a>
+      <div class="links">
+        <a href="/ai-photo-organizer/">Product</a>
+        <a href="/category/photos/">Guides</a>
+        <a href="/photo-organizer-vs-cloud/">Comparisons</a>
+        <a href="/docs/privacy/">Privacy</a>
+      </div>
+      <a href="/#download">Download for Windows</a>
+    </nav>
+  </header>
+  <div class="container breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/category/photos/">Guides</a> <span aria-hidden="true">/</span> <span aria-current="page">Galoria AI Photo Organizer Classification Test</span>
+  </div>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Reproducible product evidence</div>
+      <h1>Galoria AI Photo Organizer Classification Test</h1>
+      <p class="lede">Review Galoria&#39;s 12 representative photo-classification cases, 26 passing backend tests, Windows environment, real interface captures, and test limitations.</p>
+    </div>
+  </section>
+  <main class="container">
+    <section class="answer" aria-labelledby="direct-answer">
+      <h2 id="direct-answer">Direct answer</h2>
+      <p>On September 6, 2026, Galoria passed all 26 backend tests in 1.986 seconds on Windows 11 Pro with a Core i5-8350U and 8 GB of RAM. A representative regression set correctly handled all 12 defined category cases, including work, people, travel, products, receipts, documents, screenshots, wallpapers, design assets, memes, and pets. This is a curated regression result, not a claim of 100% real-world accuracy.</p>
+      <div class="updated">Reviewed and updated 2026-09-06</div>
+    </section>
+<section aria-labelledby="evidence-title">
+    <h2 id="evidence-title">Observed Galoria test evidence</h2>
+    <p>The regression results and product captures document both machine-checked behavior and the user-visible workflow.</p>
+    <dl class="evidence-facts">
+      <div class="evidence-fact"><dt>Backend tests</dt><dd>26 passed, 0 failed</dd></div><div class="evidence-fact"><dt>Representative fixtures</dt><dd>12 passed, 0 failed</dd></div><div class="evidence-fact"><dt>Automated suite time</dt><dd>1.986 seconds</dd></div><div class="evidence-fact"><dt>Environment</dt><dd>Windows 11 Pro, Core i5-8350U, 8 GB RAM</dd></div>
+    </dl>
+    <div class="evidence-media">
+      <figure><img src="/evidence/galoria-folder-step.png" alt="Galoria local photo organizer folder-selection screen" loading="lazy"><figcaption>The first product step keeps the source folder and local-processing promise explicit.</figcaption></figure><figure><img src="/evidence/galoria-output.png" alt="Galoria photo organization output shown in Windows File Explorer" loading="lazy"><figcaption>Observed demonstration output displayed directly in Windows File Explorer.</figcaption></figure>
+    </div>
+    <p class="evidence-note">No general accuracy percentage or guaranteed scan speed is inferred from these fixtures. A broader benchmark would require a labeled image dataset, repeated runs, and documented model/runtime versions.</p>
+  </section>
+    <section>
+      <h2>Why photo-organizer evidence needs edge cases</h2>
+      <p>A useful image organizer must do more than match obvious words. Galoria&#39;s regression suite checks that a camera photo of a window is not treated as a screenshot, an abstract camera photo is not forced into Wallpapers, and a small unknown image can remain uncertain instead of receiving a confident but weak category.</p><p>The suite also covers preview capabilities, changed-file rejection, duplicate verification with a full hash, undo history, bounded progress updates, metadata workers, and caption limits. These checks reduce known regressions while leaving the final destination visible to the user.</p>
+    </section>
+    <section>
+      <h2>Step-by-step workflow</h2>
+      <ol><li>Prepare representative filenames, image metadata, and optional local visual captions with an expected category for each case.</li><li>Run the classifier across 12 categories covering common photo-library and screenshot workflows.</li><li>Run edge cases designed to catch screenshot, wallpaper, design, and uncertainty false positives.</li><li>Run planner, duplicate, history, preview, changed-file, and performance-bound tests before publishing the result.</li></ol>
+    </section>
+    <section>
+      <h2>Use-case examples</h2>
+      <div class="grid">
+        <article class="card">
+              <h3>Screenshot classification</h3>
+              <div class="label">Before</div>
+              <p>browser_dashboard.png with a browser-dashboard visual caption</p>
+              <div class="label">After</div>
+              <p>Screenshots category</p>
+            </article><article class="card">
+              <h3>Receipt classification</h3>
+              <div class="label">Before</div>
+              <p>receipt_204.jpg with printed receipt, subtotal, and tax signals</p>
+              <div class="label">After</div>
+              <p>Receipts category</p>
+            </article>
+      </div>
+    </section>
+    <section>
+      <h2>Evidence, meaning, and limits</h2>
+      <p>The published result separates curated regression coverage from performance and real-library accuracy.</p>
+      <div style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Option</th><th>Best for</th><th>Tradeoff</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">12 category fixtures</th><td>Preventing regressions in representative filename, metadata, and caption cases</td><td>A curated set is smaller and cleaner than a real photo library</td></tr><tr><th scope="row">26 backend tests</th><td>Classifier, planner, duplicate, history, preview, and bounded-work checks</td><td>Test runtime is not end-to-end library speed</td></tr><tr><th scope="row">Copied-library acceptance test</th><td>Checking categories against your own image collection</td><td>Requires reviewing ambiguous and irreplaceable images</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>Frequently asked questions</h2>
+      <article class="faq"><h3>Did Galoria score 100% accuracy?</h3><p>Galoria passed 12 of 12 defined regression fixtures. That is not the same as 100% accuracy across arbitrary real-world photo collections.</p></article><article class="faq"><h3>What happens when an image is uncertain?</h3><p>The classifier can retain uncertainty rather than forcing a weak category, and the proposed destination remains available for review.</p></article><article class="faq"><h3>Does the 1.986-second result measure a photo scan?</h3><p>No. It is the complete backend automated test-suite time on one computer. A real scan also depends on image count, format, storage, caching, and visual analysis.</p></article>
+    </section>
+    <section>
+      <h2>Related guides</h2>
+      <div class="related">
+        <a href="/ai-photo-organizer/">AI Photo Organizer for Windows</a><a href="/organize-screenshots-automatically/">Organize Screenshots Automatically</a><a href="/offline-ai-photo-organizer/">Offline AI Photo Organizer</a><a href="/docs/troubleshooting/">Galoria Troubleshooting</a>
+      </div>
+    </section>
+    <section class="cta">
+      <h2>Organize a folder with Galoria</h2>
+      <p>Run local AI on Windows, review the proposed structure and filenames, then apply the changes you approve.</p>
+      <a class="button" href="/#download">Download for Windows</a>
+    </section>
+  </main>
+  <footer><div class="container">Galoria AI - Local, preview-first photo organization<div class="footer-links"><a href="https://computoraai.com/">Computora AI desktop software</a><a href="https://foldoraai.com/">Foldora AI file organizer</a><a href="https://cleanoraai.com/">Cleanora Downloads folder organizer</a></div></div></footer>
+</body>
+</html>
