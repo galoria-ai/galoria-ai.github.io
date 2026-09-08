@@ -6,7 +6,7 @@ import { trackEvent } from "@/lib/analytics";
 const Navbar = () => {
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -20 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl"
@@ -20,6 +20,7 @@ const Navbar = () => {
           <a href="https://computoraai.com/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Computora AI</a>
           <a href="/#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Features</a>
           <a href="/#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">How It Works</a>
+          <a href="/photo-organizer-vs-cloud/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Comparisons</a>
           <a href="/#download" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Download</a>
           <a href="/#faq" className="text-sm text-muted-foreground transition-colors hover:text-foreground">FAQ</a>
         </div>
@@ -41,4 +42,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
