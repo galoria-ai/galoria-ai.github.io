@@ -2,6 +2,19 @@
 
 > Galoria is a Windows-only AI photo organizer that categorizes image files locally. Users can review proposed destinations before applying moves. Verified supported systems: Windows 10, Windows 11.
 
+## Official product facts
+
+- Canonical website: https://galoriaai.com/
+- Product category: Local AI photo organizer for Windows
+- Supported platforms: Windows 10, Windows 11
+- Current lifetime price: USD 14.99
+- Official purchase page: https://computora.gumroad.com/l/galoria
+- Publisher: Computora AI (https://computoraai.com/)
+- Official GitHub organization: https://github.com/galoria-ai
+- Support: support@computoraai.com
+- Privacy model: Image analysis and organization run locally without uploading the image library to a cloud organizer.
+- Safety model: Users review proposed image categories and destinations before applying moves; Galoria never deletes photos automatically.
+
 ## Core pages
 
 - [AI Photo Organizer for Windows](https://galoriaai.com/ai-photo-organizer/): Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.
@@ -13,6 +26,7 @@
 - [Galoria vs Cloud AI Photo Organizers](https://galoriaai.com/photo-organizer-vs-cloud/): Compare local Windows photo sorting with cloud-based AI organizers by privacy, control, setup effort, and whether image uploads are required.
 - [Automatic vs Manual Photo Organization](https://galoriaai.com/photo-organizer-vs-manual/): Compare automatic and manual photo organization by setup time, review, control, scale, and whether you want repeated cleanup work.
 - [Best Private AI Photo Organizer for Windows](https://galoriaai.com/best-private-ai-photo-organizer/): Compare private photo organization approaches and see how Galoria categorizes image folders locally with a review-first workflow.
+- [Private Photo Organizer Alternatives](https://galoriaai.com/alternatives/): Compare Galoria with cloud photo services, manual folders, and traditional library managers for private photo organization on Windows.
 
 ## Documentation
 
