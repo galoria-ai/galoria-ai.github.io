@@ -15,7 +15,7 @@ import { product, site } from "../src/config/product";
 const SITE_URL = site.url;
 const BUNDLE_URL = "https://computora.gumroad.com/l/computoraai";
 const OUTPUT_DIR = path.resolve("public");
-const UPDATED_AT = "2026-06-14";
+const UPDATED_AT = "2026-09-08";
 
 interface SupportPage {
   route: string;

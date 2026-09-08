@@ -27,7 +27,9 @@ const SeoHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content={`${title} — Galoria AI`} />
       <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
       {canonical && <meta property="og:url" content={canonical} />}
       <meta property="og:site_name" content="Galoria AI" />
 
@@ -35,6 +37,7 @@ const SeoHead = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      {canonical && <meta name="twitter:url" content={canonical} />}
 
       {canonical && <link rel="canonical" href={canonical} />}
       {schema && (
