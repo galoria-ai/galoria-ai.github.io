@@ -526,7 +526,9 @@ function renderMainPage(page: SeoPage): string {
   <meta property="og:url" content="${canonical}">
   <meta property="og:site_name" content="Galoria AI">
   <meta property="og:image" content="${SITE_URL}/icon-512.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image:alt" content="${escapeHtml(page.title)} — Galoria AI">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(page.title)}">
   <meta name="twitter:image" content="${SITE_URL}/icon-512.png">
   <meta name="twitter:description" content="${escapeHtml(page.description)}">
