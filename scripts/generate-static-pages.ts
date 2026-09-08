@@ -289,6 +289,7 @@ function schemaForPage(page: SeoPage): object {
         "@id": `${SITE_URL}/#organization`,
         name: "Galoria AI",
         url: `${SITE_URL}/`,
+        sameAs: ["https://github.com/galoria-ai"],
       },
       {
         "@type": "WebSite",
@@ -359,6 +360,7 @@ function basicSchema(route: string, title: string, description: string): object 
         "@id": `${SITE_URL}/#organization`,
         name: "Galoria AI",
         url: `${SITE_URL}/`,
+        sameAs: ["https://github.com/galoria-ai"],
       },
       {
         "@type": "WebSite",
@@ -866,7 +868,13 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: ${SITE_URL}/sitemap.xml
@@ -886,6 +894,19 @@ function writeLlmsTxt(): void {
   const content = `# Galoria AI
 
 > Galoria is a ${product.platforms.positioning} that categorizes image files locally. Users can review proposed destinations before applying moves. Verified supported systems: ${product.platforms.supported.join(", ")}.
+
+## Official product facts
+
+- Canonical website: ${SITE_URL}/
+- Product category: Local AI photo organizer for Windows
+- Supported platforms: ${product.platforms.supported.join(", ")}
+- Current lifetime price: USD ${product.price.amount.toFixed(2)}
+- Official purchase page: ${product.checkoutUrl}
+- Publisher: Computora AI (https://computoraai.com/)
+- Official GitHub organization: https://github.com/galoria-ai
+- Support: ${site.supportEmail}
+- Privacy model: Image analysis and organization run locally without uploading the image library to a cloud organizer.
+- Safety model: Users review proposed image categories and destinations before applying moves; Galoria never deletes photos automatically.
 
 ## Core pages
 
