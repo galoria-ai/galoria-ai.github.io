@@ -12,6 +12,12 @@ export function organizationSchema() {
     name: site.name,
     url: `${site.url}/`,
     sameAs: ["https://github.com/galoria-ai"],
+    parentOrganization: {
+      "@type": "Organization",
+      "@id": "https://computoraai.com/#organization",
+      name: "Computora AI",
+      url: "https://computoraai.com/",
+    },
   };
 }
 
@@ -28,6 +34,7 @@ export function websiteSchema() {
 export function softwareApplicationSchema() {
   return {
     "@type": "SoftwareApplication",
+    "@id": `${site.url}/#software`,
     name: product.productName ?? site.productName,
     url: `${site.url}/`,
     applicationCategory: "FileManagementApplication",

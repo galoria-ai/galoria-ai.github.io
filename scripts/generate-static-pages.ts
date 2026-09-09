@@ -290,6 +290,12 @@ function schemaForPage(page: SeoPage): object {
         name: "Galoria AI",
         url: `${SITE_URL}/`,
         sameAs: ["https://github.com/galoria-ai"],
+        parentOrganization: {
+          "@type": "Organization",
+          "@id": "https://computoraai.com/#organization",
+          name: "Computora AI",
+          url: "https://computoraai.com/",
+        },
       },
       {
         "@type": "WebSite",
@@ -335,6 +341,7 @@ function schemaForPage(page: SeoPage): object {
         ? [
             {
               "@type": "SoftwareApplication",
+              "@id": `${SITE_URL}/#software`,
               name: product.productName,
               url: `${SITE_URL}/`,
               applicationCategory: "FileManagementApplication",
@@ -361,6 +368,12 @@ function basicSchema(route: string, title: string, description: string): object 
         name: "Galoria AI",
         url: `${SITE_URL}/`,
         sameAs: ["https://github.com/galoria-ai"],
+        parentOrganization: {
+          "@type": "Organization",
+          "@id": "https://computoraai.com/#organization",
+          name: "Computora AI",
+          url: "https://computoraai.com/",
+        },
       },
       {
         "@type": "WebSite",
