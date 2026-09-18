@@ -68,7 +68,7 @@ export const seoPages: SeoPage[] = [
     description:
       "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
     eyebrow: "Local photo organization",
-    updatedAt: "2026-09-06",
+    updatedAt: "2026-09-18",
     directAnswer:
       "Galoria is an AI photo organizer for Windows 10 and 11. It analyzes supported images locally, combines filename, folder, metadata, and visual signals when available, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Every destination remains visible for review before images move.",
     problemTitle: "Why photo libraries get hard to browse",
@@ -131,6 +131,11 @@ export const seoPages: SeoPage[] = [
         question: "What kinds of images work best?",
         answer:
           "Mixed folders with screenshots, camera photos, memes, wallpapers, design assets, and scanned documents are the best fit.",
+      },
+      {
+        question: "Which image formats can Galoria organize?",
+        answer:
+          "Galoria supports JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF image files. The information available for analysis varies by format, so review the proposed destination for each file before applying a move.",
       },
     ],
     evidence: {

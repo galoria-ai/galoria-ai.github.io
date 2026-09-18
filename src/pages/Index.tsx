@@ -30,8 +30,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Galoria AI - AI Photo Organizer for Windows | Local and Preview-First"
-        description="Galoria organizes mixed photo folders on Windows with local AI, preview-first review, and a folder plan you can approve before anything moves."
+        title="AI Photo Organizer for Windows | Galoria AI"
+        description="Galoria organizes screenshots, camera photos, and mixed image folders on Windows with local analysis, exact destination previews, and undo."
         canonical={absoluteUrl()}
         schema={homepageSchema(homepageFaqs)}
       />

@@ -16,6 +16,7 @@ const SITE_URL = site.url;
 const BUNDLE_URL = "https://computora.gumroad.com/l/computoraai";
 const OUTPUT_DIR = path.resolve("public");
 const UPDATED_AT = "2026-09-08";
+const HOMEPAGE_UPDATED_AT = "2026-09-18";
 
 interface SupportPage {
   route: string;
@@ -846,7 +847,7 @@ function renderRedirect(from: string, to: string): string {
 
 function writeSitemap(): void {
   const entries = [
-    { route: "", updatedAt: UPDATED_AT },
+    { route: "", updatedAt: HOMEPAGE_UPDATED_AT },
     ...seoPages
       .filter((page) => page.indexable !== false)
       .map((page) => ({ route: page.route, updatedAt: page.updatedAt })),
