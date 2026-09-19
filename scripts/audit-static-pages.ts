@@ -30,12 +30,22 @@ function visibleWordCount(html: string): number {
     .filter(Boolean).length;
 }
 
+function localPublicAsset(url: string): string | undefined {
+  if (!url.startsWith(`${SITE_URL}/`)) {
+    return undefined;
+  }
+
+  const pathname = new URL(url).pathname.replace(/^\//, "");
+  return pathname ? path.join(PUBLIC_DIR, ...pathname.split("/")) : undefined;
+}
+
 const sitemap = read(path.join(PUBLIC_DIR, "sitemap.xml"));
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(
   (match) => match[1],
 );
 const errors: string[] = [];
 const checkedRoutes = new Set<string>();
+const inboundCounts = new Map(urls.map((url) => [url, 0]));
 
 for (const url of urls) {
   const filePath = routeFile(url);
@@ -68,12 +78,24 @@ for (const url of urls) {
     html,
     /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i,
   );
+  const title = getAttribute(html, /<title[^>]*>([^<]+)<\/title>/i);
+  const socialImage = getAttribute(
+    html,
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
+  );
 
   if (canonical !== url) {
     errors.push(`${route}: canonical ${canonical ?? "missing"} does not match sitemap`);
   }
   if (!description || description.length < 80) {
     errors.push(`${route}: missing or short meta description`);
+  } else if (description.length > 165) {
+    errors.push(`${route}: meta description is ${description.length} characters`);
+  }
+  if (!title) {
+    errors.push(`${route}: missing title`);
+  } else if (title.length > 65) {
+    errors.push(`${route}: title is ${title.length} characters`);
   }
   if (robots?.includes("noindex")) {
     errors.push(`${route}: sitemap URL is noindex`);
@@ -83,6 +105,14 @@ for (const url of urls) {
   }
   if (!/<script[^>]+application\/ld\+json/i.test(html)) {
     errors.push(`${route}: missing JSON-LD`);
+  }
+  if (!socialImage) {
+    errors.push(`${route}: missing Open Graph image`);
+  } else {
+    const imagePath = localPublicAsset(socialImage);
+    if (imagePath && !fs.existsSync(imagePath)) {
+      errors.push(`${route}: Open Graph image does not exist: ${socialImage}`);
+    }
   }
 
   const minimumWords = route.startsWith("/category/") ? 140 : route === "/" ? 80 : 220;
@@ -126,6 +156,17 @@ for (const url of urls) {
     if (!fs.existsSync(target)) {
       errors.push(`${route}: broken internal link ${link}`);
     }
+
+    const linkedUrl = new URL(link, `${SITE_URL}/`).href;
+    if (linkedUrl !== url && inboundCounts.has(linkedUrl)) {
+      inboundCounts.set(linkedUrl, (inboundCounts.get(linkedUrl) ?? 0) + 1);
+    }
+  }
+}
+
+for (const [url, inboundCount] of inboundCounts) {
+  if (url !== `${SITE_URL}/` && inboundCount === 0) {
+    errors.push(`${url.replace(SITE_URL, "")}: orphaned sitemap page`);
   }
 }
 

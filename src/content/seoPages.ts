@@ -63,7 +63,7 @@ export const seoPages: SeoPage[] = [
     route: "ai-photo-organizer",
     kind: "landing",
     topic: "photos",
-    title: "AI Photo Organizer for Windows | Local and Preview-First",
+    title: "AI Photo Organizer for Windows",
     h1: "AI Photo Organizer for Windows",
     description:
       "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
@@ -1011,7 +1011,7 @@ if (privatePhotoBase) {
   seoPages.push({
     ...privatePhotoBase,
     route: "best-private-ai-photo-organizer",
-    title: "Best Private AI Photo Organizer for Windows | Galoria",
+    title: "Private AI Photo Organizer for Windows",
     h1: "Best Private AI Photo Organizer for Windows",
     description: "Compare private photo organization approaches and see how Galoria categorizes image folders locally with a review-first workflow.",
     eyebrow: "Private AI photo organization",
