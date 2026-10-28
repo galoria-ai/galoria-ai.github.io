@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, Download, Eye, ShieldCheck, WifiOff } from "lucide-react";
+import { ArrowRight, CheckCircle2, Eye, ShieldCheck, WifiOff } from "lucide-react";
 
 import InteractiveDemo from "./InteractiveDemo";
 import { trackEvent } from "@/lib/analytics";
@@ -58,8 +58,8 @@ const HeroSection = () => {
                 }}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition-all hover:opacity-90 glow-shadow"
               >
-                <Download className="h-4 w-4" />
-                Download for Windows
+                <ArrowRight className="h-4 w-4" />
+                See Windows pricing
               </a>
 
               <a

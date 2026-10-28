@@ -118,8 +118,9 @@ const PricingSection = () => {
               </div>
 
               <div className="rounded-xl border border-border bg-card p-6">
-                <h3 className="text-lg font-semibold text-foreground">After download</h3>
+                <h3 className="text-lg font-semibold text-foreground">After purchase</h3>
                 <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-muted-foreground">
+                  <li>Complete checkout, then use the download and license instructions provided with your purchase.</li>
                   <li>Install Galoria on your Windows PC.</li>
                 <li>Select a folder such as Downloads, Pictures, or Screenshots.</li>
                   <li>Activate the app, review the plan, then apply only approved moves.</li>
