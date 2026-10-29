@@ -70,7 +70,7 @@ export const seoPages: SeoPage[] = [
     eyebrow: "Local photo organization",
     updatedAt: "2026-10-28",
     directAnswer:
-      "Galoria is a $14.99 one-time AI photo organizer for Windows 10 and 11. It analyzes supported images locally, combines filename, folder, metadata, and visual signals when available, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Every destination remains visible for review before images move. License activation requires internet access; image analysis and planning run locally.",
+      "Galoria is a $14.99 one-time AI photo organizer for Windows 10 and 11. It organizes JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF files. Local analysis combines filenames, folder context, metadata, dimensions, and optional visual captions from the packaged model, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Every destination remains editable before images move. Download, license activation, and periodic license validation require internet access; the packaged model and organization workflow run locally without a separate model download.",
     problemTitle: "Why photo libraries get hard to browse",
     problem: [
       "Windows photo folders often mix camera imports, screenshots, memes, wallpapers, receipts, scanned documents, design assets, and exports from other apps. A folder can contain useful images without revealing what any of them are for.",
@@ -79,7 +79,7 @@ export const seoPages: SeoPage[] = [
     steps: [
       "Choose one mixed image folder, such as Downloads or Pictures.",
       "Let Galoria inspect filenames and local image signals on your PC.",
-      "Review the proposed folders, labels, and destination paths.",
+      "Review destinations and conflicts, then reassign, exclude, or rename folders where needed.",
       "Apply only the organization plan that matches how you browse images later.",
     ],
     examples: [
@@ -136,6 +136,21 @@ export const seoPages: SeoPage[] = [
         question: "Which image formats can Galoria organize?",
         answer:
           "Galoria supports JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF image files. The information available for analysis varies by format, so review the proposed destination for each file before applying a move.",
+      },
+      {
+        question: "Does Galoria download an AI model while organizing photos?",
+        answer:
+          "No. The installer packages the local image model, and Galoria loads it from the installed application without a separate model download. Internet access is still required to download Galoria, activate a license, and periodically validate that license.",
+      },
+      {
+        question: "What are the limits of Galoria's image analysis?",
+        answer:
+          "Galoria uses available filename, folder, metadata, dimension, and optional local caption signals. Visual captions are reserved for uncertain items and bounded per scan. Signals vary by format and ambiguous images may still be categorized incorrectly, so review, reassign, or exclude them before applying the plan.",
+      },
+      {
+        question: "Can Galoria undo a photo organization run?",
+        answer:
+          "Galoria records applied moves in local history and can undo the latest organization operation. Undo requires a valid license and restores files from that recorded operation; keep a separate backup before organizing important libraries.",
       },
     ],
     evidence: {

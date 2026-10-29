@@ -531,7 +531,11 @@ function renderMainPage(page: SeoPage): string {
   const canonical = absoluteUrl(page.route);
   const breadcrumbs = breadcrumbItems(page.route, page.h1);
   const schema = JSON.stringify(schemaForPage(page)).replaceAll("<", "\\u003c");
-  const downloadHref = "/#download";
+  const isPrimaryProductPage = page.route === "ai-photo-organizer";
+  const downloadHref = isPrimaryProductPage ? product.checkoutUrl : "/#download";
+  const downloadLabel = isPrimaryProductPage
+    ? `Buy Galoria for Windows — ${product.price.display}`
+    : "Download for Windows";
 
   return `<!doctype html>
 <html lang="en">
@@ -573,7 +577,7 @@ ${analyticsHead()}
         <a href="/alternatives/">Comparisons</a>
         <a href="/docs/privacy/">Privacy</a>
       </div>
-      <a href="${downloadHref}">Download for Windows</a>
+      <a href="${downloadHref}">${downloadLabel}</a>
     </nav>
   </header>
   <div class="container breadcrumbs" aria-label="Breadcrumb">
@@ -660,7 +664,7 @@ ${renderEvidence(page)}
     <section class="cta">
       <h2>Organize a folder with Galoria</h2>
       <p>Run local AI on Windows, review the proposed structure and filenames, then apply the changes you approve.</p>
-      <a class="button" href="${downloadHref}">Download for Windows</a>
+      <a class="button" href="${downloadHref}">${downloadLabel}</a>
       <a class="button secondary" href="${BUNDLE_URL}" target="_blank" rel="noopener noreferrer">Get the complete bundle</a>
     </section>
   </main>
