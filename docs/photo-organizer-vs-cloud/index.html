@@ -27,73 +27,69 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://galoriaai.com/#organization","name":"Galoria AI","url":"https://galoriaai.com/","sameAs":["https://github.com/galoria-ai"],"parentOrganization":{"@type":"Organization","@id":"https://computoraai.com/#organization","name":"Computora AI","url":"https://computoraai.com/"}},{"@type":"WebSite","@id":"https://galoriaai.com/#website","name":"Galoria AI","url":"https://galoriaai.com/","publisher":{"@id":"https://galoriaai.com/#organization"}},{"@type":"Article","@id":"https://galoriaai.com/photo-organizer-vs-cloud/#page","url":"https://galoriaai.com/photo-organizer-vs-cloud/","headline":"Galoria vs Cloud AI Photo Organizers","name":"Galoria vs Cloud AI Photo Organizers","description":"Compare local Windows photo sorting with cloud-based AI organizers by privacy, control, setup effort, and whether image uploads are required.","dateModified":"2026-09-08","inLanguage":"en","author":{"@id":"https://galoriaai.com/#organization"},"publisher":{"@id":"https://galoriaai.com/#organization"},"isPartOf":{"@id":"https://galoriaai.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://galoriaai.com/"},{"@type":"ListItem","position":2,"name":"Galoria vs Cloud AI Photo Organizers","item":"https://galoriaai.com/photo-organizer-vs-cloud/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is cloud processing always less private?","acceptedAnswer":{"@type":"Answer","text":"It usually requires more trust because images are uploaded to a provider before the sorting plan is created."}},{"@type":"Question","name":"What should I check in a cloud service?","acceptedAnswer":{"@type":"Answer","text":"Check upload behavior, retention terms, preview behavior, and whether you can easily undo a bad sort."}},{"@type":"Question","name":"Can Galoria replace a cloud organizer?","acceptedAnswer":{"@type":"Answer","text":"It can replace the local sorting part for Windows users who want the analysis to stay on their device."}}]}]}</script>
 
   <style>
-    :root{color-scheme:dark;--bg:#020817;--card:#0f172a;--line:#243244;--text:#e2e8f0;--muted:#a8b3c5;--green:#22c55e}
+    :root{color-scheme:dark;--bg:#0d0b12;--card:#191521;--line:#332d3e;--text:#f5f1f7;--muted:#b8aebf;--primary:#bb8ff0;--accent:#ed83bb;--gradient:linear-gradient(135deg,var(--primary),var(--accent))}
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}
-    a{color:#86efac}
-    .container{width:min(100% - 40px,980px);margin-inline:auto}
-    header{border-bottom:1px solid var(--line);background:rgba(2,8,23,.96)}
-    nav{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:24px}
-    nav .links{display:flex;gap:20px;flex-wrap:wrap}
-    nav a{text-decoration:none;color:var(--text)}
-    .brand{font-weight:800}
-    .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
-    .eyebrow{color:#86efac;font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    h1{max-width:850px;margin:12px 0 20px;color:white;font-size:clamp(2.5rem,7vw,4.5rem);line-height:1.05;letter-spacing:-.04em}
-    h2{margin:0 0 18px;color:white;font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.2}
-    h3{color:white;line-height:1.3}
-    .lede{max-width:760px;color:var(--muted);font-size:1.2rem}
-    .breadcrumbs{padding-top:28px;color:var(--muted);font-size:.9rem}
+    body{margin:0;padding-top:64px;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:#d0a7ff}a:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+    .container{width:min(calc(100% - 40px),1024px);margin-inline:auto}
+    .site-header{position:fixed;z-index:50;inset:0 0 auto;border-bottom:1px solid rgba(51,45,62,.8);background:rgba(13,11,18,.86);backdrop-filter:blur(18px)}
+    .site-nav{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:24px}
+    .site-nav a{text-decoration:none}.brand{display:flex;align-items:center;gap:9px;color:var(--text);font-size:1.05rem;font-weight:800;white-space:nowrap}.brand img{width:32px;height:32px;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:26px}.nav-links a{color:var(--muted);font-size:.875rem}.nav-links a:hover{color:white}
+    .nav-cta{padding:9px 18px;border-radius:8px;background:var(--gradient);color:#21172b!important;font-size:.875rem;font-weight:800;white-space:nowrap}.mobile-menu{display:none;padding:7px 11px;border:1px solid var(--line);border-radius:8px;color:var(--muted)!important;font-size:1.1rem}
+    .hero{padding:56px 0 64px;border-bottom:1px solid var(--line)}
+    .eyebrow{color:#d0a7ff;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:850px;margin:16px 0 20px;color:white;font-size:4rem;line-height:1.08;letter-spacing:0}
+    h2{margin:0 0 18px;color:white;font-size:2rem;line-height:1.25;letter-spacing:0}
+    h3{margin:0 0 10px;color:white;font-size:1.2rem;line-height:1.35;letter-spacing:0}
+    p{margin:0 0 18px}.lede{max-width:760px;margin:0;color:var(--muted);font-size:1.2rem;line-height:1.75}
+    .breadcrumbs{padding-top:24px;color:var(--muted);font-size:.875rem}
     .breadcrumbs a{color:var(--muted)}
-    main{padding:60px 0 90px}
-    section{margin-bottom:64px}
-    .answer,.card,.cta{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:28px}
-    .answer{border-left:4px solid var(--green)}
+    main{width:min(calc(100% - 40px),900px);margin:auto;padding:64px 0 96px}
+    section{margin-bottom:72px}section>p,section>ol{max-width:760px;color:var(--muted)}
+    .answer,.card,.cta{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:28px}
+    .answer{border-color:rgba(187,143,240,.48)}
     .answer p{font-size:1.1rem;margin:0}
     .updated{margin-top:16px;color:#7f8ba0;font-size:.85rem}
-    ol{padding-left:24px}
+    ol,ul{padding-left:26px}
     li{margin-bottom:12px}
     .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .card p{color:var(--muted)}
     .label{margin-bottom:4px;color:#7f8ba0;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-    table{width:100%;border-collapse:collapse;border:1px solid var(--line);background:var(--card)}
+    .table-wrap{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+    table{width:100%;min-width:680px;border-collapse:collapse;background:var(--card)}
     th,td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-    th{color:white}
+    tr:last-child th,tr:last-child td{border-bottom:0}th{color:white;font-size:.9rem}
     td{color:var(--muted)}
     .faq{padding:22px 0;border-bottom:1px solid var(--line)}
     .faq h3{margin:0 0 8px}
     .faq p{margin:0;color:var(--muted)}
     .evidence-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
-    .evidence-fact{padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
-    .evidence-fact dt{color:var(--green);font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .evidence-fact{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+    .evidence-fact dt{color:#d0a7ff;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
     .evidence-fact dd{margin:8px 0 0;color:white;font-size:1.05rem;font-weight:700}
     .evidence-media{display:grid;gap:18px;margin-top:24px}
-    .evidence-media figure{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+    .evidence-media figure{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--card)}
     .evidence-media img,.evidence-media video{display:block;width:100%;height:auto;background:#000}
     .evidence-media figcaption{padding:14px 18px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
     .evidence-note{padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--muted);font-size:.9rem}
     .related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .related a{display:block;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--card);text-decoration:none;color:white}
+    .related a{display:block;padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--card);text-decoration:none;color:white}
     .cta{text-align:center}
-    .button{display:inline-block;margin-top:16px;padding:13px 22px;border-radius:999px;background:var(--green);color:#052e16;text-decoration:none;font-weight:800}.button.secondary{margin-left:8px;background:transparent;color:var(--ink);border:1px solid var(--line)}
-    footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted)}
-    footer a{color:var(--muted)}
-    .footer-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
-    @media(max-width:700px){.grid,.related,.evidence-facts{grid-template-columns:1fr}.links{display:none!important}th,td{padding:12px;font-size:.9rem}}</style>
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:16px;padding:12px 22px;border-radius:8px;background:var(--gradient);color:#21172b;text-decoration:none;font-weight:800}.button.secondary{margin-left:8px;background:transparent;color:var(--text);border:1px solid rgba(187,143,240,.55)}
+    footer{padding:48px 0;border-top:1px solid var(--line);color:var(--muted)}footer a{color:var(--muted)}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}.publisher{display:inline-flex;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;text-decoration:none}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;font-size:.875rem}.copyright{margin:28px 0 0;text-align:center;font-size:.75rem}
+    @media(max-width:800px){.nav-links,.nav-cta{display:none}.mobile-menu{display:inline-flex}.footer-inner{flex-direction:column;text-align:center}}
+    @media(max-width:700px){.container,main{width:min(calc(100% - 32px),900px)}.hero{padding:42px 0 48px}h1{font-size:2.5rem}h2{font-size:1.65rem}.lede{font-size:1.08rem}main{padding-top:48px}section{margin-bottom:56px}.answer,.card,.cta{padding:22px}.grid,.related,.evidence-facts{grid-template-columns:1fr}th,td{padding:13px;font-size:.88rem}.button.secondary{margin-left:0}.cta .button{width:100%}}</style>
 </head>
 <body>
-  <header>
-    <nav class="container" aria-label="Primary navigation">
-      <a class="brand" href="/">Galoria AI</a>
-      <div class="links">
-        <a href="/ai-photo-organizer/">Product</a>
-        <a href="/category/photos/">Guides</a>
-        <a href="/alternatives/">Comparisons</a>
-        <a href="/docs/privacy/">Privacy</a>
-      </div>
-      <a href="/#download">Download for Windows</a>
-    </nav>
-  </header>
+  <header class="site-header"><nav class="container site-nav" aria-label="Primary navigation">
+    <a class="brand" href="/"><img src="/icon-192.png" alt="" width="32" height="32">Galoria AI</a>
+    <div class="nav-links"><a href="https://computoraai.com/">Computora AI</a><a href="/#features">Features</a><a href="/#how-it-works">How It Works</a><a href="/alternatives/">Comparisons</a><a href="/#download">Download</a><a href="/#faq">FAQ</a></div>
+    <a class="mobile-menu" href="/#download" aria-label="Open download section">&#9776;</a>
+    <a class="nav-cta" href="/#download">Download for Windows</a>
+  </nav></header>
   <div class="container breadcrumbs" aria-label="Breadcrumb">
     <a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Galoria vs Cloud AI Photo Organizers</span>
   </div>
@@ -140,7 +136,7 @@
     <section>
       <h2>Local and cloud photo organizers at a glance</h2>
       <p>The better choice depends on privacy expectations and how much control you want before files move.</p>
-      <div style="overflow-x:auto">
+      <div class="table-wrap">
         <table>
           <thead><tr><th>Option</th><th>Best for</th><th>Tradeoff</th></tr></thead>
           <tbody>
@@ -166,6 +162,6 @@
       <a class="button secondary" href="https://computora.gumroad.com/l/computoraai" target="_blank" rel="noopener noreferrer">Get the complete bundle</a>
     </section>
   </main>
-  <footer><div class="container">Galoria AI - Local, preview-first photo organization<div class="footer-links"><a href="/category/photos/">Photo guides</a><a href="/category/screenshots/">Screenshot guides</a><a href="/category/windows/">Windows guides</a><a href="/category/privacy/">Privacy guides</a><a href="/docs/how-it-works/">How Galoria works</a><a href="/docs/supported-file-types/">Supported image types</a><a href="https://computoraai.com/">Computora AI desktop software</a><a href="https://foldoraai.com/">Foldora AI file organizer</a><a href="https://cleanoraai.com/">Cleanora Downloads folder organizer</a></div></div></footer>
+  <footer><div class="container"><div class="footer-inner"><a class="brand" href="/"><img src="/icon-192.png" alt="" width="32" height="32">Galoria AI</a><a class="publisher" href="https://computoraai.com/">By Computora AI</a><div class="footer-links"><a href="/#download">Download</a><a href="/#features">Features</a><a href="/category/photos/">Photo guides</a><a href="/category/screenshots/">Screenshot guides</a><a href="/category/windows/">Windows guides</a><a href="/category/privacy/">Privacy guides</a><a href="/docs/install/">Install</a><a href="/docs/how-it-works/">How it works</a><a href="/docs/supported-file-types/">Supported types</a><a href="/docs/privacy/">Privacy</a><a href="/docs/troubleshooting/">Support</a><a href="https://computoraai.com/">Computora AI</a><a href="https://foldoraai.com/">Foldora AI</a><a href="https://cleanoraai.com/">Cleanora AI</a></div></div><p class="copyright">Copyright 2026 Galoria AI. All rights reserved.</p></div></footer>
 </body>
 </html>
