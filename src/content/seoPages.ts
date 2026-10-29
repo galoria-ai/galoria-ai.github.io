@@ -68,9 +68,9 @@ export const seoPages: SeoPage[] = [
     description:
       "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
     eyebrow: "Local photo organization",
-    updatedAt: "2026-09-18",
+    updatedAt: "2026-10-28",
     directAnswer:
-      "Galoria is an AI photo organizer for Windows 10 and 11. It analyzes supported images locally, combines filename, folder, metadata, and visual signals when available, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Every destination remains visible for review before images move.",
+      "Galoria is a $14.99 one-time AI photo organizer for Windows 10 and 11. It analyzes supported images locally, combines filename, folder, metadata, and visual signals when available, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Every destination remains visible for review before images move. License activation requires internet access; image analysis and planning run locally.",
     problemTitle: "Why photo libraries get hard to browse",
     problem: [
       "Windows photo folders often mix camera imports, screenshots, memes, wallpapers, receipts, scanned documents, design assets, and exports from other apps. A folder can contain useful images without revealing what any of them are for.",
