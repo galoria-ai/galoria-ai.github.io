@@ -10,7 +10,6 @@ import { absoluteUrl } from "@/config/product";
 import { trackEvent } from "@/lib/analytics";
 import { breadcrumbSchema, faqSchema } from "@/lib/seo";
 
-const bundleUrl = "https://computora.gumroad.com/l/computoraai";
 
 const SeoContentPage = () => {
   const location = useLocation();
@@ -224,14 +223,6 @@ const SeoContentPage = () => {
                 className="inline-flex min-h-12 items-center justify-center rounded-lg bg-gradient-primary px-6 py-3 font-semibold text-primary-foreground"
               >
                 Download for Windows
-              </a>
-              <a
-                href={bundleUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-primary/40 px-6 py-3 font-semibold text-foreground transition-colors hover:border-primary"
-              >
-                Get the complete bundle
               </a>
             </div>
           </section>

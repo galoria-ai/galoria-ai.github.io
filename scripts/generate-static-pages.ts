@@ -14,7 +14,6 @@ import { product, site } from "../src/config/product";
 import { getPricingNavigation } from "../src/lib/pricingNavigation";
 
 const SITE_URL = site.url;
-const BUNDLE_URL = "https://computora.gumroad.com/l/computoraai";
 const OUTPUT_DIR = path.resolve("public");
 const SOCIAL_IMAGE_PATH = "/social-preview.png";
 const SOCIAL_IMAGE_URL = `${SITE_URL}${SOCIAL_IMAGE_PATH}`;
@@ -676,7 +675,6 @@ ${renderEvidence(page)}
       <h2>Organize a folder with Galoria</h2>
       <p>Run local AI on Windows, review the proposed structure and filenames, then apply the changes you approve.</p>
       <a class="button" href="${downloadHref}">${downloadLabel}</a>
-      <a class="button secondary" href="${BUNDLE_URL}" target="_blank" rel="noopener noreferrer">Get the complete bundle</a>
     </section>`}
   </main>
   ${renderPageFooter()}

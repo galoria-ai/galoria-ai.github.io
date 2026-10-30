@@ -10,6 +10,21 @@ import { product, site } from "@/config/product";
 afterEach(cleanup);
 
 describe("other Computora products", () => {
+  it("keeps card, PayPal and delivery information available without JavaScript", () => {
+    const markup = new DOMParser().parseFromString(fs.readFileSync("index.html", "utf8"), "text/html");
+    expect(markup.querySelector(`a[href="${product.checkoutUrl}"]`)?.textContent).toContain("card");
+    expect(markup.querySelector(`a[href="${product.paypalUrl}"]`)?.textContent).toContain("PayPal");
+    expect(markup.body.textContent).toContain("The purchase flow provides download and license instructions.");
+  });
+
+  it("keeps the primary product page focused on its own checkout without a bundle upsell", () => {
+    const html = fs.readFileSync("public/ai-photo-organizer/index.html", "utf8");
+    const markup = new DOMParser().parseFromString(html, "text/html");
+    expect(markup.querySelector(`main a[href="${product.checkoutUrl}"]`)).toBeTruthy();
+    expect(markup.querySelector('a[href="https://computora.gumroad.com/l/computoraai"]')).toBeNull();
+    expect(markup.querySelector("main")?.textContent).not.toMatch(/complete bundle/i);
+  });
+
   it("shows only the other two products, once, in the footer", () => {
     render(<Footer />);
     const section = screen.getByRole("region", { name: "Other products by Computora" });
