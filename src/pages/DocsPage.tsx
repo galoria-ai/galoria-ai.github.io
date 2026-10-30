@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PricingRoute from "@/components/PricingRoute";
+import { getPricingNavigation } from "@/lib/pricingNavigation";
 import SeoHead from "@/components/SeoHead";
 
 import { docs } from "@/content/docs";
@@ -101,6 +103,7 @@ const DocsPage = () => {
 
             </article>
 
+            {getPricingNavigation(`docs/${slug}`) ? <PricingRoute route={`docs/${slug}`} trackClick /> : (
             <div className="mt-24 rounded-3xl border border-border bg-card p-10 text-center">
 
               <h2 className="text-3xl font-bold">
@@ -124,6 +127,7 @@ const DocsPage = () => {
               </a>
 
             </div>
+            )}
 
           </div>
         </section>

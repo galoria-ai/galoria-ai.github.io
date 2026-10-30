@@ -11,6 +11,7 @@ import {
   type SeoPage,
 } from "../src/content/seoPages";
 import { product, site } from "../src/config/product";
+import { getPricingNavigation } from "../src/lib/pricingNavigation";
 
 const SITE_URL = site.url;
 const BUNDLE_URL = "https://computora.gumroad.com/l/computoraai";
@@ -423,6 +424,12 @@ function analyticsHead(): string {
     </script>`;
 }
 
+function renderPricingRoute(route: string, prefix = ""): string {
+  const navigation = getPricingNavigation(route);
+  if (!navigation) return "";
+  return `${prefix}<section data-pricing-route aria-label="Galoria pricing" style="border-top:1px solid var(--line);padding-top:24px"><p style="color:var(--muted);margin:0 0 8px">${escapeHtml(navigation.context)}</p><a href="${navigation.href}" style="display:inline-flex;align-items:center;min-height:44px">See pricing</a></section>`;
+}
+
 function pageStyles(): string {
   return `
     :root{color-scheme:dark;--bg:#0d0b12;--card:#191521;--line:#332d3e;--text:#f5f1f7;--muted:#b8aebf;--primary:#bb8ff0;--accent:#ed83bb;--gradient:linear-gradient(135deg,var(--primary),var(--accent))}
@@ -665,12 +672,12 @@ ${renderEvidence(page)}
           .join("")}
       </div>
     </section>
-    <section class="cta">
+    ${renderPricingRoute(page.route) || `<section class="cta">
       <h2>Organize a folder with Galoria</h2>
       <p>Run local AI on Windows, review the proposed structure and filenames, then apply the changes you approve.</p>
       <a class="button" href="${downloadHref}">${downloadLabel}</a>
       <a class="button secondary" href="${BUNDLE_URL}" target="_blank" rel="noopener noreferrer">Get the complete bundle</a>
-    </section>
+    </section>`}
   </main>
   ${renderPageFooter()}
 </body>
@@ -784,7 +791,7 @@ ${analyticsHead()}
     <section><h2>Step-by-step</h2><ol>${steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}<li>Review the proposed result before applying changes to important files.</li></ol></section>
     <section><h2>Example</h2><div class="card"><p>Start with a small representative folder, confirm that the resulting names and locations match your workflow, and only then process a larger collection.</p></div></section>
     <section><h2>Frequently asked questions</h2>${faqs.map((faq) => `<article class="faq"><h3>${escapeHtml(faq.question)}</h3><p>${escapeHtml(faq.answer)}</p></article>`).join("")}</section>
-    <section><h2>Related resources</h2><div class="related"><a href="/ai-photo-organizer/">AI Photo Organizer</a><a href="/photo-organizer-windows/">Photo Organizer for Windows</a><a href="/features/offline-processing/">Offline Processing</a><a href="/docs/privacy/">Galoria Privacy</a></div></section>
+    <section><h2>Related resources</h2><div class="related"><a href="/ai-photo-organizer/">AI Photo Organizer</a><a href="/photo-organizer-windows/">Photo Organizer for Windows</a><a href="/features/offline-processing/">Offline Processing</a><a href="/docs/privacy/">Galoria Privacy</a></div></section>${renderPricingRoute(page.route, "\n    ")}
   </main>
   ${renderPageFooter()}
 </body>
@@ -841,7 +848,7 @@ ${analyticsHead()}
         (page) => `<article class="card"><h3><a href="/${page.route}/">${escapeHtml(page.h1)}</a></h3><p>${escapeHtml(page.description)}</p></article>`,
       )
       .join("")}</div></section>
-    <section><h2>How to choose a guide</h2><ol><li>Start with the folder or file type causing the most repeated work.</li><li>Use a persona guide when retention, privacy, or project structure matters.</li><li>Read a comparison page before adopting a new automation tool.</li><li>Test every workflow on a small backed-up folder.</li></ol></section>
+    <section><h2>How to choose a guide</h2><ol><li>Start with the folder or file type causing the most repeated work.</li><li>Use a persona guide when retention, privacy, or project structure matters.</li><li>Read a comparison page before adopting a new automation tool.</li><li>Test every workflow on a small backed-up folder.</li></ol></section>${renderPricingRoute(route, "\n    ")}
   </main>
   ${renderPageFooter()}
 </body>

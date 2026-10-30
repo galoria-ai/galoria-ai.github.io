@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PricingRoute from "@/components/PricingRoute";
 import SeoHead from "@/components/SeoHead";
 
 import { categories } from "@/content/categories";
@@ -87,6 +88,7 @@ const CategoryPage = () => {
                 ))}
 
             </div>
+            <PricingRoute route={`category/${slug}`} />
 
           </div>
         </section>

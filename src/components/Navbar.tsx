@@ -28,7 +28,7 @@ const Navbar = () => {
           <Menu className="h-5 w-5" />
         </a>
         <a
-          href="#download"
+          href="/#download"
           onClick={() => {
             trackEvent("platform_download_cta_clicked", { platform: "windows", location: "header" });
           }}
