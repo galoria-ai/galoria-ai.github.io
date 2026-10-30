@@ -1,10 +1,12 @@
 import { site } from "@/config/product";
 import { trackEvent } from "@/lib/analytics";
+import RelatedProducts from "@/components/RelatedProducts";
 
 const Footer = () => {
   return (
     <footer className="border-t border-border py-12">
       <div className="container">
+        <RelatedProducts />
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <a href="/" className="flex items-center gap-2 text-lg font-bold text-foreground">
             <img src="/icon-192.png" alt="" className="h-8 w-8 object-contain" />
@@ -39,12 +41,6 @@ const Footer = () => {
             </a>
             <a href="https://computoraai.com/" className="transition-colors hover:text-foreground">
               Computora AI desktop software
-            </a>
-            <a href="https://foldoraai.com/" className="transition-colors hover:text-foreground">
-              Foldora AI file organizer
-            </a>
-            <a href="https://cleanoraai.com/" className="transition-colors hover:text-foreground">
-              Cleanora Downloads folder organizer
             </a>
           </nav>
 
