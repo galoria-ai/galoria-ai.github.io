@@ -2,6 +2,7 @@ import { Check, CreditCard, ShieldCheck } from "lucide-react";
 
 import { product, site } from "@/config/product";
 import { trackEvent } from "@/lib/analytics";
+import BundleOffer from "@/components/BundleOffer";
 
 const included = [
   "Windows-only desktop app",
@@ -45,6 +46,7 @@ const PricingSection = () => {
         </div>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid content-start gap-6">
           <div className="rounded-xl border border-primary/30 bg-card p-8">
             <div className="text-sm font-semibold uppercase tracking-wide text-primary">
               {product.price.label}
@@ -93,6 +95,9 @@ const PricingSection = () => {
                 Galoria analyzes supported images locally after installation. License activation is the separate network-dependent step.
               </p>
             </div>
+          </div>
+
+            <BundleOffer />
           </div>
 
           <div className="grid gap-6">
