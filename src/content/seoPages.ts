@@ -63,7 +63,7 @@ export const seoPages: SeoPage[] = [
     route: "ai-photo-organizer",
     kind: "landing",
     topic: "photos",
-    title: "AI Photo Organizer for Windows",
+    title: "Local AI Photo Organizer for Windows",
     h1: "AI Photo Organizer for Windows",
     description:
       "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
