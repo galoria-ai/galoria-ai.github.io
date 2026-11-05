@@ -15,7 +15,9 @@ export function getPricingNavigation(path: string) {
 
   const context = route === "photo-organizer-windows"
     ? "For local photo sorting with destination previews and numbered collision handling on Windows 10 and 11, review Galoria's one-time purchase price and license details before buying."
-    : route.startsWith("category/")
+    : route === "automatic-photo-organizer"
+      ? "For reviewed moves into ordinary folders on Windows 10 and 11, check Galoria's individual one-time purchase price and license terms before buying."
+      : route.startsWith("category/")
     ? "For the photo topics covered here, Galoria offers local image organization with reviewed file moves on Windows 10 and 11."
     : route.startsWith("docs/")
       ? "Galoria runs on Windows 10 and 11 and lets you preview photo destinations before applying moves."

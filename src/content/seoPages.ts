@@ -375,57 +375,71 @@ export const seoPages: SeoPage[] = [
     title: "Automatic Photo Organizer for Windows",
     h1: "Automatic Photo Organizer",
     description:
-      "Automatically organize photo folders on Windows with local AI, previewed folder moves, and safer cleanup for mixed image libraries.",
+      "Organize photos into ordinary Windows folders with Galoria. Review physical file moves, understand what happens to originals, and compare folders with catalogs.",
     eyebrow: "Automatic sorting",
-    updatedAt,
+    updatedAt: "2026-11-05",
     directAnswer:
-      "Automatic photo organization is most useful when the same folders keep filling with mixed image types. Galoria proposes a structure locally and lets you review it before anything changes.",
-    problemTitle: "Auto-sorting should still leave room for review",
+      "Galoria organizes approved images into ordinary folders on Windows 10 and 11. It physically moves selected files under Image Organizer Output inside the folder you chose. You can browse the result in Windows File Explorer or open it in another image application without using a Galoria library. This changes the source paths: it is not a copy-only import or a backup. Review the destinations and keep a separate backup before applying changes.",
+    problemTitle: "Choose physical folders or a catalog deliberately",
     problem: [
-      "Automatic sorting is helpful because image libraries grow quickly. It becomes risky when the tool moves files without showing you what the new structure will look like.",
-      "A good photo organizer should reduce repeated cleanup, but it should not assume every image belongs in the same permanent folder. Review is what keeps the result usable later.",
+      "Ordinary folders suit people who want the organization visible in Windows and usable with other applications. Galoria moves individual images, not whole source folders, and does not reproduce the original folder hierarchy. Its normal workflow scans subfolders too, so an approved nested image can move out of its old project folder and leave an empty directory. Exclude images whose current paths must stay unchanged.",
+      "Galoria normally retains each image's filename. This workflow does not generate a new descriptive name for every photo; a destination-name conflict may require a numbered suffix. Unsupported files stay outside the image move plan. Apply rejects images marked unreadable, and recognized HEIC/HEIF files still depend on local decoder support.",
+      "Browsing the resulting folders needs no Galoria catalog, but the application does keep local metadata-cache and move-history files. History supports the app's recovery workflow; it is not a second copy of every photo. Keep it if you intend to use undo, which requires a valid license, and retain an independent backup.",
+      "Choose a catalog or library application if your main task is browsing, ratings, tags, albums, or keeping existing image paths intact. Check whether that particular tool indexes images in place or copies them into its own library. Galoria is a selected-folder organizer, not an in-place photo catalog or a background folder watcher. This guide is published by Computora AI, Galoria's publisher.",
     ],
     steps: [
-      "Choose a folder that keeps collecting new images.",
-      "Let Galoria group the photos using local analysis.",
-      "Review the proposed destinations and category names.",
-      "Apply the result once the structure feels easy to browse.",
+      "Back up the images separately, then choose one small Windows image folder. The default output is Image Organizer Output inside that folder.",
+      "Generate the local plan and inspect the complete source and destination paths. Review category assignments and destination folder names; do not assume the old hierarchy will be retained.",
+      "Exclude images that must remain in their current location and review any skipped or unreadable items. Nothing moves until you approve the plan; apply requires a valid license.",
+      "Apply the reviewed selection, check the completion result for errors, then browse Image Organizer Output in Windows File Explorer. Keep the local move history for eligible undo and keep your separate backup.",
     ],
     examples: [
       {
-        title: "Screenshot spillover",
-        before: "Work screenshots, chat captures, and quick reference photos in one folder",
-        after: "Screenshots/Work, Screenshots/Reference, and Screenshots/Inbox",
+        title: "Illustrative reviewed plan: ordinary folders, not a library import",
+        before: "Inbox contains camera.jpg, capture.png, and notes.pdf. In Preview, the user reviews Photos and Screenshots as the destination folders for the two images.",
+        after: "Approved moves place camera.jpg in Image Organizer Output / Photos and capture.png in Image Organizer Output / Screenshots. The original image paths no longer contain those moved files; notes.pdf stays in Inbox. This example follows the move and exclusion behavior in the code; it is not a measured classification result or a promise that those category suggestions are automatic.",
       },
       {
-        title: "Camera imports",
-        before: "Months of phone imports mixed with downloaded graphics",
-        after: "Photos/Camera, Photos/Downloads, and Photos/Archive",
+        title: "When a catalog is the better choice",
+        before: "Images are already linked from documents or design projects, and the current source paths must stay unchanged.",
+        after: "Choose a catalog that explicitly supports indexing files in place, or leave those images excluded from a Galoria move plan. Verify the selected product's import behavior before relying on it.",
       },
     ],
     comparison: {
-      title: "Automatic sorting options",
+      title: "Folder organizer, catalog, or manual filing?",
       summary:
-        "Choose the approach that matches how often the folder changes and how much control you want.",
+        "Decide whether you want files physically relocated or a way to browse and label them. Catalog storage behavior varies by product.",
       rows: [
         {
           option: "Galoria",
-          bestFor: "Automatic photo cleanup with local review",
-          tradeoff: "Review step adds time up front",
+          bestFor: "Reviewed moves into ordinary Windows category folders",
+          tradeoff: "Changes source paths; local cache and history still exist; not a backup",
         },
         {
-          option: "Manual cleanup",
-          bestFor: "Tiny folders with rare imports",
-          tradeoff: "Repeated work is easy to postpone",
+          option: "Catalog or library application",
+          bestFor: "Browsing, ratings, tags, or album-based organization",
+          tradeoff: "Verify whether it indexes files in place or imports copies; albums need not correspond to disk folders",
         },
         {
-          option: "Cloud AI sorting",
-          bestFor: "Hosted services already used by a team",
-          tradeoff: "More privacy and upload questions",
+          option: "Manual folder filing",
+          bestFor: "Small collections where every destination must be chosen individually",
+          tradeoff: "Moves and copies must be managed manually, including their effect on existing references",
         },
       ],
     },
     faqs: [
+      {
+        question: "Does Galoria move photos or import copies into a library?",
+        answer: "The approved organization workflow moves selected images into category folders under the output root. It does not leave a separate source copy as a backup. Original filenames are normally retained, apart from destination-conflict adjustments. Use a backed-up folder and review the actual paths before approving.",
+      },
+      {
+        question: "Can I browse the organized photos without Galoria?",
+        answer: "Yes. The output contains ordinary image files and folders, so you can browse it with Windows File Explorer or another application that supports the image format. Galoria's metadata cache and move history are separate local application records; they are not required simply to browse those files. This does not mean the app stores no persistent data.",
+      },
+      {
+        question: "What happens to existing folders and unsupported files?",
+        answer: "Approved images can move out of existing subfolders into the reviewed category layout; the old hierarchy is not preserved as an archive. Excluded images and files outside the supported-image scan remain in place. Apply rejects images marked corrupt or unreadable. Check the supported-format documentation and preview before changing a mixed folder.",
+      },
       {
         question: "Can Galoria sort thousands of images?",
         answer:
@@ -447,6 +461,8 @@ export const seoPages: SeoPage[] = [
       "ai-photo-organizer",
       "offline-ai-photo-organizer",
       "photo-organizer-vs-manual",
+      "docs/how-it-works",
+      "docs/supported-file-types",
     ],
   },
   {
