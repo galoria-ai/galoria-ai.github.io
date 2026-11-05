@@ -13,7 +13,9 @@ export function getPricingNavigation(path: string) {
   if (page && (page.indexable === false || (page.canonicalUrl && !page.canonicalUrl.startsWith(site.url + "/")))) return null;
   if (!page && !/^(docs|category)\//.test(route)) return null;
 
-  const context = route.startsWith("category/")
+  const context = route === "photo-organizer-windows"
+    ? "For local photo sorting with destination previews and numbered collision handling on Windows 10 and 11, review Galoria's one-time purchase price and license details before buying."
+    : route.startsWith("category/")
     ? "For the photo topics covered here, Galoria offers local image organization with reviewed file moves on Windows 10 and 11."
     : route.startsWith("docs/")
       ? "Galoria runs on Windows 10 and 11 and lets you preview photo destinations before applying moves."

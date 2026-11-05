@@ -196,13 +196,15 @@ export const seoPages: SeoPage[] = [
     description:
       "Sort photo folders on Windows with local AI, straightforward preview steps, and destinations that help you browse mixed image libraries later.",
     eyebrow: "Windows photo workflow",
-    updatedAt,
+    updatedAt: "2026-11-05",
     directAnswer:
-      "A Windows photo organizer should reduce repetitive sorting work without hiding the result. Galoria keeps the analysis local, proposes folders for review, and lets you keep control before files move.",
+      "If two photos would land at the same path, Galoria plans an available numbered filename rather than intentionally replacing the existing image. It checks destinations again when applying moves, so a new conflict can change the final filename. On Windows 10 and 11, you can review the proposed destinations before approving the local organization plan. Keep a separate backup before combining important photo folders.",
     problemTitle: "Windows image folders need a better structure than one giant pile",
     problem: [
       "A single folder can hold camera imports, screenshots, product images, memes, and scans. That is fine for storage but not for retrieval when you need one specific image later.",
       "Date-only folder structures are easy to create and difficult to browse. A useful layout usually combines purpose, subject, and review control instead of relying on timestamps alone.",
+      "Camera imports can reuse names such as IMG_0001.jpg. The name alone cannot tell you whether two files contain the same picture. Galoria reserves destination names across the plan and chooses an available suffix when a path is already occupied. Review both the images and their complete destination paths before applying moves, and avoid editing the source or destination folders during the operation.",
+      "This guide is published by Computora AI, the publisher of Galoria. The behavior described here concerns local image-folder organization, not phone importing, video management, or a guarantee that every file operation will succeed.",
     ],
     steps: [
       "Start with one folder that mixes several image types.",
@@ -220,6 +222,11 @@ export const seoPages: SeoPage[] = [
         title: "Small business assets",
         before: "Product shots, banner drafts, and social graphics mixed together",
         after: "Products, Marketing, and Social",
+      },
+      {
+        title: "Illustrative filename collision",
+        before: "Two different photos named IMG_0001.jpg would share one destination folder",
+        after: "Available destinations can be IMG_0001.jpg and IMG_0001 (1).jpg; existing files may require a different suffix",
       },
     ],
     comparison: {
@@ -260,12 +267,24 @@ export const seoPages: SeoPage[] = [
         answer:
           "Yes. Start with a folder of mixed imports and review the proposed structure before applying changes.",
       },
+      {
+        question: "What happens when photos have the same filename?",
+        answer:
+          "Galoria checks whether the intended destination already exists or is reserved by another planned move. If so, it chooses an available numbered name such as IMG_0001 (1).jpg. It checks again before moving each file. A destination created after Preview may therefore change the final name; the local move history records the actual destination. Keep a backup and review completion errors instead of assuming every selected photo moved.",
+      },
+      {
+        question: "Does keeping same-named photos also remove duplicates?",
+        answer:
+          "No. Filename conflicts and identical image contents are different problems. Galoria can flag candidate exact copies after full-file SHA-256 verification, but it does not automatically delete them. That check is not visual similarity detection: edited versions, resized images and burst shots are not necessarily exact copies. Review the files you keep or exclude; do not buy Galoria as an automatic near-duplicate photo cleaner.",
+      },
     ],
     related: [
       "ai-photo-organizer",
       "organize-screenshots-automatically",
       "offline-ai-photo-organizer",
       "photo-organizer-vs-cloud",
+      "docs/how-it-works",
+      "docs/supported-file-types",
     ],
   },
   {
