@@ -37,7 +37,7 @@ export function softwareApplicationSchema() {
     "@id": `${site.url}/#software`,
     name: product.productName ?? site.productName,
     url: `${site.url}/`,
-    applicationCategory: "FileManagementApplication",
+    applicationCategory: "UtilitiesApplication",
     operatingSystem: product.platforms.supported.join(", "),
     description:
       "Galoria helps Windows users scan cluttered image folders locally, review exact destinations, and apply approved file moves with a local audit trail.",

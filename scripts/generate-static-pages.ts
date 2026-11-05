@@ -347,7 +347,7 @@ function schemaForPage(page: SeoPage): object {
               "@id": `${SITE_URL}/#software`,
               name: product.productName,
               url: `${SITE_URL}/`,
-              applicationCategory: "FileManagementApplication",
+              applicationCategory: "UtilitiesApplication",
               operatingSystem: product.platforms.supported.join(", "),
               description:
                 "Galoria categorizes messy photo folders with local planning and a preview step before image moves are applied.",
