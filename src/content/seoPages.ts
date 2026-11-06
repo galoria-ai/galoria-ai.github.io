@@ -70,133 +70,141 @@ const updatedAt = "2026-09-08";
 
 export const seoPages: SeoPage[] = [
   {
-    route: "ai-photo-organizer",
-    kind: "landing",
-    topic: "photos",
-    title: "Local AI Photo Organizer for Windows",
-    h1: "AI Photo Organizer for Windows",
-    description:
-      "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
-    eyebrow: "Local photo organization",
-    updatedAt: "2026-10-28",
-    directAnswer:
-      "Galoria is a $14.99 one-time AI photo organizer for Windows 10 and 11. It organizes JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF files. Local analysis combines filenames, folder context, metadata, dimensions, and optional visual captions from the packaged model, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Every destination remains editable before images move. Download, license activation, and periodic license validation require internet access; the packaged model and organization workflow run locally without a separate model download.",
-    problemTitle: "Why photo libraries get hard to browse",
-    problem: [
-      "Windows photo folders often mix camera imports, screenshots, memes, wallpapers, receipts, scanned documents, design assets, and exports from other apps. A folder can contain useful images without revealing what any of them are for.",
-      "Manual sorting is slow when filenames do not explain the image. You usually need a combination of folder context, image type, and a review step to keep the result usable later.",
-    ],
-    steps: [
-      "Choose one mixed image folder, such as Downloads or Pictures.",
-      "Let Galoria inspect filenames and local image signals on your PC.",
-      "Review destinations and conflicts, then reassign, exclude, or rename folders where needed.",
-      "Apply only the organization plan that matches how you browse images later.",
-    ],
-    examples: [
-      {
-        title: "Mixed downloads",
-        before: "IMG_4829.jpg, Screenshot 2026-08-01.png, meme_004.webp, receipt.jpg",
-        after: "Photos/Camera, Screenshots/Work, Memes, and Receipts",
-      },
-      {
-        title: "Creative project",
-        before: "logo draft.png, reference 1.jpg, color palette.webp",
-        after: "Design/Logos, Design/References, Design/Palettes",
-      },
-    ],
-    comparison: {
-      title: "AI sorting, manual sorting, or cloud AI?",
-      summary:
-        "The best choice depends on privacy expectations, the size of the library, and how much review you want.",
-      rows: [
-        {
-          option: "Galoria",
-          bestFor: "Local Windows photo sorting with preview-first control",
-          tradeoff: "Requires reviewing the proposed plan",
-        },
-        {
-          option: "Manual sorting",
-          bestFor: "Small image folders with only a few files",
-          tradeoff: "Becomes repetitive as the library grows",
-        },
-        {
-          option: "Cloud AI organizers",
-          bestFor: "Hosted workflows where image upload is acceptable",
-          tradeoff: "Files may leave your device during analysis",
-        },
-      ],
+  "route": "ai-photo-organizer",
+  "kind": "landing",
+  "topic": "photos",
+  "title": "Local AI Photo Organizer for Windows",
+  "h1": "AI Photo Organizer for Windows",
+  "description": "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
+  "eyebrow": "Local photo organization",
+  "updatedAt": "2026-10-28",
+  "directAnswer": "Galoria is a $14.99 one-time AI photo organizer for Windows 10 and 11. It organizes JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF files. Local analysis combines filenames, folder context, metadata, dimensions, and optional visual captions from the packaged model, then proposes categories such as Photos, Screenshots, Receipts, Documents, Design Assets, and Memes. Review each proposed destination and choose Move or Keep before images move. Download, license activation, and periodic license validation require internet access; the packaged model and organization workflow run locally without a separate model download.",
+  "problemTitle": "Why photo libraries get hard to browse",
+  "problem": [
+    "Windows photo folders often mix camera imports, screenshots, memes, wallpapers, receipts, scanned documents, design assets, and exports from other apps. A folder can contain useful images without revealing what any of them are for.",
+    "Manual sorting is slow when filenames do not explain the image. You usually need a combination of folder context, image type, and a review step to keep the result usable later."
+  ],
+  "steps": [
+    "Choose one mixed image folder, such as Downloads or Pictures.",
+    "Let Galoria inspect filenames and local image signals on your PC.",
+    "Review destinations and conflicts, then exclude unsuitable suggestions and handle them manually.",
+    "Apply only the organization plan that matches how you browse images later."
+  ],
+  "examples": [
+    {
+      "title": "Mixed downloads",
+      "before": "IMG_4829.jpg, Screenshot 2026-08-01.png, meme_004.webp, receipt.jpg",
+      "after": "Photos/Camera, Screenshots/Work, Memes, and Receipts"
     },
-    faqs: [
+    {
+      "title": "Creative project",
+      "before": "logo draft.png, reference 1.jpg, color palette.webp",
+      "after": "Design/Logos, Design/References, Design/Palettes"
+    }
+  ],
+  "comparison": {
+    "title": "AI sorting, manual sorting, or cloud AI?",
+    "summary": "The best choice depends on privacy expectations, the size of the library, and how much review you want.",
+    "rows": [
       {
-        question: "Does Galoria upload my photos?",
-        answer:
-          "No. The workflow is designed to analyze supported image files locally on Windows before any move is applied.",
+        "option": "Galoria",
+        "bestFor": "Local Windows photo sorting with preview-first control",
+        "tradeoff": "Requires reviewing the proposed plan"
       },
       {
-        question: "Can I review the plan first?",
-        answer:
-          "Yes. Galoria is built around a preview step so you can inspect destinations and conflicts before changes are applied.",
+        "option": "Manual sorting",
+        "bestFor": "Small image folders with only a few files",
+        "tradeoff": "Becomes repetitive as the library grows"
       },
       {
-        question: "What kinds of images work best?",
-        answer:
-          "Mixed folders with screenshots, camera photos, memes, wallpapers, design assets, and scanned documents are the best fit.",
-      },
-      {
-        question: "Which image formats can Galoria organize?",
-        answer:
-          "Galoria supports JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF image files. The information available for analysis varies by format, so review the proposed destination for each file before applying a move.",
-      },
-      {
-        question: "Does Galoria download an AI model while organizing photos?",
-        answer:
-          "No. The installer packages the local image model, and Galoria loads it from the installed application without a separate model download. Internet access is still required to download Galoria, activate a license, and periodically validate that license.",
-      },
-      {
-        question: "What are the limits of Galoria's image analysis?",
-        answer:
-          "Galoria uses available filename, folder, metadata, dimension, and optional local caption signals. Visual captions are reserved for uncertain items and bounded per scan. Signals vary by format and ambiguous images may still be categorized incorrectly, so review, reassign, or exclude them before applying the plan.",
-      },
-      {
-        question: "Can Galoria undo a photo organization run?",
-        answer:
-          "Galoria records applied moves in local history and can undo the latest organization operation. Undo requires a valid license and restores files from that recorded operation; keep a separate backup before organizing important libraries.",
-      },
-    ],
-    evidence: {
-      title: "Real interface captures and tested classification cases",
-      summary:
-        "The captures below show Galoria's local picture-folder workflow and a resulting Windows folder structure. On September 6, 2026, all 26 backend tests passed, including 12 representative filename, metadata, and caption classification cases plus uncertainty and false-positive checks.",
-      facts: [
-        { label: "Backend regression suite", value: "26 of 26 tests passed" },
-        { label: "Representative category fixtures", value: "12 of 12 passed" },
-        { label: "Test-suite runtime", value: "1.986 seconds" },
-        { label: "Test computer", value: "Windows 11 Pro, Core i5-8350U, 8 GB RAM" },
-      ],
-      media: [
-        {
-          kind: "image",
-          src: "/evidence/galoria-folder-step.png",
-          alt: "Galoria AI photo organizer asking the user to choose a local picture folder",
-          caption: "Galoria begins with a local picture folder and states that nothing moves until the plan is approved.",
-        },
-        {
-          kind: "image",
-          src: "/evidence/galoria-output.png",
-          alt: "Windows File Explorer showing folders produced by a Galoria image organization run",
-          caption: "A local demonstration output with Design Assets, Documents, Miscellaneous, Photos, and Screenshots folders.",
-        },
-      ],
-      note:
-        "The 12 fixtures are curated regression cases, not a universal accuracy percentage. Test-suite runtime is also not end-to-end photo-library speed; image decoding, optional visual analysis, storage, and hardware affect real runs.",
-    },
-    related: [
-      "blog/ai-photo-organizer-classification-test",
-      "organize-photos-with-ai",
-      "offline-ai-photo-organizer",
-      "automatic-photo-organizer",
-    ],
+        "option": "Cloud AI organizers",
+        "bestFor": "Hosted workflows where image upload is acceptable",
+        "tradeoff": "Files may leave your device during analysis"
+      }
+    ]
   },
+  "faqs": [
+    {
+      "question": "Does Galoria upload my photos?",
+      "answer": "No. The workflow is designed to analyze supported image files locally on Windows before any move is applied."
+    },
+    {
+      "question": "Can I review the plan first?",
+      "answer": "Yes. Galoria is built around a preview step so you can inspect destinations and conflicts before changes are applied."
+    },
+    {
+      "question": "What kinds of images work best?",
+      "answer": "Mixed folders with screenshots, camera photos, memes, wallpapers, design assets, and scanned documents are the best fit."
+    },
+    {
+      "question": "Which image formats can Galoria organize?",
+      "answer": "Galoria supports JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF image files. The information available for analysis varies by format, so review the proposed destination for each file before applying a move."
+    },
+    {
+      "question": "Does Galoria download an AI model while organizing photos?",
+      "answer": "No. The installer packages the local image model, and Galoria loads it from the installed application without a separate model download. Internet access is still required to download Galoria, activate a license, and periodically validate that license."
+    },
+    {
+      "question": "What are the limits of Galoria's image analysis?",
+      "answer": "Galoria uses available filename, folder, metadata, dimension, and optional local caption signals. Visual captions are reserved for uncertain items and bounded per scan. Signals vary by format and ambiguous images may still be categorized incorrectly, so review, reassign, or exclude them before applying the plan."
+    },
+    {
+      "question": "Can Galoria undo a photo organization run?",
+      "answer": "Galoria records applied moves in local history and can undo the latest organization operation. Undo requires a valid license and restores files from that recorded operation; keep a separate backup before organizing important libraries."
+    }
+  ],
+  "evidence": {
+    "title": "Real interface captures and tested classification cases",
+    "summary": "The captures below show Galoria's local picture-folder workflow and a resulting Windows folder structure. On September 6, 2026, all 26 backend tests passed, including 12 representative filename, metadata, and caption classification cases plus uncertainty and false-positive checks.",
+    "facts": [
+      {
+        "label": "Backend regression suite",
+        "value": "26 of 26 tests passed"
+      },
+      {
+        "label": "Representative category fixtures",
+        "value": "12 of 12 passed"
+      },
+      {
+        "label": "Test-suite runtime",
+        "value": "1.986 seconds"
+      },
+      {
+        "label": "Test computer",
+        "value": "Windows 11 Pro, Core i5-8350U, 8 GB RAM"
+      }
+    ],
+    "media": [
+      {
+        "kind": "image",
+        "src": "/evidence/galoria-folder-step.png",
+        "alt": "Galoria AI photo organizer asking the user to choose a local picture folder",
+        "caption": "Galoria begins with a local picture folder and states that nothing moves until the plan is approved."
+      },
+      {
+        "kind": "image",
+        "src": "/evidence/galoria-output.png",
+        "alt": "Windows File Explorer showing folders produced by a Galoria image organization run",
+        "caption": "A local demonstration output with Design Assets, Documents, Miscellaneous, Photos, and Screenshots folders."
+      }
+    ],
+    "note": "The 12 fixtures are curated regression cases, not a universal accuracy percentage. Test-suite runtime is also not end-to-end photo-library speed; image decoding, optional visual analysis, storage, and hardware affect real runs."
+  },
+  "related": [
+    "blog/ai-photo-organizer-classification-test",
+    "organize-photos-with-ai",
+    "offline-ai-photo-organizer",
+    "automatic-photo-organizer"
+  ],
+  "contextualLinks": [
+    {
+      "before": "For screenshot-heavy folders, choose between ",
+      "anchor": "reviewed image moves and OCR text extraction",
+      "href": "/organize-screenshots-automatically/",
+      "after": "."
+    }
+  ]
+},
   {
     route: "photo-organizer-windows",
     kind: "landing",
@@ -482,167 +490,221 @@ export const seoPages: SeoPage[] = [
     ],
   },
   {
-    route: "automatic-photo-sorting",
-    kind: "landing",
-    topic: "screenshots",
-    title: "Automatic Photo Sorting for Screenshots and Exports",
-    h1: "Automatic Photo Sorting",
-    description:
-      "Sort screenshots, exports, and mixed image folders automatically on Windows with local AI and a preview before any move happens.",
-    eyebrow: "Screenshot workflow",
-    updatedAt,
-    directAnswer:
-      "Automatic photo sorting is best when screenshots, exports, and temporary captures keep piling up. Galoria groups the folder locally and lets you review the result before applying it.",
-    problemTitle: "Screenshots are fast to capture and slow to clean up",
-    problem: [
-      "Screenshots tend to accumulate because they are easy to take and hard to sort later. Without a system, the folder becomes a long list of generic filenames and forgotten captures.",
-      "Many screenshot folders also include error messages, chat snippets, design references, and one-off captures that should not live in the same final folder.",
-    ],
-    steps: [
-      "Pick the screenshot folder that fills up fastest.",
-      "Let Galoria group temporary captures from keepers.",
-      "Review the proposed project or subject folders.",
-      "Apply the layout and keep the temporary folder small.",
-    ],
-    examples: [
-      {
-        title: "Work captures",
-        before: "Error messages, meeting snippets, and product notes in one screenshot folder",
-        after: "Screenshots/Work, Screenshots/Reference, Screenshots/Errors",
-      },
-      {
-        title: "Design references",
-        before: "Color examples, layout ideas, and saved inspiration shots",
-        after: "Design/References, Design/Color, Design/Layout",
-      },
-    ],
-    comparison: {
-      title: "Screenshot sorting approaches",
-      summary:
-        "Choose a workflow based on how temporary the captures are and whether you need a review step.",
-      rows: [
-        {
-          option: "Galoria",
-          bestFor: "Local screenshot sorting with preview and undo",
-          tradeoff: "Requires you to review the plan",
-        },
-        {
-          option: "Manual cleanup",
-          bestFor: "A few screenshots every now and then",
-          tradeoff: "Quickly becomes repetitive",
-        },
-        {
-          option: "Cloud tools",
-          bestFor: "Hosted image workflows already in use",
-          tradeoff: "Less control over where the files go",
-        },
-      ],
+  "route": "automatic-photo-sorting",
+  "kind": "landing",
+  "topic": "screenshots",
+  "title": "Automatic Photo Sorting for Screenshots and Exports",
+  "h1": "Automatic Photo Sorting",
+  "description": "Sort screenshots, exports, and mixed image folders automatically on Windows with local AI and a preview before any move happens.",
+  "eyebrow": "Screenshot workflow",
+  "updatedAt": "2026-09-08",
+  "directAnswer": "Automatic photo sorting is best when screenshots, exports, and temporary captures keep piling up. Galoria groups the folder locally and lets you review the result before applying it.",
+  "problemTitle": "Screenshots are fast to capture and slow to clean up",
+  "problem": [
+    "Screenshots tend to accumulate because they are easy to take and hard to sort later. Without a system, the folder becomes a long list of generic filenames and forgotten captures.",
+    "Many screenshot folders also include error messages, chat snippets, design references, and one-off captures that should not live in the same final folder."
+  ],
+  "steps": [
+    "Pick the screenshot folder that fills up fastest.",
+    "Let Galoria group temporary captures from keepers.",
+    "Review the proposed project or subject folders.",
+    "Apply the layout and keep the temporary folder small."
+  ],
+  "examples": [
+    {
+      "title": "Work captures",
+      "before": "Error messages, meeting snippets, and product notes in one screenshot folder",
+      "after": "Screenshots/Work, Screenshots/Reference, Screenshots/Errors"
     },
-    faqs: [
+    {
+      "title": "Design references",
+      "before": "Color examples, layout ideas, and saved inspiration shots",
+      "after": "Design/References, Design/Color, Design/Layout"
+    }
+  ],
+  "comparison": {
+    "title": "Screenshot sorting approaches",
+    "summary": "Choose a workflow based on how temporary the captures are and whether you need a review step.",
+    "rows": [
       {
-        question: "Should screenshots be deleted or organized?",
-        answer:
-          "Usually both. Delete truly temporary captures, then organize the screenshots worth keeping into subject folders.",
+        "option": "Galoria",
+        "bestFor": "Local screenshot sorting with preview and undo",
+        "tradeoff": "Requires you to review the plan"
       },
       {
-        question: "Can I keep screenshots separate from photos?",
-        answer:
-          "Yes. That is often the easiest way to keep a large image library browsable.",
+        "option": "Manual cleanup",
+        "bestFor": "A few screenshots every now and then",
+        "tradeoff": "Quickly becomes repetitive"
       },
       {
-        question: "Can Galoria handle mixed screenshot exports?",
-        answer:
-          "Yes. Mixed folders are the main use case, especially when the images are already on your Windows PC.",
-      },
-    ],
-    related: [
-      "ai-photo-organizer",
-      "organize-photos-with-ai",
-      "photo-organizer-windows",
-      "offline-ai-photo-organizer",
-    ],
+        "option": "Cloud tools",
+        "bestFor": "Hosted image workflows already in use",
+        "tradeoff": "Less control over where the files go"
+      }
+    ]
   },
+  "faqs": [
+    {
+      "question": "Should screenshots be deleted or organized?",
+      "answer": "Usually both. Delete truly temporary captures, then organize the screenshots worth keeping into subject folders."
+    },
+    {
+      "question": "Can I keep screenshots separate from photos?",
+      "answer": "Yes. That is often the easiest way to keep a large image library browsable."
+    },
+    {
+      "question": "Can Galoria handle mixed screenshot exports?",
+      "answer": "Yes. Mixed folders are the main use case, especially when the images are already on your Windows PC."
+    }
+  ],
+  "related": [
+    "ai-photo-organizer",
+    "organize-photos-with-ai",
+    "photo-organizer-windows",
+    "offline-ai-photo-organizer"
+  ],
+  "contextualLinks": [
+    {
+      "before": "For screenshot-heavy folders, choose between ",
+      "anchor": "reviewed image moves and OCR text extraction",
+      "href": "/organize-screenshots-automatically/",
+      "after": "."
+    }
+  ]
+},
   {
-    route: "organize-screenshots-automatically",
-    kind: "guide",
-    topic: "screenshots",
-    title: "How to Organize Screenshots Automatically on Windows",
-    h1: "Organize Screenshots Automatically",
-    description:
-      "Organize screenshots automatically on Windows with local AI, preview-first review, and folders that separate quick captures from keepers.",
-    eyebrow: "Screenshot guide",
-    updatedAt,
-    directAnswer:
-      "To organize screenshots automatically, choose one crowded screenshot folder, let Galoria group the images locally, and review the plan before applying it.",
-    problemTitle: "Screenshot folders fill up faster than most image folders",
-    problem: [
-      "Screenshots are easy to capture and easy to forget. Without a review step, they become a long list of generic filenames that are difficult to scan later.",
-      "The best screenshot workflow separates temporary captures from reference images, errors, and keepers so the folder stays browsable as it grows.",
-    ],
-    steps: [
-      "Pick the screenshot folder that grows fastest on your Windows PC.",
-      "Let Galoria analyze the screenshots locally and group similar captures.",
-      "Review the proposed folder names and keep only the groups you want.",
-      "Apply the layout and keep the temporary folder trimmed over time.",
-    ],
-    examples: [
-      {
-        title: "Work screenshots",
-        before: "Error messages, status captures, and quick notes in one folder",
-        after: "Screenshots/Errors, Screenshots/Work, and Screenshots/Notes",
-      },
-      {
-        title: "Design captures",
-        before: "Color ideas, layout references, and product examples",
-        after: "Design/Color, Design/Layout, and Design/References",
-      },
-    ],
-    comparison: {
-      title: "Screenshot organization options",
-      summary:
-        "Pick the workflow that matches how many screenshots you keep and how much review you want.",
-      rows: [
-        {
-          option: "Galoria",
-          bestFor: "Local screenshot sorting with preview and undo",
-          tradeoff: "Requires a quick review before applying changes",
-        },
-        {
-          option: "Manual cleanup",
-          bestFor: "A few captures that rarely change",
-          tradeoff: "Hard to keep up with repeated captures",
-        },
-        {
-          option: "Cloud tools",
-          bestFor: "Hosted image workflows already in use",
-          tradeoff: "Less control over upload and retention",
-        },
-      ],
+  "route": "organize-screenshots-automatically",
+  "kind": "guide",
+  "topic": "screenshots",
+  "title": "Organize Screenshots: Folder Sorting or OCR Search?",
+  "h1": "Organize Screenshots: Folder Sorting or OCR Search?",
+  "description": "Choose screenshot folder organization or text extraction on Windows. See Galoria classification signals, review controls, limits and free Microsoft alternatives.",
+  "eyebrow": "Screenshot guide",
+  "updatedAt": "2026-11-06",
+  "directAnswer": "Choose Galoria when you want reviewed physical folder moves for existing screenshot images on Windows 10 or 11. It uses filename, folder and image-metadata signals, with optional local visual captions; screenshot suggestions are heuristics, not reliable recognition of every capture or its text. Use capture software or Microsoft text-extraction tools when the real task is taking screenshots or copying words from them. Galoria is not an OCR search library.",
+  "problemTitle": "Recognizing a screenshot is different from reading its contents",
+  "problem": [
+    "The classifier gives weight to screenshot-like filenames and some screen-like dimensions/formats, while considering camera metadata. A cropped capture, renamed export or ordinary graphic can lack or mimic those signals. Optional local captions can influence categories, but a visual description does not guarantee extraction of an error message, receipt total, application name or conversation.",
+    "The image planner applies captions selectively and limits them to a bounded subset, rather than promising a model read of every picture. It can still propose categories from metadata and filenames when a caption is absent. That is a reason to inspect each proposed folder and exclude mismatches, not evidence of a classification accuracy percentage.",
+    "Galoria does not expose an OCR/text-search workflow or a persistent screenshot knowledge library. If you need to copy the words visible in a capture, Microsoft documents OCR in PowerToys Text Extractor. Snipping Tool handles capture, saving and editing, with text actions in supported versions. Those are different tasks from approving image-file moves.",
+    "The review interface shows images and proposed folders and lets you toggle Move or Keep. Category filters change what you are reviewing; do not assume they edit destinations or generate custom Errors, Work and Notes hierarchies. Exclude a wrong suggestion and file it manually if the proposed category does not suit the image.",
+    "Approval physically moves selected supported images under Image Organizer Output inside the chosen folder. Original filenames are retained unless a collision requires a numbered suffix. Keep an independent backup: history-based undo can be limited by files changed or paths occupied after organization. No automatic deletion, disk-space saving or reliable duplicate identification is claimed by this workflow.",
+    "PNG, JPG/JPEG, WEBP, GIF, BMP, TIFF, HEIC and HEIF are supported image formats; screen recordings such as MP4 are not image entries in this workflow. Read the format documentation for decoder and analysis limits. Installation downloads, activation and periodic license checks require internet; optional image captions use the packaged local model.",
+    "Publisher disclosure: Computora AI publishes Galoria. Microsoft documentation and application source were checked November 6, 2026. Examples are illustrative, not observed classification tests, and no comparative speed, recognition or OCR accuracy result is claimed."
+  ],
+  "steps": [
+    "Choose the actual goal: capturing an image, extracting visible text, keeping a few manual folders, or reviewing category-based file moves. Use a copy and keep a backup.",
+    "In Galoria, select a copied screenshot folder and generate the plan. Compare each preview image with its proposed folder; do not assume a screenshot-like filename proves the category is right.",
+    "Use Move or Keep to select appropriate entries and exclude mismatches. A category tab is a review filter, not a custom destination editor. Handle excluded files manually if needed.",
+    "Approve the selected moves and inspect the resulting Image Organizer Output folders. Use an OCR tool separately for text extraction; use capture or monitoring software if you need ongoing capture automation."
+  ],
+  "examples": [
+    {
+      "title": "Illustrative screenshot-category proposal, not a measured result",
+      "before": "A copied folder contains Screenshot_001.png, a camera JPEG and a cropped capture with a generic filename.",
+      "after": "Galoria may propose Screenshots for the named capture and a different folder for the camera image. Inspect the cropped image manually and keep it in place if the suggestion is inappropriate. Exact outcomes depend on the actual signals."
     },
-    faqs: [
+    {
+      "title": "When text extraction is the better approach",
+      "before": "You need to copy an exact error code from an image and later find it by those words.",
+      "after": "Use an OCR/text-extraction tool and an appropriate searchable note or library workflow. A Galoria category move does not create an OCR transcript or searchable text index."
+    }
+  ],
+  "comparison": {
+    "title": "Choose the screenshot task before the tool",
+    "summary": "Free capture and text-extraction tools can be sufficient; buying a folder organizer should solve a different requirement.",
+    "headers": {
+      "option": "Your task",
+      "bestFor": "Suitable approach",
+      "tradeoff": "Important limitation"
+    },
+    "rows": [
       {
-        question: "Should screenshots stay separate from photos?",
-        answer:
-          "Usually yes. Separate screenshot folders are easier to browse and easier to archive later.",
+        "option": "Capture, save or annotate a screenshot",
+        "bestFor": "Windows Snipping Tool on supported Windows versions.",
+        "tradeoff": "Capture/editing is different from reviewing a backlog of category-based moves."
       },
       {
-        question: "Can Galoria handle mixed captures?",
-        answer:
-          "Yes. Start with a mixed screenshot folder and review the categories before applying changes.",
+        "option": "Copy words from a screenshot",
+        "bestFor": "Microsoft PowerToys Text Extractor or supported Snipping Tool text actions.",
+        "tradeoff": "OCR output still needs review; text extraction is not Galoria classification."
       },
       {
-        question: "Can I keep some screenshots in place?",
-        answer:
-          "Yes. Exclude the images that already sit in the right folder or that you want to keep where they are.",
+        "option": "A small collection with known destinations",
+        "bestFor": "File Explorer and manually chosen folders.",
+        "tradeoff": "You supply the categories and move selections; no organizer purchase is required."
       },
-    ],
-    related: [
-      "automatic-photo-sorting",
-      "photo-organizer-windows",
-      "ai-photo-organizer",
-      "offline-ai-photo-organizer",
-    ],
+      {
+        "option": "Review category suggestions for existing images",
+        "bestFor": "Galoria local image planning and Move/Keep selection on Windows 10/11.",
+        "tradeoff": "Heuristic suggestions can be wrong; no promise of exact app, topic or text recognition."
+      },
+      {
+        "option": "Search by screenshot text or capture automatically",
+        "bestFor": "A tool specifically providing the required OCR library or capture/monitoring workflow.",
+        "tradeoff": "Galoria does not provide an OCR search library, capture tool or background screenshot watcher."
+      }
+    ]
   },
+  "faqs": [
+    {
+      "question": "Can Galoria reliably find every screenshot regardless of its filename?",
+      "answer": "No such reliability is established. Names, dimensions, format, camera metadata and optional captions influence suggestions. Crops and exports can miss expected signals, and ordinary graphics can resemble captures. Review the images and keep mismatches out of the move selection."
+    },
+    {
+      "question": "Does Galoria read and index screenshot text?",
+      "answer": "Its caption/classification workflow is not an OCR transcript or full-text search library. Use a suitable text-extraction and retrieval tool when exact words or error codes are the requirement."
+    },
+    {
+      "question": "Can I correct a wrong screenshot suggestion?",
+      "answer": "The current review interface lets you exclude the image using Keep. Category filtering is not destination editing. File an excluded mismatch manually rather than assuming automatic custom Errors or Notes subfolders."
+    }
+  ],
+  "related": [
+    "ai-photo-organizer",
+    "automatic-photo-organizer",
+    "docs/supported-file-types",
+    "offline-ai-photo-organizer"
+  ],
+  "contextualLinks": [
+    {
+      "before": "Check ",
+      "anchor": "supported images and analysis limits",
+      "href": "/docs/supported-file-types/",
+      "after": "."
+    },
+    {
+      "before": "Read the ",
+      "anchor": "preview, approval and recovery workflow",
+      "href": "/docs/how-it-works/",
+      "after": "."
+    },
+    {
+      "before": "For what happens to existing files, see ",
+      "anchor": "Galoria ordinary-folder output",
+      "href": "/automatic-photo-organizer/",
+      "after": "."
+    },
+    {
+      "before": "Review ",
+      "anchor": "local processing and licensing privacy",
+      "href": "/docs/privacy/",
+      "after": "."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Microsoft: Snipping Tool",
+      "url": "https://support.microsoft.com/en-us/windows/apps/use-snipping-tool-to-capture-screenshots",
+      "note": "Capture, saving/editing and text actions in supported versions."
+    },
+    {
+      "label": "Microsoft: PowerToys Text Extractor",
+      "url": "https://learn.microsoft.com/en-us/windows/powertoys/text-extractor",
+      "note": "OCR text extraction is distinct from a folder classification workflow."
+    }
+  ]
+},
   {
     route: "windows-photo-organizer",
     kind: "landing",
@@ -1083,8 +1145,8 @@ if (privatePhotoBase) {
     directAnswer: "Galoria is a strong fit for private photo organization on Windows because it analyzes supported image folders locally, proposes categories and destination folders, and lets you review every change before applying it. It is designed for screenshots, camera photos, receipts, scans, and mixed image folders without requiring a cloud photo upload.",
     problemTitle: "Private photo organization needs more than a no-cloud slogan",
     problem: [
-      "A private photo organizer should explain what happens on the device, which files and signals it supports, and whether the proposed moves remain editable. Privacy is useful only when the workflow also protects against wrong categories and accidental moves.",
-      "Galoria combines local image analysis with a visible plan. You can reassign ambiguous photos, exclude items, rename destination folders, and keep a local history for the latest-operation undo workflow.",
+      "A private photo organizer should explain what happens on the device, which files and signals it supports, and whether proposed moves can be reviewed and excluded. Privacy is useful only when the workflow also protects against wrong categories and accidental moves.",
+      "Galoria combines local image analysis with a visible plan. You can review proposed destinations, exclude ambiguous photos, and keep local history for undo subject to file and path checks.",
     ],
     steps: [
       "Choose a copied Pictures, Screenshots, Downloads, or camera-roll folder.",
