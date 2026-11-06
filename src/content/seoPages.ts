@@ -23,6 +23,7 @@ export interface ContextualLink {
 export interface SeoComparison {
   title: string;
   summary: string;
+  headers?: { option: string; bestFor: string; tradeoff: string };
   rows: Array<{ option: string; bestFor: string; tradeoff: string }>;
 }
 
@@ -60,6 +61,7 @@ export interface SeoPage {
   comparison: SeoComparison;
   faqs: SeoFaq[];
   related: string[];
+  sources?: Array<{ label: string; url: string; note: string }>;
   evidence?: SeoEvidence;
   indexable?: boolean;
 }
@@ -400,6 +402,7 @@ export const seoPages: SeoPage[] = [
       "Browsing the resulting folders needs no Galoria catalog, but the application does keep local metadata-cache and move-history files. History supports the app's recovery workflow; it is not a second copy of every photo. Keep it if you intend to use undo, which requires a valid license, and retain an independent backup.",
       "Choose a catalog or library application if your main task is browsing, ratings, tags, albums, or keeping existing image paths intact. Check whether that particular tool indexes images in place or copies them into its own library. Galoria is a selected-folder organizer, not an in-place photo catalog or a background folder watcher. This guide is published by Computora AI, Galoria's publisher.",
     ],
+    contextualLinks: [{ before: "For a specific local collection manager, compare ", anchor: "Galoria vs digiKam: collection management or folder proposals", href: "/alternatives/digikam/", after: ". Both use ordinary folders and local AI; the comparison covers editing, face recognition, setup, and recovery." }],
     steps: [
       "Back up the images separately, then choose one small Windows image folder. The default output is Image Organizer Output inside that folder.",
       "Generate the local plan and inspect the complete source and destination paths. Review category assignments and destination folder names; do not assume the old hierarchy will be retained.",
@@ -1129,7 +1132,8 @@ seoPages.push({
     "A local sorter, cloud gallery, and digital asset manager may all be called photo organizers, but they serve different needs. Compare storage location, supported formats, visual analysis, category editing, destination preview, backup, and recovery before choosing.",
     "Irreplaceable photos deserve a cautious workflow. Keep an independent backup, test with copied images, and review uncertain screenshots, scans, receipts, and design assets before allowing any organizer to change the folder structure.",
   ],
-  steps: [
+  contextualLinks: [{ before: "For a specific local collection manager, compare ", anchor: "Galoria vs digiKam: collection management or folder proposals", href: "/alternatives/digikam/", after: ". Both use ordinary folders and local AI; the comparison covers editing, face recognition, setup, and recovery." }],
+    steps: [
     "Decide whether your priority is local privacy, cloud access, or detailed library management.",
     "Check image-format support and whether analysis requires an upload.",
     "Compare category editing, exclusions, destination previews, conflicts, history, and undo.",
@@ -1192,6 +1196,190 @@ seoPages.push({
     "photo-organizer-vs-manual",
     "blog/ai-photo-organizer-classification-test",
   ],
+});
+
+seoPages.push({
+  "route": "alternatives/digikam",
+  "kind": "comparison",
+  "topic": "photos",
+  "title": "Galoria vs digiKam: Sorter or Photo Manager?",
+  "h1": "Galoria vs digiKam: Which Photo Workflow Fits?",
+  "description": "Choose between Galoria folder-move previews and digiKam collection management. Compare local AI, albums, editing, formats, setup, price, and recovery.",
+  "eyebrow": "Comparison published by Computora AI",
+  "updatedAt": "2026-11-06",
+  "directAnswer": "Choose digiKam when you want to manage a continuing photo collection with albums, tags, search, editing, or face recognition. Choose Galoria when your main job is reviewing a category-based move plan for one Windows image folder. Both products work with ordinary folders, and both have local AI capabilities. Neither is inherently faster or more accurate on the evidence presented here.",
+  "problemTitle": "A photo collection manager or a focused organization plan?",
+  "problem": [
+    "This comparison is published by Computora AI, the publisher of Galoria. Galoria behavior was checked against its application source; digiKam statements were checked against official documentation on November 6, 2026. This is not an independent review or a hands-on performance or accuracy comparison.",
+    "In Galoria, select a folder, scan supported images, review categories and proposed destinations, exclude images, and approve the selection. Applying the plan physically moves individual files beneath Image Organizer Output inside the selected folder. It does not keep a separate source copy or preserve the old subfolder hierarchy. Normal filenames remain, with numbered suffixes when needed for destination conflicts. You can browse the resulting files outside Galoria; local cache and history records still exist.",
+    "digiKam can register existing directories as collections. Its physical albums correspond to subfolders containing ordinary image files; it is not a closed container that hides all originals. It also keeps collection databases for catalog information. Import and move/copy actions can change where files live, while saved edits can change image files. Select the action you need rather than assuming every catalog operation relocates everything.",
+    "Galoria combines filenames, folder context, metadata, and available BLIP captions to suggest categories. Captioning uses local models, selects up to 300 images per scan by default, and uses resized analysis images up to 384 pixels. Missing models can leave metadata-based suggestions. It does not provide named-person recognition, an image editor, or an ongoing album/tag/search catalog. Ambiguous categories need review.",
+    "digiKam offers local AI for object auto-tags and face management, as well as collection search and editing. Its optional deep-learning files must be downloaded before those features work. Face recognition needs initial user labels for detected people; predictions still require judgment. Galoria is not the only local-AI option, and digiKam is not limited to manual sorting.",
+    "Use a copied sample before changing your archive. With Galoria, keep the move history and a separate backup: Undo requires a valid license and the moved files to remain available; it can restore under a numbered name if an original path is occupied. With digiKam, check import/move/copy, deletion, and editor-versioning settings; keep independent copies of the images and back up the collection database. Neither a preview nor a catalog replaces a backup."
+  ],
+  "contextualLinks": [
+    {
+      "before": "For Galoria's physical output and source-path changes, read ",
+      "anchor": "how approved images become ordinary folders",
+      "href": "/automatic-photo-organizer/",
+      "after": "."
+    },
+    {
+      "before": "Check ",
+      "anchor": "supported image formats and decoding limits",
+      "href": "/docs/supported-file-types/",
+      "after": " and use the installation and privacy documentation linked below before selecting a large batch."
+    },
+    {
+      "before": "If reviewed category moves fit your needs, see ",
+      "anchor": "Galoria's individual $14.99 one-time license and pricing",
+      "href": "/#download",
+      "after": ". Scan and preview are available without activation; applying moves and Undo require a valid license."
+    }
+  ],
+  "steps": [
+    "Decide what you need after this session: newly arranged folders, or continuing albums, tags, search, face labels, and editing. That decision matters more than the AI label.",
+    "For a proposed category move plan, test Galoria on copied supported images, inspect category assignments and destination paths, and exclude files whose current paths must remain unchanged.",
+    "For ongoing collection management, register a copied test collection in digiKam, try its album/tag/search workflow, and download the optional models before evaluating its AI features.",
+    "Before using either product on originals, verify format support, internet/setup requirements, the exact physical file actions, recovery settings, and a separate backup. Do not let two applications move the same live collection at the same time."
+  ],
+  "examples": [
+    {
+      "title": "Illustrative Galoria scenario: a mixed image inbox",
+      "before": "A copied Inbox contains camera.jpg, capture.png, and notes.pdf. The user reviews Photos and Screenshots as the proposed destinations for the two images.",
+      "after": "Approving those images moves them beneath Inbox / Image Organizer Output / Photos and Screenshots; notes.pdf is not part of the image move plan. Exact categories vary. This illustrates source-verified file operations, not a measured AI result."
+    },
+    {
+      "title": "digiKam scenario: a continuing family archive",
+      "before": "Years of photos already have meaningful folders, but you need people labels, ratings, searches, and edits while keeping track of the collection.",
+      "after": "Start with a copied collection in digiKam and test those management functions. Its ordinary-folder storage does not require you to replace the existing hierarchy just to use a catalog. Explicit imports, moves, and editing still need deliberate choices."
+    }
+  ],
+  "comparison": {
+    "title": "Compare the workflow you actually need",
+    "summary": "The columns describe documented behavior, not rankings or measured superiority. Official sources are provided below.",
+    "headers": {
+      "option": "Decision or capability",
+      "bestFor": "Galoria",
+      "tradeoff": "digiKam"
+    },
+    "rows": [
+      {
+        "option": "Main workflow",
+        "bestFor": "Selected-folder scan, category suggestions, destination review, exclusions, then approved moves.",
+        "tradeoff": "Continuing collection management with albums, tags, ratings, search, editing, and import tools."
+      },
+      {
+        "option": "Physical files and ordinary folders",
+        "bestFor": "Moves approved images under Image Organizer Output. Source paths change; no backup copy is created by applying the plan.",
+        "tradeoff": "Collections use ordinary directories and physical album folders, plus databases. Explicit import and move/copy operations can relocate files."
+      },
+      {
+        "option": "Local AI and limits",
+        "bestFor": "BLIP captions plus filename/folder/metadata signals. Default caption cap: 300; analysis thumbnails: up to 384 pixels. Missing captions can leave metadata-only suggestions.",
+        "tradeoff": "Local object auto-tagging, face detection and recognition, and other AI tools. Download optional models; face recognition needs initial labeling. Review results."
+      },
+      {
+        "option": "Albums, tags, and search",
+        "bestFor": "Review categories within a move plan; not a persistent album/tag/search collection manager.",
+        "tradeoff": "Albums, tags, ratings, metadata search, and collection databases. These are reasons to choose a photo manager."
+      },
+      {
+        "option": "Editing and named people",
+        "bestFor": "No image-editing suite or named-person recognition workflow.",
+        "tradeoff": "Image editor, configurable versioning, and trained face recognition. Check the save/versioning choices before changing originals."
+      },
+      {
+        "option": "Platforms and formats",
+        "bestFor": "Windows 10/11. JPG/JPEG, PNG, WEBP, GIF, BMP, TIF/TIFF, HEIC/HEIF, subject to decoding support. RAW formats such as CR2, NEF, and DNG and video are outside the supported image plan.",
+        "tradeoff": "Windows, macOS, and Linux. Common photos, RAW decoding, and video management; verify your camera, format, and platform against current official packages."
+      },
+      {
+        "option": "Price and setup",
+        "bestFor": "$14.99 one-time license. Complete package bundles runtime and local models. Preview before activation; licensed apply/Undo.",
+        "tradeoff": "Free and open source. Configure collection roots and the catalog database; download optional AI models when needed."
+      },
+      {
+        "option": "Internet and local processing",
+        "bestFor": "Local image processing; download, activation and later validation need internet. Cached license use is less than seven days after saved validation.",
+        "tradeoff": "Downloaded AI models run locally. Downloads/updates and chosen online export services need a connection; do not assume every optional feature is offline."
+      },
+      {
+        "option": "Preview, recovery, and backup",
+        "bestFor": "Review a move plan before approval. Local history supports Undo, with missing-file and occupied-path limits. Keep a separate image backup.",
+        "tradeoff": "Image previews, comparison tools and configurable editor versioning. Review file actions and trash settings; back up both photos and database rather than assuming a universal undo."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Is Galoria better than digiKam because it has AI?",
+      "answer": "No. digiKam also provides local AI, including auto-tags and face recognition. Choose by the intended workflow and supported tasks; no comparative speed or accuracy testing is claimed here."
+    },
+    {
+      "question": "Does digiKam require a proprietary photo container?",
+      "answer": "No. Its collection roots and physical albums are ordinary directories and image files, alongside databases used for management. It can also move or copy files when you choose those operations. A catalog is not proof that originals are hidden in a closed library."
+    },
+    {
+      "question": "Can I use both on the same photos?",
+      "answer": "You can evaluate both on separate copied samples. Plan which application owns physical folder changes before using a live collection: external moves can disrupt paths known to a catalog. Keep backups and follow the catalog documentation when relocating images."
+    }
+  ],
+  "related": [
+    "automatic-photo-organizer",
+    "offline-ai-photo-organizer",
+    "docs/how-it-works",
+    "docs/supported-file-types",
+    "docs/install",
+    "docs/privacy"
+  ],
+  "sources": [
+    {
+      "label": "digiKam manual and free/open-source status",
+      "url": "https://docs.digikam.org/en/index.html",
+      "note": "Official manual entry point and product licensing description; checked November 6, 2026."
+    },
+    {
+      "label": "digiKam Albums View",
+      "url": "https://docs.digikam.org/en/left_sidebar/albums_view.html",
+      "note": "Physical albums, import actions, moving/copying images, and deletion settings."
+    },
+    {
+      "label": "digiKam collections setup",
+      "url": "https://docs.digikam.org/en/setup_application/collections_settings.html",
+      "note": "Existing local, removable, and network collection roots."
+    },
+    {
+      "label": "digiKam features and supported workflows",
+      "url": "https://www.digikam.org/about/features/",
+      "note": "Local AI, albums, search, image previews, editing, and RAW/batch tools."
+    },
+    {
+      "label": "digiKam People View",
+      "url": "https://docs.digikam.org/en/left_sidebar/people_view.html",
+      "note": "Model download, face detection, recognition, and initial person labeling."
+    },
+    {
+      "label": "digiKam image-editor settings",
+      "url": "https://docs.digikam.org/en/setup_application/editor_settings.html",
+      "note": "Configurable image versioning and save behavior; not a blanket backup guarantee."
+    },
+    {
+      "label": "digiKam database settings",
+      "url": "https://docs.digikam.org/en/setup_application/database_settings.html",
+      "note": "Database setup, local records, and database-backup recommendations."
+    },
+    {
+      "label": "digiKam official downloads",
+      "url": "https://www.digikam.org/download/",
+      "note": "Current Windows, Intel/Apple Silicon macOS, and Linux packages. Check platform requirements before installation."
+    },
+    {
+      "label": "digiKam product overview",
+      "url": "https://www.digikam.org/about/",
+      "note": "Photo/RAW/video support, collection search and editing, and optional external-service plugins."
+    }
+  ]
 });
 
 export const seoPagesByRoute = Object.fromEntries(

@@ -650,7 +650,7 @@ ${renderEvidence(page)}
       <p>${escapeHtml(page.comparison.summary)}</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Option</th><th>Best for</th><th>Tradeoff</th></tr></thead>
+          <thead><tr><th>${escapeHtml(page.comparison.headers?.option ?? "Option")}</th><th>${escapeHtml(page.comparison.headers?.bestFor ?? "Best for")}</th><th>${escapeHtml(page.comparison.headers?.tradeoff ?? "Tradeoff")}</th></tr></thead>
           <tbody>
             ${page.comparison.rows
               .map(
@@ -669,6 +669,7 @@ ${renderEvidence(page)}
         )
         .join("")}
     </section>
+${page.sources ? `<section aria-label="Official sources"><h2>Official sources</h2><ul>${page.sources.map((source) => `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.label)}</a><p>${escapeHtml(source.note)}</p></li>`).join("")}</ul></section>` : ""}
     <section>
       <h2>Related guides</h2>
       <div class="related">

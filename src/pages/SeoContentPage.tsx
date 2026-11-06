@@ -176,9 +176,9 @@ const SeoContentPage = () => {
               <table className="w-full min-w-[640px] border-collapse bg-card text-left">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="p-4 text-sm font-semibold text-foreground">Option</th>
-                    <th className="p-4 text-sm font-semibold text-foreground">Best for</th>
-                    <th className="p-4 text-sm font-semibold text-foreground">Tradeoff</th>
+                    <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.option ?? "Option"}</th>
+                    <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.bestFor ?? "Best for"}</th>
+                    <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.tradeoff ?? "Tradeoff"}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -195,6 +195,20 @@ const SeoContentPage = () => {
               </table>
             </div>
           </section>
+
+          {page.sources && (
+            <section aria-label="Official sources">
+              <h2 className="text-3xl font-bold">Official sources</h2>
+              <ul className="mt-6 space-y-4">
+                {page.sources.map((source) => (
+                  <li key={source.url}>
+                    <a href={source.url} className="text-primary underline underline-offset-4">{source.label}</a>
+                    <p className="mt-2 text-muted-foreground">{source.note}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section>
             <h2 className="text-3xl font-bold">Related guides</h2>

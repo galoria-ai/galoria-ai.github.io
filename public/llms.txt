@@ -27,6 +27,7 @@
 - [Automatic vs Manual Photo Organization](https://galoriaai.com/photo-organizer-vs-manual/): Compare automatic and manual photo organization by setup time, review, control, scale, and whether you want repeated cleanup work.
 - [Best Private AI Photo Organizer for Windows](https://galoriaai.com/best-private-ai-photo-organizer/): Compare private photo organization approaches and see how Galoria categorizes image folders locally with a review-first workflow.
 - [Private Photo Organizer Alternatives](https://galoriaai.com/alternatives/): Compare Galoria with cloud photo services, manual folders, and traditional library managers for private photo organization on Windows.
+- [Galoria vs digiKam: Which Photo Workflow Fits?](https://galoriaai.com/alternatives/digikam/): Choose between Galoria folder-move previews and digiKam collection management. Compare local AI, albums, editing, formats, setup, price, and recovery.
 
 ## Documentation
 

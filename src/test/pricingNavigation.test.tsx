@@ -45,11 +45,12 @@ describe("content-page pricing navigation", () => {
       expect(document.querySelector("main .cta"), url).toBeNull();
       expect(document.querySelector('link[rel="canonical"]')?.getAttribute("href"), url).toBe(url);
     }
-    expect(affected).toBe(18);
+    expect(affected).toBe(19);
   });
 
   it.each([
     ["/alternatives/", <SeoContentPage />, "*"],
+    ["/alternatives/digikam/", <SeoContentPage />, "/alternatives/:slug/"],
     ["/docs/how-it-works/", <DocsPage />, "/docs/:slug/"],
     ["/category/windows/", <CategoryPage />, "/category/:slug/"],
   ])("renders one matching pricing route for %s", (url, component, route) => {
@@ -57,6 +58,18 @@ describe("content-page pricing navigation", () => {
     expect(screen.getAllByRole("link", { name: "See pricing" })).toHaveLength(1);
     expect(screen.getByRole("link", { name: "See pricing" }).getAttribute("href")).toBe("/#download");
     expect(document.querySelectorAll("[data-pricing-route]")).toHaveLength(1);
+  });
+
+  it("keeps comparison columns and official sources consistent with initial HTML", () => {
+    const initial = new DOMParser().parseFromString(fs.readFileSync("public/alternatives/digikam/index.html", "utf8"), "text/html");
+    render(<HelmetProvider><MemoryRouter initialEntries={["/alternatives/digikam/"]}><Routes><Route path="/alternatives/:slug/" element={<SeoContentPage />} /></Routes></MemoryRouter></HelmetProvider>);
+    expect(screen.getAllByRole("columnheader").map(item => item.textContent)).toEqual(
+      [...initial.querySelectorAll("thead th")].map(item => item.textContent),
+    );
+    const sources = screen.getByRole("region", { name: "Official sources" });
+    expect([...sources.querySelectorAll("a")].map(item => item.getAttribute("href"))).toEqual(
+      [...initial.querySelectorAll('[aria-label="Official sources"] a')].map(item => item.getAttribute("href")),
+    );
   });
 
   it.each(["/", "/ai-photo-organizer/", "/docs/privacy/", "/docs/troubleshooting/", "/category/privacy/", "/legal/", "/terms/"])("does not add a promotion to excluded or already-clear page %s", route => {
