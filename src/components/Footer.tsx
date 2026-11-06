@@ -36,6 +36,7 @@ const Footer = () => {
             <a href="/docs/privacy/" className="transition-colors hover:text-foreground">
               Privacy
             </a>
+            <button type="button" data-galoria-privacy-open className="transition-colors hover:text-foreground">Privacy settings</button>
             <a href="/docs/troubleshooting/" className="transition-colors hover:text-foreground">
               Support
             </a>

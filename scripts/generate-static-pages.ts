@@ -409,17 +409,25 @@ function basicSchema(route: string, title: string, description: string): object 
 }
 
 function analyticsHead(): string {
-  if (!site.analyticsMeasurementId) {
-    return "";
-  }
-
-  return `
-    <script async src="https://www.googletagmanager.com/gtag/js?id=${site.analyticsMeasurementId}"></script>
+  const consentScript = '<script src="/privacy-consent.js"></script>';
+  if (!site.analyticsMeasurementId) return consentScript;
+  return `${consentScript}
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${site.analyticsMeasurementId}', {'anonymize_ip': true});
+      (function () {
+        function loadAnalytics() {
+          if (!window.SitePrivacy?.optionalServicesAllowed() || window.gtag) return;
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', '${site.analyticsMeasurementId}', {'anonymize_ip': true});
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=${site.analyticsMeasurementId}';
+          document.head.appendChild(script);
+        }
+        loadAnalytics();
+        document.addEventListener('galoria:consent-change', loadAnalytics);
+      })();
     </script>`;
 }
 
@@ -498,7 +506,7 @@ function renderPageHeader(downloadHref: string, downloadLabel: string): string {
 }
 
 function renderPageFooter(): string {
-  return `<footer><div class="container"><div class="footer-inner"><a class="brand" href="/"><img src="/icon-192.png" alt="" width="32" height="32">Galoria AI</a><a class="publisher" href="https://computoraai.com/">By Computora AI</a><div class="footer-links"><a href="/#download">Download</a><a href="/#features">Features</a><a href="/category/photos/">Photo guides</a><a href="/category/screenshots/">Screenshot guides</a><a href="/category/windows/">Windows guides</a><a href="/category/privacy/">Privacy guides</a><a href="/docs/install/">Install</a><a href="/docs/how-it-works/">How it works</a><a href="/docs/supported-file-types/">Supported types</a><a href="/docs/privacy/">Privacy</a><a href="/docs/troubleshooting/">Support</a><a href="https://computoraai.com/">Computora AI</a><a href="https://foldoraai.com/">Foldora AI</a><a href="https://cleanoraai.com/">Cleanora AI</a></div></div><p class="copyright">Copyright ${new Date().getFullYear()} Galoria AI. All rights reserved.</p></div></footer>`;
+  return `<footer><div class="container"><div class="footer-inner"><a class="brand" href="/"><img src="/icon-192.png" alt="" width="32" height="32">Galoria AI</a><a class="publisher" href="https://computoraai.com/">By Computora AI</a><div class="footer-links"><a href="/#download">Download</a><a href="/#features">Features</a><a href="/category/photos/">Photo guides</a><a href="/category/screenshots/">Screenshot guides</a><a href="/category/windows/">Windows guides</a><a href="/category/privacy/">Privacy guides</a><a href="/docs/install/">Install</a><a href="/docs/how-it-works/">How it works</a><a href="/docs/supported-file-types/">Supported types</a><a href="/docs/privacy/">Privacy</a><a href="/docs/troubleshooting/">Support</a><a href="https://computoraai.com/">Computora AI</a><a href="https://foldoraai.com/">Foldora AI</a><a href="https://cleanoraai.com/">Cleanora AI</a></div></div><p class="copyright">Copyright ${new Date().getFullYear()} Galoria AI. All rights reserved.</p></div><button type="button" data-galoria-privacy-open style="display:block;margin:12px auto 0;background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline">Privacy settings</button></footer>`;
 }
 
 function relatedTitle(route: string): string {

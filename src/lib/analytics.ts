@@ -16,6 +16,7 @@ type AnalyticsPayload = Record<string, string | number | boolean | undefined>;
 
 declare global {
   interface Window {
+    SitePrivacy?: { optionalServicesAllowed: () => boolean; showSettings: (trigger?: HTMLElement) => void };
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
   }
@@ -24,6 +25,7 @@ declare global {
 export function loadAnalytics(): void {
   if (
     typeof window === "undefined" ||
+    !window.SitePrivacy?.optionalServicesAllowed() ||
     window.gtag ||
     !site.analyticsMeasurementId
   ) {
@@ -51,7 +53,7 @@ export function trackEvent(
   eventName: AnalyticsEventName,
   payload: AnalyticsPayload = {},
 ): void {
-  if (!site.analyticsMeasurementId) return;
+  if (!site.analyticsMeasurementId || !window.SitePrivacy?.optionalServicesAllowed()) return;
   try {
     window.gtag?.("event", eventName, {
       event_category: "website_funnel",
@@ -63,7 +65,7 @@ export function trackEvent(
 }
 
 export function trackPageView(path: string, title = document.title): void {
-  if (!site.analyticsMeasurementId) return;
+  if (!site.analyticsMeasurementId || !window.SitePrivacy?.optionalServicesAllowed()) return;
   try {
     window.gtag?.("event", "page_view", {
       page_title: title,
