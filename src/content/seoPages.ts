@@ -725,81 +725,80 @@ export const seoPages: SeoPage[] = [
     route: "offline-ai-photo-organizer",
     kind: "comparison",
     topic: "privacy",
-    title: "Offline AI Photo Organizer vs Cloud Services",
-    h1: "Offline AI Photo Organizer",
+    title: "Local AI Photo Organizer for Windows: Offline Limits",
+    h1: "Local AI Photo Sorting: What Works Offline?",
     description:
-      "Compare local Windows photo organization with cloud services by privacy, preview control, and whether your images need to leave the device.",
-    eyebrow: "Privacy and local processing",
-    updatedAt,
+      "Sort image folders locally on Windows. Check Galoria's model setup, seven-day license window and preview limits before choosing an offline photo organizer.",
+    eyebrow: "Local photo sorting and offline readiness",
+    updatedAt: "2026-11-06",
     directAnswer:
-      "Choose Galoria when you want the organization plan to stay local on your Windows PC. Choose cloud services when you are fine uploading images and using a hosted workflow.",
-    problemTitle: "Local and cloud photo workflows solve different privacy problems",
+      "Galoria scans images and builds organization previews locally on Windows 10 and 11, without uploading photos for analysis. Preview is available without activation; applying moves and Undo require a valid license. Download and initial activation need internet. The current license permits offline use for less than seven days after saved validation, then needs online validation again. Choose another approach for a permanently disconnected computer.",
+    problemTitle: "Local AI does not mean every part of the product stays offline",
     problem: [
-      "Local processing is attractive when the library contains personal photos, work screenshots, product images, or scanned documents that you do not want to upload before sorting.",
-      "Cloud workflows can be convenient, but they shift the privacy and retention questions to a provider. For many users, that is the main decision point, not the algorithm itself.",
+      "Published by Galoria's publisher, Computora AI. Competitor documentation was checked on November 6, 2026. The recommendations below compare documented workflows, not hands-on accuracy or speed results.",
+      "The complete Windows package includes the Python runtime and local BLIP image-captioning model. The loader uses local model files only and does not fetch missing models on first use. If the model is absent or cannot initialize, captions can be unavailable while filename, folder-context, and metadata classification still produce a plan. A completed preview alone does not prove that image-content AI ran.",
+      "Galoria combines filenames, existing folder context, image metadata, and available short visual captions to suggest categories. It is not a face-identity, detailed image-search, or document-OCR system. The planner selects a limited set of images for captioning, with a default cap of 300 per scan, and analyzes resized images up to 384 pixels rather than every detail of every original. Review uncertain suggestions; do not expect every photo to receive an AI caption.",
+      "Recognized formats include JPG/JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF. Recognition does not guarantee successful decoding or meaningful classification. Unreadable images and missing local decoding dependencies can limit analysis. The supported-format documentation explains these boundaries; test a copied representative folder first.",
+      "Scanning, metadata caching, planning, and approved file moves happen locally. License activation and later validation communicate with Keygen; checkout, downloads, updates, and online support are separate connected activities. A separately configured cloud-sync service can still upload a selected folder independently of Galoria. Local sorting is not cloud backup.",
+    ],
+    contextualLinks: [
+      { before: "Before choosing an image batch, review ", anchor: "Galoria's supported formats and analysis limits", href: "/docs/supported-file-types/", after: "." },
+      { before: "For local processing and connected services, read ", anchor: "Galoria's privacy documentation", href: "/docs/privacy/", after: "; use the installation guide before relying on a disconnected session." },
+      { before: "For catalog-style object tags, ", anchor: "digiKam's official auto-tagging manual", href: "https://docs.digikam.org/en/left_sidebar/tags_view.html", after: " documents neural-network tagging and a required model download. This is a different workflow from approving a Galoria file-move plan." },
+      { before: "Compare that with ", anchor: "KDE's digiKam overview", href: "https://apps.kde.org/digikam/", after: ", which describes albums, tags, metadata search, and Windows, macOS, and Linux support." },
+      { before: "If your main goal is a remotely accessible copy, ", anchor: "Google Photos' backup documentation", href: "https://support.google.com/photos/answer/6193313?co=GENIE.Platform%3DDesktop&hl=en", after: " describes saving images to a Google Account with an internet connection. That backup function is not supplied by Galoria's local sorting." },
+      { before: "If local reviewed sorting with periodic online validation fits, check ", anchor: "Galoria's individual $14.99 one-time license and pricing", href: "/#download", after: " before buying." },
     ],
     steps: [
-      "Decide whether the images should stay local during sorting.",
-      "Check whether the tool gives you a preview before applying changes.",
-      "Verify that the Windows workflow matches the folders you actually use.",
-      "Test one representative folder before adopting the tool broadly.",
+      "While connected, download the complete Windows installer, install it, and activate normally if you intend to apply moves or use Undo. Confirm local image analysis on a small copied folder before travel or a restricted-network session.",
+      "Select a local image folder and review the category plan. Check whether suggestions use available image content or only filename and metadata clues; ambiguous images need manual review or exclusion.",
+      "Within the valid offline license window, inspect exact destinations and exclude anything you do not want moved. Keep a separate backup before approving the plan. Preview itself does not move files.",
+      "After approval, inspect the moved files and retain local history. Undo depends on that history and the organized files remaining available; it is not a substitute for a backup. Reconnect for license validation before the offline window expires.",
     ],
     examples: [
       {
-        title: "Private local folder",
-        before: "Family photos, receipts, and screenshots stored together on one PC",
-        after: "Use Galoria locally and review the proposed structure before applying it",
+        title: "Illustrative: a short disconnected sorting session",
+        before: "A copied folder contains camera photos and work screenshots. The complete package is installed, licensed moves were activated online, and local image analysis was checked before disconnecting.",
+        after: "Galoria can propose categories from local signals, show the move destinations, and apply an approved plan within the license window. Exact categories vary; this is a source-grounded workflow example, not an executed accuracy benchmark.",
       },
       {
-        title: "Hosted workflow",
-        before: "A team already uses a cloud image service",
-        after: "Cloud tools may fit, but review upload and retention policies first",
+        title: "Decision example: a computer that cannot reconnect",
+        before: "The workstation must remain disconnected for weeks and you need ongoing photo tagging or browsing.",
+        after: "Galoria's periodic validation is a mismatch. Evaluate a local catalog such as digiKam and complete its documented model download before disconnecting; verify the setup against your own offline requirements.",
       },
     ],
     comparison: {
-      title: "Offline and cloud photo organizers at a glance",
+      title: "Choose by the result and connection requirement",
       summary:
-        "The right choice depends on privacy expectations and whether you want local control.",
+        "An offline-capable sorter, a local photo catalog, and an online backup service solve different jobs. These are publisher assessments based on the official sources linked above.",
       rows: [
-        {
-          option: "Galoria",
-          bestFor: "Windows users who want local photo planning and preview",
-          tradeoff: "Focused on folders rather than hosted workflows",
-        },
-        {
-          option: "Cloud services",
-          bestFor: "Users already comfortable with uploaded images",
-          tradeoff: "Images may leave the device during analysis",
-        },
-        {
-          option: "Manual organization",
-          bestFor: "Tiny folders with only a few images",
-          tradeoff: "More repeated work and less consistency",
-        },
+        { option: "Reviewed local folder sorting: Galoria", bestFor: "Windows 10/11 users who want categories and an exact destination plan before files move; $14.99 once.", tradeoff: "Bundled local models; AI captioning is selective. Applying moves and Undo require activation and periodic online license validation." },
+        { option: "Local albums, tags, and metadata search: digiKam", bestFor: "A photo-management workflow with albums, object auto-tags, and metadata search across Windows, macOS, or Linux.", tradeoff: "Its auto-tagging models must be downloaded before that feature works. Plan and verify the local setup before disconnecting." },
+        { option: "Online backup and access: Google Photos", bestFor: "Saving photos to a Google Account and accessing backed-up images from signed-in devices.", tradeoff: "Backup requires internet and account storage. It does not make Galoria's local move plan into a backup." },
       ],
     },
     faqs: [
       {
         question: "Can offline AI organizers work without internet?",
         answer:
-          "Yes for image analysis and organization. Internet is still needed to download and activate the app.",
+          "Local analysis can, once its dependencies and models are available. Galoria's preview runs locally, but applying moves and Undo require a valid license, with an offline window of less than seven days after saved validation. Download, activation, periodic validation, and updates need a connection at the relevant times.",
       },
       {
-        question: "Why choose a local photo organizer?",
+        question: "Does Galoria download a cloud model when local AI is missing?",
         answer:
-          "It keeps planning on your own device, which is easier to justify for personal and work image collections.",
+          "No. Its captioning loader reads local model files only. If local captioning is unavailable, filename, folder-context, and metadata signals can still produce suggestions; those suggestions should not be mistaken for completed image-content analysis.",
       },
       {
-        question: "Does Galoria delete images automatically?",
+        question: "Does local photo organization protect the original files?",
         answer:
-          "No. It is built to keep the user in control through preview, exclusion, and undo.",
+          "Preview does not move files. Approving a plan physically moves the included images, rather than creating a backup copy. Exclude files you want left in place, keep an independent backup, and inspect results before relying on local history and Undo.",
       },
     ],
     related: [
       "ai-photo-organizer",
+      "docs/install",
+      "docs/how-it-works",
       "photo-organizer-vs-cloud",
-      "photo-organizer-vs-manual",
-      "photo-organizer-windows",
     ],
   },
   {
