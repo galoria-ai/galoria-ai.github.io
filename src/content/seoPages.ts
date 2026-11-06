@@ -13,6 +13,13 @@ export interface SeoFaq {
   answer: string;
 }
 
+export interface ContextualLink {
+  before: string;
+  anchor: string;
+  href: string;
+  after: string;
+}
+
 export interface SeoComparison {
   title: string;
   summary: string;
@@ -47,6 +54,7 @@ export interface SeoPage {
   directAnswer: string;
   problemTitle: string;
   problem: string[];
+  contextualLinks?: ContextualLink[];
   steps: string[];
   examples: SeoExample[];
   comparison: SeoComparison;
@@ -206,6 +214,9 @@ export const seoPages: SeoPage[] = [
       "Camera imports can reuse names such as IMG_0001.jpg. The name alone cannot tell you whether two files contain the same picture. Galoria reserves destination names across the plan and chooses an available suffix when a path is already occupied. Review both the images and their complete destination paths before applying moves, and avoid editing the source or destination folders during the operation.",
       "This guide is published by Computora AI, the publisher of Galoria. The behavior described here concerns local image-folder organization, not phone importing, video management, or a guarantee that every file operation will succeed.",
     ],
+    contextualLinks: [
+      { before: "Because approved images move out of their original paths, see the guide to ", anchor: "ordinary folder output and catalog trade-offs", href: "/automatic-photo-organizer/", after: " before applying a large batch." },
+    ],
     steps: [
       "Start with one folder that mixes several image types.",
       "Let Galoria analyze the image collection on your Windows PC.",
@@ -304,6 +315,9 @@ export const seoPages: SeoPage[] = [
       "A mixed image folder usually has enough context to sort, but not enough context to sort manually at speed. That is where a preview-first AI workflow helps.",
       "The goal is not to erase human judgment. It is to reduce the number of repetitive choices when the same folder keeps filling up with screenshots, exports, and photos.",
     ],
+    contextualLinks: [
+      { before: "Before applying the plan, check ", anchor: "where Galoria puts approved images and how ordinary folders differ from a photo catalog", href: "/automatic-photo-organizer/", after: "." },
+    ],
     steps: [
       "Pick a mixed image folder with several repeated categories.",
       "Run Galoria locally and inspect the initial category plan.",
@@ -363,7 +377,6 @@ export const seoPages: SeoPage[] = [
     ],
     related: [
       "ai-photo-organizer",
-      "automatic-photo-organizer",
       "automatic-photo-sorting",
       "offline-ai-photo-organizer",
     ],
