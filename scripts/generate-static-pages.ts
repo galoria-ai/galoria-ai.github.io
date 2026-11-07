@@ -18,7 +18,7 @@ const OUTPUT_DIR = path.resolve("public");
 const SOCIAL_IMAGE_PATH = "/social-preview.png";
 const SOCIAL_IMAGE_URL = `${SITE_URL}${SOCIAL_IMAGE_PATH}`;
 const UPDATED_AT = "2026-09-08";
-const HOMEPAGE_UPDATED_AT = "2026-09-18";
+const HOMEPAGE_UPDATED_AT = "2026-11-05";
 
 interface SupportPage {
   route: string;
