@@ -230,6 +230,7 @@ export const seoPages: SeoPage[] = [
     ],
     contextualLinks: [
       { before: "Because approved images move out of their original paths, see the guide to ", anchor: "ordinary folder output and catalog trade-offs", href: "/automatic-photo-organizer/", after: " before applying a large batch." },
+      { before: "If you already use the Windows Photos app, compare ", anchor: "Microsoft Photos with Galoria's reviewed folder moves", href: "/alternatives/microsoft-photos/", after: " before buying another organizer." },
     ],
     steps: [
       "Start with one folder that mixes several image types.",
@@ -978,6 +979,9 @@ export const seoPages: SeoPage[] = [
       "Manual sorting gives complete control but repeats the same decisions every time screenshots, photos, or exports pile up in the same folder.",
       "Automatic sorting reduces repetition, but it should still keep the user in control through a preview step and an easy way to exclude specific images.",
     ],
+    contextualLinks: [
+      { before: "For the manual folder tools already included with Windows, see ", anchor: "Galoria versus Microsoft Photos", href: "/alternatives/microsoft-photos/", after: " and decide whether a proposed move plan would add value." },
+    ],
     steps: [
       "Identify the photo folders that fill up most often.",
       "Decide which images can be grouped automatically and which need manual review.",
@@ -1456,6 +1460,65 @@ seoPages.push({
       "note": "Photo/RAW/video support, collection search and editing, and optional external-service plugins."
     }
   ]
+});
+
+seoPages.push({
+  route: "alternatives/microsoft-photos",
+  kind: "comparison",
+  topic: "windows",
+  title: "Galoria vs Microsoft Photos: Do You Need Both?",
+  h1: "Galoria vs Microsoft Photos for Windows Folders",
+  description: "Microsoft Photos can browse and manually move pictures. Compare its Windows and Copilot+ features with Galoria's reviewed folder proposals before buying.",
+  eyebrow: "Comparison published by Computora AI",
+  updatedAt: "2026-11-07",
+  directAnswer: "You may not need Galoria. Microsoft Photos lets you browse local pictures, search, edit, create folders and manually move files on Windows. Choose Galoria only if you want it to analyze a selected mixed-image folder locally, propose category destinations, and let you review Move or Keep before approved images physically move. Galoria costs $14.99 once and runs on Windows 10 and 11. It does not replace Photos' gallery or editor, and its category suggestions can be wrong.",
+  problemTitle: "The difference is who chooses each destination",
+  problem: [
+    "Microsoft Photos is a useful first choice when your image folders are small or you already know where each file belongs. Its documented folder actions let you create folders and drag pictures into them; a manual move changes the file's location. Browsing a local folder in Photos does not itself upload those images to OneDrive. Microsoft also offers optional OneDrive and iCloud views, depending on the connected accounts and setup.",
+    "Microsoft Photos is not limited to filename-only search on every PC. Its documented name, date and file-type search works without Copilot+ hardware. On supported Windows 11 Copilot+ PCs, semantic search can find indexed local photos by a natural-language description. That feature helps retrieve an image; it is not Galoria's proposed category move plan. Availability also depends on Microsoft's supported languages, image types and indexing settings.",
+    "Galoria scans supported images in the folder you select on Windows 10 or 11. Filenames, folder context, metadata and dimensions inform proposed categories; optional captions use a packaged local model for a bounded subset. Screenshot-like names and dimensions are hints, not reliable recognition of every cropped or renamed capture. Review the images and destinations, keep wrong suggestions in place, then approve the selected moves into Image Organizer Output. Galoria does not continuously watch the folder, create an OCR index or organize videos and RAW photos.",
+    "Galoria's preview does not move files and does not require activation; applying moves and Undo require a valid license. Download and activation need internet, and later license validation needs occasional access. Local image analysis does not require cloud uploads or a separate model download. Approved moves change source paths rather than creating backup copies. Keep an independent backup, and check completion errors and undo limits before changing important folders.",
+    "This comparison is published by Computora AI, the publisher of Galoria. Microsoft claims were checked against Microsoft's official documentation on November 7, 2026. Galoria behavior was checked against application source; this is not a hands-on performance or accuracy comparison.",
+  ],
+  contextualLinks: [
+    { before: "For image formats, decoder requirements and scan limits, see ", anchor: "Galoria's supported-file documentation", href: "/docs/supported-file-types/", after: "." },
+    { before: "For physical output, history and recovery, read ", anchor: "how Galoria's reviewed moves work", href: "/docs/how-it-works/", after: "." },
+  ],
+  steps: [
+    "Try Microsoft Photos first: add your local picture folder, browse or search it, and manually create folders and move a few images if their destinations are obvious.",
+    "Decide whether you need to find pictures in the current collection or change their physical folder paths. On an eligible Copilot+ PC, try local semantic search before moving files just to make them findable.",
+    "If a mixed folder still needs repeated sorting decisions, use Galoria on a backed-up copy. Select the folder and inspect its category plan, source paths, proposed destinations and uncertain screenshots.",
+    "Mark incorrect suggestions Keep. Apply only the reviewed selection with a valid Galoria license, then inspect Image Organizer Output and the completion result. Keep a separate backup.",
+  ],
+  examples: [
+    { title: "Illustrative mixed folder, not a measured AI result", before: "A copied folder contains Screenshot_001.png, holiday.jpg and notes.pdf. You can drag the images into folders manually in Microsoft Photos.", after: "Galoria may propose Screenshots and Photos for the supported images. Review or keep each suggestion; approved images move beneath Image Organizer Output. The PDF is outside its image plan." },
+    { title: "When Photos is sufficient", before: "A family collection is already filed by year and you mostly browse, search, crop or edit images.", after: "Use Microsoft Photos without buying Galoria. On eligible Windows 11 Copilot+ hardware, local semantic search may also help retrieve indexed pictures without moving them." },
+  ],
+  comparison: {
+    title: "Choose the workflow, not an AI label",
+    summary: "Both products can work with ordinary local files. Microsoft Photos offers more than a viewer; Galoria offers a different move-planning step.",
+    headers: { option: "Decision", bestFor: "Microsoft Photos", tradeoff: "Galoria" },
+    rows: [
+      { option: "Browse and edit", bestFor: "Gallery, local folders, search and editing; suitable when existing folders work.", tradeoff: "Focused folder organization, not a gallery or image editor." },
+      { option: "Move files", bestFor: "Create folders and move/copy selected files manually; a move changes the original path.", tradeoff: "Proposes categories and exact destinations; user reviews Move or Keep before approved physical moves." },
+      { option: "Screenshots", bestFor: "Browse and search captures; manual filing remains available.", tradeoff: "Can suggest a screenshot category from heuristic signals, but crops and renamed images need review; no OCR search." },
+      { option: "AI and hardware", bestFor: "Name/date/type search on ordinary PCs; indexed local-photo semantic search on supported Windows 11 Copilot+ PCs.", tradeoff: "Optional local image captions use bundled models on Windows 10/11; no Copilot+ hardware requirement. Captioning is selective and uncertain." },
+      { option: "Internet and storage", bestFor: "Local browsing need not upload photos; optional OneDrive/iCloud access uses their accounts and connectivity.", tradeoff: "Local planning and files; download, activation and later license validation need internet. Not cloud backup." },
+      { option: "Cost and fit", bestFor: "Included with Windows; start here if manual folder filing or photo viewing meets the need.", tradeoff: "$14.99 one-time license for reviewed category move plans. Buy only if that additional step saves repeated manual filing." },
+    ],
+  },
+  faqs: [
+    { question: "Does Microsoft Photos actually move pictures?", answer: "Yes. Microsoft documents creating folders and dragging photos into them; a move changes the file's location. Galoria differs by proposing destinations for a selected batch before approval, not by being the only way to move pictures." },
+    { question: "Does Microsoft Photos have local AI?", answer: "On supported Windows 11 Copilot+ PCs, Microsoft documents semantic search over indexed local photos. Standard name, date and file-type search does not require that hardware. Semantic search is for finding pictures, not automatically filing them into categories." },
+    { question: "Will Galoria identify every screenshot or read its text?", answer: "No. It uses filename, metadata, dimensions and optional local captions to suggest categories. It does not provide a reliable screenshot detector or OCR search index. Review ambiguous images and keep wrong suggestions in place." },
+    { question: "Can either tool replace a photo backup?", answer: "No. Galoria physically moves approved files and keeps local move history, not a second copy of every image. Microsoft Photos can show local files without uploading them; optional connected cloud services have their own backup and sync behavior. Keep an independent backup before moving important pictures." },
+  ],
+  related: ["photo-organizer-windows", "photo-organizer-vs-manual", "organize-screenshots-automatically", "automatic-photo-organizer", "docs/how-it-works", "docs/supported-file-types"],
+  sources: [
+    { label: "Microsoft Photos: manage photos and folders", url: "https://support.microsoft.com/en-us/windows/apps/photos/manage-photos-and-videos-with-microsoft-photos-app", note: "Official folder browsing, manual move/copy, editing and connected-service features; checked November 7, 2026." },
+    { label: "Microsoft Photos: search photos", url: "https://support.microsoft.com/en-us/windows/apps/photos/search-photos", note: "Official distinction between name/date/type search and semantic local-photo search on eligible Windows 11 Copilot+ PCs." },
+    { label: "Microsoft: browse and manage photos on Windows", url: "https://support.microsoft.com/en-us/onedrive/windows/browse-your-photos-on-windows", note: "Official local-folder browsing, optional OneDrive access and local-photo upload behavior; features may vary by account and rollout." },
+  ],
 });
 
 export const seoPagesByRoute = Object.fromEntries(
