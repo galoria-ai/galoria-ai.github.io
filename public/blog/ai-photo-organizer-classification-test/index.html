@@ -61,6 +61,10 @@
     th,td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
     tr:last-child th,tr:last-child td{border-bottom:0}th{color:white;font-size:.9rem}
     td{color:var(--muted)}
+    .comparison-sources{margin-top:10px;font-size:.82rem;line-height:1.5}
+    .comparison-sources a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    .table-hint{color:var(--muted);font-size:.85rem}
+    @media(min-width:701px){.table-hint{display:none}}
     .faq{padding:22px 0;border-bottom:1px solid var(--line)}
     .faq h3{margin:0 0 8px}
     .faq p{margin:0;color:var(--muted)}
@@ -106,14 +110,15 @@
       <p>On September 6, 2026, Galoria passed all 26 backend tests in 1.986 seconds on Windows 11 Pro with a Core i5-8350U and 8 GB of RAM. A representative regression set correctly handled all 12 defined category cases, including work, people, travel, products, receipts, documents, screenshots, wallpapers, design assets, memes, and pets. This is a curated regression result, not a claim of 100% real-world accuracy.</p>
       <div class="updated">Reviewed and updated 2026-09-06</div>
     </section>
+
 <section aria-labelledby="evidence-title">
     <h2 id="evidence-title">Observed Galoria test evidence</h2>
     <p>The regression results and product captures document both machine-checked behavior and the user-visible workflow.</p>
-    <dl class="evidence-facts">
+<dl class="evidence-facts">
       <div class="evidence-fact"><dt>Backend tests</dt><dd>26 passed, 0 failed</dd></div><div class="evidence-fact"><dt>Representative fixtures</dt><dd>12 passed, 0 failed</dd></div><div class="evidence-fact"><dt>Automated suite time</dt><dd>1.986 seconds</dd></div><div class="evidence-fact"><dt>Environment</dt><dd>Windows 11 Pro, Core i5-8350U, 8 GB RAM</dd></div>
     </dl>
     <div class="evidence-media">
-      <figure><img src="/evidence/galoria-folder-step.png" alt="Galoria local photo organizer folder-selection screen" loading="lazy"><figcaption>The first product step keeps the source folder and local-processing promise explicit.</figcaption></figure><figure><img src="/evidence/galoria-output.png" alt="Galoria photo organization output shown in Windows File Explorer" loading="lazy"><figcaption>Observed demonstration output displayed directly in Windows File Explorer.</figcaption></figure>
+      <figure><a href="/evidence/galoria-folder-step.png" target="_blank" rel="noopener" aria-label="Open full-size image: Galoria start screen showing Choose folder, Analyze, Review and Move pictures steps, with no folder selected"><img src="/evidence/galoria-folder-step.png" alt="Galoria start screen showing Choose folder, Analyze, Review and Move pictures steps, with no folder selected" width="1280" height="900" loading="lazy" decoding="async"></a><figcaption>Galoria&#39;s genuine first screen shows local folder selection before analysis. Open the image to read the interface at full size.</figcaption></figure><figure><a href="/evidence/galoria-output.png" target="_blank" rel="noopener" aria-label="Open full-size image: Windows File Explorer showing Galoria Image Organizer Output folders named Design Assets, Documents, Miscellaneous, Photos and Screenshots"><img src="/evidence/galoria-output.png" alt="Windows File Explorer showing Galoria Image Organizer Output folders named Design Assets, Documents, Miscellaneous, Photos and Screenshots" width="1875" height="961" loading="lazy" decoding="async"></a><figcaption>Galoria demonstration output shown in Windows File Explorer. The capture does not show the review plan or prove accuracy. Open the image to read folder names at full size.</figcaption></figure>
     </div>
     <p class="evidence-note">No general accuracy percentage or guaranteed scan speed is inferred from these fixtures. A broader benchmark would require a labeled image dataset, repeated runs, and documented model/runtime versions.</p>
   </section>
@@ -143,10 +148,11 @@
             </article>
       </div>
     </section>
-    <section>
+<section aria-label="Photo organizer decision table">
       <h2>Evidence, meaning, and limits</h2>
       <p>The published result separates curated regression coverage from performance and real-library accuracy.</p>
-      <div class="table-wrap">
+
+      <div class="table-wrap" role="region" aria-label="Compare photo organizers" tabindex="0">
         <table>
           <thead><tr><th>Option</th><th>Best for</th><th>Tradeoff</th></tr></thead>
           <tbody>

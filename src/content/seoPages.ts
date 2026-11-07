@@ -34,12 +34,10 @@ export interface SeoEvidence {
     label: string;
     value: string;
   }>;
-  media: Array<{
-    kind: "image" | "video";
-    src: string;
-    alt: string;
-    caption: string;
-  }>;
+  media: Array<
+    { kind: "image"; src: string; alt: string; caption: string; width: number; height: number }
+    | { kind: "video"; src: string; alt: string; caption: string }
+  >;
   note: string;
 }
 
@@ -179,14 +177,18 @@ export const seoPages: SeoPage[] = [
       {
         "kind": "image",
         "src": "/evidence/galoria-folder-step.png",
-        "alt": "Galoria AI photo organizer asking the user to choose a local picture folder",
-        "caption": "Galoria begins with a local picture folder and states that nothing moves until the plan is approved."
+        "alt": "Galoria start screen showing Choose folder, Analyze, Review and Move pictures steps, with no folder selected",
+        "caption": "Galoria's genuine folder-selection screen: choose a local picture folder before analysis and review. Open the image to read the interface at full size.",
+        "width": 1280,
+        "height": 900
       },
       {
         "kind": "image",
         "src": "/evidence/galoria-output.png",
-        "alt": "Windows File Explorer showing folders produced by a Galoria image organization run",
-        "caption": "A local demonstration output with Design Assets, Documents, Miscellaneous, Photos, and Screenshots folders."
+        "alt": "Windows File Explorer showing Galoria Image Organizer Output folders named Design Assets, Documents, Miscellaneous, Photos and Screenshots",
+        "caption": "Galoria demonstration output in Windows File Explorer, showing five ordinary folders. This does not show the individual image decisions or prove classification accuracy. Open the image to read folder names at full size.",
+        "width": 1875,
+        "height": 961
       }
     ],
     "note": "The 12 fixtures are curated regression cases, not a universal accuracy percentage. Test-suite runtime is also not end-to-end photo-library speed; image decoding, optional visual analysis, storage, and hardware affect real runs."
@@ -322,6 +324,20 @@ export const seoPages: SeoPage[] = [
       "docs/supported-file-types",
       "alternatives/digikam",
     ],
+    evidence: {
+      title: "Galoria's first step on Windows",
+      summary: "This genuine Galoria screen shows where a user selects the local picture folder before analysis. It does not show a completed preview or claim a sorting result.",
+      facts: [],
+      media: [{
+        kind: "image",
+        src: "/evidence/galoria-folder-step.png",
+        alt: "Galoria Windows app on the Choose a picture folder screen, with Analyze, Review and Move pictures listed as later steps",
+        caption: "Galoria folder-selection screen. Choose a local folder first; proposed destinations appear later in the review workflow. Open the full-size image to read the interface.",
+        width: 1280,
+        height: 900,
+      }],
+      note: "Screenshot of the real application, not evidence of classification accuracy or a completed move.",
+    },
   },
   {
     route: "organize-photos-with-ai",
@@ -415,7 +431,7 @@ export const seoPages: SeoPage[] = [
     description:
       "Organize photos into ordinary Windows folders with Galoria. Review physical file moves, understand what happens to originals, and compare folders with catalogs.",
     eyebrow: "Automatic sorting",
-    updatedAt: "2026-11-05",
+    updatedAt: "2026-11-07",
     directAnswer:
       "Galoria organizes approved images into ordinary folders on Windows 10 and 11. It physically moves selected files under Image Organizer Output inside the folder you chose. You can browse the result in Windows File Explorer or open it in another image application without using a Galoria library. This changes the source paths: it is not a copy-only import or a backup. Review the destinations and keep a separate backup before applying changes.",
     problemTitle: "Choose physical folders or a catalog deliberately",
@@ -503,6 +519,20 @@ export const seoPages: SeoPage[] = [
       "docs/how-it-works",
       "docs/supported-file-types",
     ],
+    evidence: {
+      title: "Ordinary output folders in Windows",
+      summary: "A genuine Windows File Explorer capture shows the Image Organizer Output directory after a Galoria demonstration. The folders can be browsed outside the app.",
+      facts: [],
+      media: [{
+        kind: "image",
+        src: "/evidence/galoria-output.png",
+        alt: "Windows File Explorer showing Galoria Image Organizer Output with Design Assets, Documents, Miscellaneous, Photos and Screenshots folders",
+        caption: "Galoria demonstration output in Windows File Explorer. This shows ordinary folders, not the earlier review screen or each image's proposed category. Open the full-size image to read folder names.",
+        width: 1875,
+        height: 961,
+      }],
+      note: "The screenshot does not establish how accurately Galoria categorized a separate collection or replace a backup of source images.",
+    },
   },
   {
   "route": "automatic-photo-sorting",
@@ -595,7 +625,7 @@ export const seoPages: SeoPage[] = [
   "h1": "Organize Screenshots: Folder Sorting or OCR Search?",
   "description": "Choose screenshot folder organization or text extraction on Windows. See Galoria classification signals, review controls, limits and free Microsoft alternatives.",
   "eyebrow": "Screenshot guide",
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "directAnswer": "Choose Galoria when you want reviewed physical folder moves for existing screenshot images on Windows 10 or 11. It uses filename, folder and image-metadata signals, with optional local visual captions; screenshot suggestions are heuristics, not reliable recognition of every capture or its text. Use capture software or Microsoft text-extraction tools when the real task is taking screenshots or copying words from them. Galoria is not an OCR search library.",
   "problemTitle": "Recognizing a screenshot is different from reading its contents",
   "problem": [
@@ -718,7 +748,21 @@ export const seoPages: SeoPage[] = [
       "url": "https://learn.microsoft.com/en-us/windows/powertoys/text-extractor",
       "note": "OCR text extraction is distinct from a folder classification workflow."
     }
-  ]
+  ],
+  "evidence": {
+    "title": "What a Screenshots output folder looks like",
+    "summary": "A genuine Galoria demonstration output includes a Screenshots category in an ordinary Windows folder. It does not show whether any particular screenshot was recognized correctly.",
+    "facts": [],
+    "media": [{
+      "kind": "image",
+      "src": "/evidence/galoria-output.png",
+      "alt": "Windows File Explorer displaying Galoria Image Organizer Output with a Screenshots folder alongside Photos and other categories",
+      "caption": "Galoria demonstration output includes a Screenshots folder. Review individual suggestions in the app before moving images; this capture alone is not a recognition test. Open the full-size image to read folder names.",
+      "width": 1875,
+      "height": 961
+    }],
+    "note": "No screenshot of the Review screen is available in this repository, so this image documents the output structure only."
+  }
 },
   {
     route: "windows-photo-organizer",
@@ -1129,14 +1173,18 @@ export const seoPages: SeoPage[] = [
         {
           kind: "image",
           src: "/evidence/galoria-folder-step.png",
-          alt: "Galoria local photo organizer folder-selection screen",
-          caption: "The first product step keeps the source folder and local-processing promise explicit.",
+          alt: "Galoria start screen showing Choose folder, Analyze, Review and Move pictures steps, with no folder selected",
+          caption: "Galoria's genuine first screen shows local folder selection before analysis. Open the image to read the interface at full size.",
+          width: 1280,
+          height: 900,
         },
         {
           kind: "image",
           src: "/evidence/galoria-output.png",
-          alt: "Galoria photo organization output shown in Windows File Explorer",
-          caption: "Observed demonstration output displayed directly in Windows File Explorer.",
+          alt: "Windows File Explorer showing Galoria Image Organizer Output folders named Design Assets, Documents, Miscellaneous, Photos and Screenshots",
+          caption: "Galoria demonstration output shown in Windows File Explorer. The capture does not show the review plan or prove accuracy. Open the image to read folder names at full size.",
+          width: 1875,
+          height: 961,
         },
       ],
       note: "No general accuracy percentage or guaranteed scan speed is inferred from these fixtures. A broader benchmark would require a labeled image dataset, repeated runs, and documented model/runtime versions.",

@@ -538,20 +538,20 @@ function renderEvidence(page: SeoPage): string {
   return `<section aria-labelledby="evidence-title">
     <h2 id="evidence-title">${escapeHtml(page.evidence.title)}</h2>
     <p>${escapeHtml(page.evidence.summary)}</p>
-    <dl class="evidence-facts">
+${page.evidence.facts.length ? `<dl class="evidence-facts">
       ${page.evidence.facts
         .map(
           (fact) => `<div class="evidence-fact"><dt>${escapeHtml(fact.label)}</dt><dd>${escapeHtml(fact.value)}</dd></div>`,
         )
         .join("")}
-    </dl>
+    </dl>` : ""}
     <div class="evidence-media">
       ${page.evidence.media
         .map(
           (item) => `<figure>${
             item.kind === "video"
               ? `<video controls preload="metadata" playsinline aria-label="${escapeHtml(item.alt)}"><source src="${escapeHtml(item.src)}" type="video/mp4"></video>`
-              : `<img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy">`
+              : `<a href="${escapeHtml(item.src)}" target="_blank" rel="noopener" aria-label="Open full-size image: ${escapeHtml(item.alt)}"><img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async"></a>`
           }<figcaption>${escapeHtml(item.caption)}</figcaption></figure>`,
         )
         .join("")}

@@ -114,7 +114,7 @@ const SeoContentPage = () => {
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
                 {page.evidence.summary}
               </p>
-              <dl className="mt-8 grid gap-4 sm:grid-cols-2">
+              {page.evidence.facts.length > 0 && <dl className="mt-8 grid gap-4 sm:grid-cols-2">
                 {page.evidence.facts.map((fact) => (
                   <div key={fact.label} className="rounded-2xl border border-border bg-card p-5">
                     <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
@@ -123,7 +123,7 @@ const SeoContentPage = () => {
                     <dd className="mt-2 text-lg font-semibold text-foreground">{fact.value}</dd>
                   </div>
                 ))}
-              </dl>
+              </dl>}
               <div className="mt-8 grid gap-6">
                 {page.evidence.media.map((item) => (
                   <figure key={item.src} className="overflow-hidden rounded-2xl border border-border bg-card">
@@ -132,7 +132,9 @@ const SeoContentPage = () => {
                         <source src={item.src} type="video/mp4" />
                       </video>
                     ) : (
-                      <img src={item.src} alt={item.alt} loading="lazy" className="h-auto w-full" />
+                      <a href={item.src} target="_blank" rel="noopener" aria-label={`Open full-size image: ${item.alt}`}>
+                        <img src={item.src} alt={item.alt} width={item.width} height={item.height} loading="lazy" decoding="async" className="h-auto w-full" />
+                      </a>
                     )}
                     <figcaption className="border-t border-border px-5 py-4 text-sm text-muted-foreground">
                       {item.caption}
