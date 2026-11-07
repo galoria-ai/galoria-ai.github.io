@@ -24,7 +24,7 @@ export interface SeoComparison {
   title: string;
   summary: string;
   headers?: { option: string; bestFor: string; tradeoff: string };
-  rows: Array<{ option: string; bestFor: string; tradeoff: string }>;
+  rows: Array<{ option: string; bestFor: string; tradeoff: string; sources?: Array<{ label: string; url: string }> }>;
 }
 
 export interface SeoEvidence {
@@ -59,6 +59,7 @@ export interface SeoPage {
   steps: string[];
   examples: SeoExample[];
   comparison: SeoComparison;
+  comparisonFirst?: boolean;
   faqs: SeoFaq[];
   related: string[];
   sources?: Array<{ label: string; url: string; note: string }>;
@@ -209,19 +210,22 @@ export const seoPages: SeoPage[] = [
     route: "photo-organizer-windows",
     kind: "landing",
     topic: "windows",
-    title: "Photo Organizer for Windows | Local AI Sorting",
+    title: "Photo Organizer for Windows: Choose the Right Tool",
     h1: "Photo Organizer for Windows",
     description:
-      "Sort photo folders on Windows with local AI, straightforward preview steps, and destinations that help you browse mixed image libraries later.",
+      "Compare Galoria, Microsoft Photos, digiKam, and Google Photos for mixed folders, family collections, people search, duplicates, and cost.",
     eyebrow: "Windows photo workflow",
-    updatedAt: "2026-11-05",
+    updatedAt: "2026-11-07",
     directAnswer:
-      "If two photos would land at the same path, Galoria plans an available numbered filename rather than intentionally replacing the existing image. It checks destinations again when applying moves, so a new conflict can change the final filename. On Windows 10 and 11, you can review the proposed destinations before approving the local organization plan. Keep a separate backup before combining important photo folders.",
+      "For mixed screenshots and downloaded images that you want physically moved into ordinary Windows folders, consider Galoria after reviewing its proposed destinations. For a family collection with albums, people and duplicate-search tools, choose digiKam. Microsoft Photos is a free starting point for browsing and manually arranging local folders; Google Photos suits people who want cloud backup and search. Galoria is a $14.99 one-time purchase for Windows 10 and 11, not a face finder, near-duplicate cleaner or photo catalog.",
+    comparisonFirst: true,
     problemTitle: "Windows image folders need a better structure than one giant pile",
     problem: [
       "A single folder can hold camera imports, screenshots, product images, memes, and scans. That is fine for storage but not for retrieval when you need one specific image later.",
       "Date-only folder structures are easy to create and difficult to browse. A useful layout usually combines purpose, subject, and review control instead of relying on timestamps alone.",
       "Camera imports can reuse names such as IMG_0001.jpg. The name alone cannot tell you whether two files contain the same picture. Galoria reserves destination names across the plan and chooses an available suffix when a path is already occupied. Review both the images and their complete destination paths before applying moves, and avoid editing the source or destination folders during the operation.",
+      "For screenshots and downloaded images, decide whether you need files moved into folders or simply an easier way to browse them. Galoria proposes local folder moves after analyzing supported images; Microsoft Photos lets you add local folders, search by file name, date or type, and move photos manually. Neither should be described as a guaranteed screenshot recognizer.",
+      "A family archive often needs albums, person labels and duplicate review rather than a one-time folder cleanup. digiKam offers those collection tools, including similarity-based duplicate search. Google Photos offers cloud backup and face groups where available. Galoria can flag candidates for exact byte-for-byte duplicates but does not automatically delete them or identify visually similar shots.",
       "This guide is published by Computora AI, the publisher of Galoria. The behavior described here concerns local image-folder organization, not phone importing, video management, or a guarantee that every file operation will succeed.",
     ],
     contextualLinks: [
@@ -235,12 +239,12 @@ export const seoPages: SeoPage[] = [
     ],
     examples: [
       {
-        title: "Family photos and screenshots",
+        title: "Illustrative mixed-folder plan (not a test result)",
         before: "Vacation photos, phone imports, and work screenshots in one folder",
         after: "Photos/Trips, Photos/Family, and Screenshots/Work",
       },
       {
-        title: "Small business assets",
+        title: "Illustrative asset-folder plan (not a test result)",
         before: "Product shots, banner drafts, and social graphics mixed together",
         after: "Products, Marketing, and Social",
       },
@@ -251,24 +255,33 @@ export const seoPages: SeoPage[] = [
       },
     ],
     comparison: {
-      title: "Galoria, manual sorting, or cloud AI?",
+      title: "Which Windows photo organizer fits your job?",
       summary:
-        "The best workflow depends on how much privacy and review you need.",
+        "Publisher assessment of documented workflows, checked November 7, 2026. Review the linked official sources before choosing.",
       rows: [
         {
-          option: "Galoria",
-          bestFor: "Windows users who want local photo sorting with preview",
-          tradeoff: "Less automatic than a fully hosted service",
+          option: "Galoria · $14.99 once · Windows 10/11",
+          bestFor: "Mixed screenshots and downloaded images: inspect a local proposed folder plan, then approve physical moves into ordinary folders.",
+          tradeoff: "No person search, persistent albums, or near-duplicate cleanup. Keep a backup; review every proposed move.",
+          sources: [{ label: "How Galoria works", url: "/docs/how-it-works/" }],
         },
         {
-          option: "Manual sorting",
-          bestFor: "Tiny folders or one-off cleanup",
-          tradeoff: "The cleanup work repeats every time",
+          option: "Microsoft Photos · included with Windows",
+          bestFor: "Free local browsing, basic search, editing and manually arranging photos into folders.",
+          tradeoff: "Folder moves are manual. Newer People features depend on personal OneDrive photos; they do not group local-only faces.",
+          sources: [{ label: "Microsoft Photos guide", url: "https://support.microsoft.com/en-us/onedrive/windows/browse-your-photos-on-windows" }],
         },
         {
-          option: "Cloud AI organizers",
-          bestFor: "Hosted workflows already used by a team",
-          tradeoff: "Images may be uploaded for analysis",
+          option: "digiKam · free/open source · Windows 10+",
+          bestFor: "Family collections needing local albums, tags, face recognition and similarity-based duplicate search.",
+          tradeoff: "Requires collection/database setup; face models may need a download. It also uses ordinary folders, but offers a broader catalog workflow.",
+          sources: [{ label: "digiKam features", url: "https://www.digikam.org/about/" }, { label: "Duplicate search", url: "https://docs.digikam.org/en/left_sidebar/similarity_view.html" }],
+        },
+        {
+          option: "Google Photos · free storage allowance",
+          bestFor: "Family photos across devices with cloud backup, search and face groups where available.",
+          tradeoff: "Backup uploads photos to a Google Account; the free 15 GB is shared with Drive and Gmail. Face Groups vary by region/account.",
+          sources: [{ label: "Face Groups", url: "https://support.google.com/photos/answer/6128838" }, { label: "Storage", url: "https://support.google.com/accounts/answer/6374270" }],
         },
       ],
     },
@@ -306,6 +319,7 @@ export const seoPages: SeoPage[] = [
       "photo-organizer-vs-cloud",
       "docs/how-it-works",
       "docs/supported-file-types",
+      "alternatives/digikam",
     ],
   },
   {

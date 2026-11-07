@@ -473,6 +473,10 @@ function pageStyles(): string {
     th,td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
     tr:last-child th,tr:last-child td{border-bottom:0}th{color:white;font-size:.9rem}
     td{color:var(--muted)}
+    .comparison-sources{margin-top:10px;font-size:.82rem;line-height:1.5}
+    .comparison-sources a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    .table-hint{color:var(--muted);font-size:.85rem}
+    @media(min-width:701px){.table-hint{display:none}}
     .faq{padding:22px 0;border-bottom:1px solid var(--line)}
     .faq h3{margin:0 0 8px}
     .faq p{margin:0;color:var(--muted)}
@@ -556,6 +560,22 @@ function renderEvidence(page: SeoPage): string {
   </section>`;
 }
 
+function renderComparison(page: SeoPage): string {
+  return `<section aria-label="Photo organizer decision table">
+      <h2>${escapeHtml(page.comparison.title)}</h2>
+      <p>${escapeHtml(page.comparison.summary)}</p>
+${page.comparisonFirst ? '<p class="table-hint">Swipe sideways to read each tradeoff.</p>' : ""}
+      <div class="table-wrap" role="region" aria-label="Compare photo organizers" tabindex="0">
+        <table>
+          <thead><tr><th>${escapeHtml(page.comparison.headers?.option ?? "Option")}</th><th>${escapeHtml(page.comparison.headers?.bestFor ?? "Best for")}</th><th>${escapeHtml(page.comparison.headers?.tradeoff ?? "Tradeoff")}</th></tr></thead>
+          <tbody>
+            ${page.comparison.rows.map((row) => `<tr><th scope="row">${escapeHtml(row.option)}</th><td>${escapeHtml(row.bestFor)}</td><td>${escapeHtml(row.tradeoff)}${row.sources ? `<div class="comparison-sources">Sources: ${row.sources.map((source) => `<a href="${escapeHtml(source.url)}">${escapeHtml(source.label)}</a>`).join(", ")}</div>` : ""}</td></tr>`).join("")}
+          </tbody>
+        </table>
+      </div>
+    </section>`;
+}
+
 function renderMainPage(page: SeoPage): string {
   const canonical = absoluteUrl(page.route);
   const breadcrumbs = breadcrumbItems(page.route, page.h1);
@@ -620,6 +640,7 @@ ${analyticsHead()}
       <p>${escapeHtml(page.directAnswer)}</p>
       <div class="updated">Reviewed and updated ${escapeHtml(page.updatedAt)}</div>
     </section>
+${page.comparisonFirst ? renderComparison(page) : ""}
 ${renderEvidence(page)}
     <section>
       <h2>${escapeHtml(page.problemTitle)}</h2>
@@ -645,22 +666,7 @@ ${renderEvidence(page)}
           .join("")}
       </div>
     </section>
-    <section>
-      <h2>${escapeHtml(page.comparison.title)}</h2>
-      <p>${escapeHtml(page.comparison.summary)}</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>${escapeHtml(page.comparison.headers?.option ?? "Option")}</th><th>${escapeHtml(page.comparison.headers?.bestFor ?? "Best for")}</th><th>${escapeHtml(page.comparison.headers?.tradeoff ?? "Tradeoff")}</th></tr></thead>
-          <tbody>
-            ${page.comparison.rows
-              .map(
-                (row) => `<tr><th scope="row">${escapeHtml(row.option)}</th><td>${escapeHtml(row.bestFor)}</td><td>${escapeHtml(row.tradeoff)}</td></tr>`,
-              )
-              .join("")}
-          </tbody>
-        </table>
-      </div>
-    </section>
+${!page.comparisonFirst ? renderComparison(page) : ""}
     <section>
       <h2>Frequently asked questions</h2>
       ${page.faqs

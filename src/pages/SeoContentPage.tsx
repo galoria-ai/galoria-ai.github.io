@@ -30,6 +30,39 @@ const SeoContentPage = () => {
     );
   }
 
+  const comparisonSection = (
+    <section aria-label="Photo organizer decision table">
+      <h2 className="text-3xl font-bold">{page.comparison.title}</h2>
+      <p className="mt-4 text-muted-foreground">{page.comparison.summary}</p>
+      {page.comparisonFirst && <p className="mt-3 text-sm text-muted-foreground sm:hidden">Swipe sideways to read each tradeoff.</p>}
+      <div className="mt-6 overflow-x-auto rounded-2xl border border-border" role="region" aria-label="Compare photo organizers" tabIndex={0}>
+        <table className="w-full min-w-[640px] border-collapse bg-card text-left">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.option ?? "Option"}</th>
+              <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.bestFor ?? "Best for"}</th>
+              <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.tradeoff ?? "Tradeoff"}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {page.comparison.rows.map((row) => (
+              <tr key={row.option} className="border-b border-border last:border-b-0">
+                <th scope="row" className="p-4 align-top text-sm font-semibold text-foreground">{row.option}</th>
+                <td className="p-4 align-top text-sm text-muted-foreground">{row.bestFor}</td>
+                <td className="p-4 align-top text-sm text-muted-foreground">
+                  {row.tradeoff}
+                  {row.sources && <span className="mt-2 block">Sources: {row.sources.map((source, index) => (
+                    <span key={source.url}>{index > 0 && ", "}<a className="text-primary underline underline-offset-4" href={source.url}>{source.label}</a></span>
+                  ))}</span>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+
   return (
     <>
       <SeoHead
@@ -70,6 +103,8 @@ const SeoContentPage = () => {
               {page.directAnswer}
             </p>
           </section>
+
+          {page.comparisonFirst && comparisonSection}
 
           {page.evidence && (
             <section aria-labelledby="evidence-title">
@@ -169,32 +204,7 @@ const SeoContentPage = () => {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-3xl font-bold">{page.comparison.title}</h2>
-            <p className="mt-4 text-muted-foreground">{page.comparison.summary}</p>
-            <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
-              <table className="w-full min-w-[640px] border-collapse bg-card text-left">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.option ?? "Option"}</th>
-                    <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.bestFor ?? "Best for"}</th>
-                    <th className="p-4 text-sm font-semibold text-foreground">{page.comparison.headers?.tradeoff ?? "Tradeoff"}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {page.comparison.rows.map((row) => (
-                    <tr key={row.option} className="border-b border-border last:border-b-0">
-                      <th scope="row" className="p-4 align-top text-sm font-semibold text-foreground">
-                        {row.option}
-                      </th>
-                      <td className="p-4 align-top text-sm text-muted-foreground">{row.bestFor}</td>
-                      <td className="p-4 align-top text-sm text-muted-foreground">{row.tradeoff}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
+          {!page.comparisonFirst && comparisonSection}
 
           {page.sources && (
             <section aria-label="Official sources">
