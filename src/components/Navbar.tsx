@@ -21,9 +21,11 @@ const Navbar = () => {
           <a href="/#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Features</a>
           <a href="/#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">How It Works</a>
           <a href="/alternatives/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Comparisons</a>
+          <a href="/tools/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Free Tool</a>
           <a href="/#download" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Download</a>
           <a href="/#faq" className="text-sm text-muted-foreground transition-colors hover:text-foreground">FAQ</a>
         </div>
+        <a href="/tools/" className="text-sm font-semibold text-foreground md:hidden">Free Tool</a>
         <a href="/#download" className="rounded-lg border border-border p-2 text-muted-foreground md:hidden" aria-label="Open download section">
           <Menu className="h-5 w-5" />
         </a>

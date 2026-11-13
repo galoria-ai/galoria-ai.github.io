@@ -886,9 +886,87 @@ function renderRedirect(from: string, to: string): string {
 </html>`;
 }
 
+function renderFreeToolsPage(): string {
+  const url = absoluteUrl("tools");
+  const title = "Free Photo Folder Cleanup Checklist and Guides";
+  const description = "Plan a safer cleanup of screenshots, camera photos, scans, and mixed image folders with a free checklist. Review each step before moving anything.";
+  const schema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    url,
+    description,
+    inLanguage: "en",
+    dateModified: "2026-11-13",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  }).replaceAll("<", "\\u003c");
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>${title} | Galoria</title>
+  <meta name="description" content="${description}">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="${url}">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${title}">
+  <meta property="og:description" content="${description}">
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="${SOCIAL_IMAGE_URL}">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">${schema}</script>
+${analyticsHead()}
+  <style>${pageStyles()}
+    .tool-panel{padding:28px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+    .tool-list{list-style:none;padding:0;margin:18px 0}
+    .tool-list li{margin:0;border-top:1px solid var(--line)}
+    .tool-list label{display:flex;align-items:flex-start;gap:14px;padding:17px 0;cursor:pointer}
+    .tool-list input{flex:none;width:20px;height:20px;margin:4px 0 0;accent-color:var(--primary)}
+    .tool-list strong{display:block;color:var(--text)}
+    .tool-list span{color:var(--muted)}
+    .tool-progress{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .tool-progress button{min-height:44px;padding:9px 16px;border:1px solid var(--primary);border-radius:8px;background:transparent;color:var(--text);font:inherit;cursor:pointer}
+    .tool-progress button:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+    .tool-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .tool-links a{display:block;min-height:44px;padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+    @media(max-width:700px){.tool-panel{padding:20px}.tool-links{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  ${renderPageHeader("/#download", "Download for Windows")}
+  <div class="container breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Free tool</span></div>
+  <section class="hero"><div class="container"><div class="eyebrow">Free photo organization resource</div><h1>Plan a photo folder cleanup</h1><p class="lede">Use this checklist to decide what should stay, be archived, or need a closer look before you move images. The checklist tracks only your progress in this browser.</p></div></section>
+  <main class="container">
+    <section class="answer" aria-labelledby="quick-answer"><h2 id="quick-answer">Where should I start?</h2><p>Make a copy of important photos, choose one folder, and separate obvious groups such as screenshots, camera photos, scans, and design assets. Review ambiguous images individually. Organizing means choosing useful destinations; it does not require deleting anything.</p></section>
+    <section class="tool-panel" aria-labelledby="checklist-title">
+      <h2 id="checklist-title">Photo folder cleanup checklist</h2>
+      <p>Check a step only after you have done it in File Explorer. This page cannot see, upload, move, rename, or delete your images.</p>
+      <div class="tool-progress"><output id="tool-progress" aria-live="polite">0 of 6 steps complete</output><button id="tool-reset" type="button">Reset checklist</button></div>
+      <ol class="tool-list" id="tool-list">
+        <li><label><input type="checkbox"><span><strong>Protect originals first.</strong> Copy irreplaceable photos to a separate location and verify that the copy opens.</span></label></li>
+        <li><label><input type="checkbox"><span><strong>Choose one folder.</strong> Start with Pictures, Screenshots, or one mixed project folder so you can review a small batch.</span></label></li>
+        <li><label><input type="checkbox"><span><strong>Group obvious images.</strong> Set aside screenshots, camera photos, scans, receipts, and design assets using what you can verify visually.</span></label></li>
+        <li><label><input type="checkbox"><span><strong>Review similar names carefully.</strong> Numbered copies and edited versions may differ; compare them before deciding what to keep. This checklist does not detect duplicates.</span></label></li>
+        <li><label><input type="checkbox"><span><strong>Keep uncertain items for review.</strong> Leave unfamiliar, application-linked, or hard-to-identify images in place until their purpose is clear.</span></label></li>
+        <li><label><input type="checkbox"><span><strong>Check the result.</strong> After any manual moves, open a few files in their new folders and keep the backup until you are satisfied.</span></label></li>
+      </ol>
+      <noscript><p>The steps remain readable without JavaScript. Enable JavaScript to track and reset progress.</p></noscript>
+    </section>
+    <section aria-labelledby="more-guidance"><h2 id="more-guidance">More guidance for your photo folder</h2><div class="tool-links"><a href="/organize-screenshots-automatically/">Plan a repeatable screenshot workflow</a><a href="/docs/supported-file-types/">Check Galoria's supported image formats</a></div></section>
+    <section class="cta" aria-labelledby="product-step"><h2 id="product-step">When a reviewed organizer helps</h2><p>Manual grouping works for a small folder. For a larger mixed image folder on Windows 10 or 11, Galoria analyzes supported images locally and proposes destinations for you to review before moving them. It can still misclassify ambiguous images, so reassign or exclude those items. It does not delete photos or detect duplicates. The desktop app costs ${product.price.display} once; download, activation, and periodic license validation require internet access.</p><a class="button" href="/ai-photo-organizer/">See Galoria's workflow and purchase options</a></section>
+  </main>
+  ${renderPageFooter()}
+  <script>(function(){var items=Array.from(document.querySelectorAll('#tool-list input[type="checkbox"]'));var output=document.getElementById('tool-progress');var reset=document.getElementById('tool-reset');var key='galoria-photo-cleanup-v1';try{var saved=JSON.parse(localStorage.getItem(key)||'[]');items.forEach(function(item,index){item.checked=saved.includes(index)})}catch(error){}function update(){var checked=items.map(function(item,index){return item.checked?index:-1}).filter(function(index){return index>=0});output.textContent=checked.length+' of '+items.length+' steps complete';reset.disabled=checked.length===0;try{localStorage.setItem(key,JSON.stringify(checked))}catch(error){}}items.forEach(function(item){item.addEventListener('change',update)});reset.addEventListener('click',function(){items.forEach(function(item){item.checked=false});update()});update()})();</script>
+</body>
+</html>`;
+}
+
 function writeSitemap(): void {
   const entries = [
     { route: "", updatedAt: HOMEPAGE_UPDATED_AT },
+    { route: "tools", updatedAt: "2026-11-13" },
     ...seoPages
       .filter((page) => page.indexable !== false)
       .map((page) => ({ route: page.route, updatedAt: page.updatedAt })),
@@ -979,6 +1057,7 @@ ${featured}
 validatePages();
 
 cleanGeneratedDirectories();
+writeRoute("tools", renderFreeToolsPage());
 
 for (const page of seoPages) {
   writeRoute(page.route, renderMainPage(page));
