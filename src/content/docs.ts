@@ -100,15 +100,15 @@ export const docs = {
       },
       {
         title: "Analyze locally",
-        content: `Galoria uses filenames, folder context, metadata, and supported local image analysis to infer useful categories.`,
+        content: `Galoria uses filenames, folder context, metadata, dimensions, and bounded optional local visual captions to propose categories. Analyzing creates a proposal; it does not move images. Ambiguous images can be categorized incorrectly.`,
       },
       {
         title: "Preview the plan",
-        content: `Review proposed categories and exact destination paths before images move.`,
+        content: `Review each proposed category and exact destination path. Reassign a suggestion or choose Keep for an image that should stay where it is. The preview is a plan, not evidence that a move has happened.`,
       },
       {
         title: "Apply approved changes",
-        content: `Apply changes only after the result matches your photo retrieval workflow.`,
+        content: `Approve the selected plan to move images physically into Image Organizer Output. Inspect the completion result and destination folders afterward. The genuine output image below shows folder names, not every individual classification decision. Keep a separate backup.`,
       },
     ],
   },
