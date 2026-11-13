@@ -122,7 +122,7 @@ for (const url of urls) {
   }
 
   if (
-    route !== "/tools/" &&
+    !route.startsWith("/tools/") &&
     !route.startsWith("/docs/") &&
     !route.startsWith("/category/") &&
     route !== "/"

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Free Photo Folder Planner | Galoria AI</title>
+  <meta name="description" content="Preview possible folders from photo filenames in your browser. Review uncertain images yourself before moving anything on Windows.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://galoriaai.com/tools/photo-folder-planner/">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:image" content="https://galoriaai.com/social-preview.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Free Photo Folder Planner","url":"https://galoriaai.com/tools/photo-folder-planner/","description":"Preview possible folders from photo filenames in your browser."}</script>
+  <script src="/privacy-consent.js"></script>
+  <style>
+    :root{color-scheme:dark;--bg:#0d0b12;--card:#191521;--line:#332d3e;--text:#f5f1f7;--muted:#b8aebf;--primary:#bb8ff0}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif}a{color:#d0a7ff}a:focus-visible,button:focus-visible,textarea:focus-visible{outline:2px solid var(--primary);outline-offset:3px}.wrap{width:min(100% - 32px,900px);margin:auto}header,footer{border-bottom:1px solid var(--line);padding:16px 0}footer{border-top:1px solid var(--line);border-bottom:0;margin-top:64px}nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}nav a:first-child{font-weight:800;color:var(--text);text-decoration:none}main{padding:38px 0}h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15}h2{font-size:1.5rem}p,li{max-width:75ch}.muted{color:var(--muted)}.panel{padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--card);margin:28px 0}label{display:block;font-weight:700}textarea{display:block;width:100%;min-height:160px;margin:12px 0;padding:14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);font:inherit}button{min-height:44px;padding:10px 18px;border:0;border-radius:8px;background:var(--primary);color:#21172b;font:inherit;font-weight:800;cursor:pointer}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.table-wrap{overflow-x:auto}a.button{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--primary);color:#21172b;font-weight:800;text-decoration:none}@media(max-width:600px){.panel{padding:16px}th,td{padding:8px;font-size:.9rem}}
+  </style>
+</head>
+<body>
+  <header><nav class="wrap" aria-label="Primary navigation"><a href="/">Galoria AI</a><a href="/tools/">Free checklist</a><a href="/ai-photo-organizer/">Product</a><a href="/docs/privacy/">Privacy</a></nav></header>
+  <main class="wrap">
+    <p><a href="/tools/">Free resources</a> / Photo folder planner</p>
+    <h1>Preview a photo folder plan from filenames</h1>
+    <p class="muted">Paste names of image files, one per line. This browser tool suggests a starting folder only when the filename gives a clue. It cannot view images, read metadata, access your device, upload files, or move anything.</p>
+    <section class="panel" aria-labelledby="planner-heading">
+      <h2 id="planner-heading">Try a small batch</h2>
+      <label for="names">Photo filenames</label>
+      <textarea id="names" maxlength="20000" placeholder="Screenshot_2026-11-13.png&#10;receipt_store.jpg&#10;DSC_0142.heic&#10;project-logo.webp"></textarea>
+      <p class="muted">Example: Screenshot_2026-11-13.png suggests Screenshots; DSC_0142.heic goes to Review because its content is unknown. Enter at most 100 names.</p>
+      <button type="button" id="preview">Preview suggested folders</button>
+      <p id="summary" role="status" aria-live="polite">No preview yet.</p>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Filename</th><th scope="col">Suggested folder</th><th scope="col">Reason</th></tr></thead><tbody id="results"></tbody></table></div>
+    </section>
+    <section><h2>How to use the preview safely</h2><p>Screenshot, receipt, scan, and design words in names are hints, not proof of what an image shows. Camera-style names and ambiguous names stay in Review. Open each image yourself before moving it. Similar names may be edited versions; this tool does not detect duplicates. Keep a backup and test a few manual moves before reorganizing a large library.</p><p>A folder plan is useful when names are descriptive and you want a quick manual starting point. It cannot classify an image by what is visible in it. Galoria is a separate Windows 10/11 desktop organizer: it analyzes supported images locally, including bounded optional visual captions, and lets you review and change proposed destinations before approved physical moves. It does not delete photos or guarantee a correct category. Download and license activation require internet access.</p><p><a class="button" href="/ai-photo-organizer/">See Galoria's reviewed workflow and $14.99 license</a></p></section>
+  </main>
+  <footer><div class="wrap"><a href="/docs/supported-file-types/">Supported image types</a> · <a href="/docs/how-it-works/">How Galoria works</a> · <a href="/tools/">Cleanup checklist</a></div></footer>
+  <script>(function(){var input=document.getElementById('names'),button=document.getElementById('preview'),body=document.getElementById('results'),summary=document.getElementById('summary');button.addEventListener('click',function(){var names=input.value.split(/\r?\n/).map(function(x){return x.trim()}).filter(Boolean).slice(0,100);body.replaceChildren();names.forEach(function(name){var ext=(name.match(/\.([^.]+)$/)||[])[1];var supported=/^(jpg|jpeg|png|webp|gif|bmp|tiff|heic|heif)$/i.test(ext||'');var folder='Review',reason=supported?'Name does not identify the image':'Unsupported or missing image extension';if(supported&&/screenshot|screen[_ -]?shot|capture/i.test(name)){folder='Screenshots';reason='Screenshot word in filename'}else if(supported&&/receipt|invoice/i.test(name)){folder='Receipts';reason='Receipt or invoice word in filename'}else if(supported&&/scan|scanned/i.test(name)){folder='Scans';reason='Scan word in filename'}else if(supported&&/logo|design|asset/i.test(name)){folder='Design Assets';reason='Design word in filename'}var tr=document.createElement('tr');[name,folder,reason].forEach(function(value){var td=document.createElement('td');td.textContent=value;tr.appendChild(td)});body.appendChild(tr)});summary.textContent=names.length?names.length+' filename'+(names.length===1?'':'s')+' previewed. Review every suggestion before moving files.':'Enter at least one filename to preview.'})})();</script>
+</body>
+</html>

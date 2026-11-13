@@ -92,7 +92,7 @@ function absoluteUrl(route = ""): string {
 
 function cleanGeneratedDirectories(): void {
   for (const entry of fs.readdirSync(OUTPUT_DIR, { withFileTypes: true })) {
-    if (entry.isDirectory() && entry.name !== "evidence") {
+    if (entry.isDirectory() && entry.name !== "evidence" && entry.name !== "tools") {
       fs.rmSync(path.join(OUTPUT_DIR, entry.name), {
         recursive: true,
         force: true,
@@ -958,7 +958,7 @@ ${analyticsHead()}
       </ol>
       <noscript><p>The steps remain readable without JavaScript. Enable JavaScript to track and reset progress.</p></noscript>
     </section>
-    <section aria-labelledby="more-guidance"><h2 id="more-guidance">More guidance for your photo folder</h2><div class="tool-links"><a href="/organize-screenshots-automatically/">Plan a repeatable screenshot workflow</a><a href="/docs/supported-file-types/">Check Galoria's supported image formats</a></div></section>
+    <section aria-labelledby="more-guidance"><h2 id="more-guidance">More free resources</h2><div class="tool-links"><a href="/tools/photo-folder-planner/">Preview folders from photo filenames</a><a href="/organize-screenshots-automatically/">Plan a repeatable screenshot workflow</a><a href="/docs/supported-file-types/">Check Galoria's supported image formats</a></div></section>
     <section class="cta" aria-labelledby="product-step"><h2 id="product-step">When a reviewed organizer helps</h2><p>Manual grouping works for a small folder. For a larger mixed image folder on Windows 10 or 11, Galoria analyzes supported images locally and proposes destinations for you to review before moving them. It can still misclassify ambiguous images, so reassign or exclude those items. It does not delete photos or detect duplicates. The desktop app costs ${product.price.display} once; download, activation, and periodic license validation require internet access.</p><a class="button" href="/ai-photo-organizer/">See Galoria's workflow and purchase options</a></section>
   </main>
   ${renderPageFooter()}
@@ -971,6 +971,7 @@ function writeSitemap(): void {
   const entries = [
     { route: "", updatedAt: HOMEPAGE_UPDATED_AT },
     { route: "tools", updatedAt: "2026-11-13" },
+    { route: "tools/photo-folder-planner", updatedAt: "2026-11-13" },
     ...seoPages
       .filter((page) => page.indexable !== false)
       .map((page) => ({ route: page.route, updatedAt: page.updatedAt })),
