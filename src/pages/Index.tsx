@@ -6,6 +6,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import DemoSection from "@/components/DemoSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
+import BusinessContactSection from "@/components/BusinessContactSection";
 import FAQSection from "@/components/FAQSection";
 import SupportedFileTypes from "@/components/SupportedFileTypes";
 import ArticleSection from "@/components/ArticleSection";
@@ -53,6 +54,7 @@ const Index = () => {
         <PricingSection />
       </AnalyticsSection>
       <ArticleSection />
+      <BusinessContactSection />
       <Footer />
       </main>
     </div>
