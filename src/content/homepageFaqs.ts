@@ -7,7 +7,7 @@ export const homepageFaqs = [
   },
   {
     q: "Can I preview changes before images move?",
-    a: "Yes. Galoria is built around a review step so you can inspect proposed folders and filenames before applying changes.",
+    a: "Yes. Galoria shows each image and its proposed folder. You can choose Move or Keep before applying changes. Original filenames normally stay the same; a collision may add a numbered suffix.",
   },
   {
     q: "Can I undo changes?",

@@ -4,8 +4,8 @@ import { Brain, Eye, FileText, FolderTree, ShieldCheck, WifiOff } from "lucide-r
 const features = [
   { icon: Brain, title: "Local AI suggestions", desc: "Analyze image folders and supporting context on your device." },
   { icon: FolderTree, title: "Photo folder organization", desc: "Group mixed image libraries into folders that reflect purpose and context." },
-  { icon: FileText, title: "Editable organization plan", desc: "Reassign images, exclude items, and rename destination folders before applying." },
-  { icon: Eye, title: "Preview before changes", desc: "Review proposed folders and filenames before applying them." },
+  { icon: FileText, title: "Choose which images move", desc: "Inspect each proposed folder and choose Move or Keep before applying." },
+  { icon: Eye, title: "Preview before changes", desc: "Review categories and destination paths before files move." },
   { icon: WifiOff, title: "Offline sorting workflow", desc: "Images do not need to be uploaded to a cloud organizer." },
   { icon: ShieldCheck, title: "Privacy-focused by design", desc: "Use Galoria on local image folders such as Downloads, Pictures, and Screenshots." },
 ];

@@ -145,7 +145,7 @@ export const seoPages: SeoPage[] = [
     },
     {
       "question": "What are the limits of Galoria's image analysis?",
-      "answer": "Galoria uses available filename, folder, metadata, dimension, and optional local caption signals. Visual captions are reserved for uncertain items and bounded per scan. Signals vary by format and ambiguous images may still be categorized incorrectly, so review, reassign, or exclude them before applying the plan."
+      "answer": "Galoria uses available filename, folder, metadata, dimension, and optional local caption signals. Visual captions are reserved for uncertain items and bounded per scan. Signals vary by format and ambiguous images may still be categorized incorrectly, so review the proposed category and choose Keep for a wrong suggestion."
     },
     {
       "question": "Can Galoria undo a photo organization run?",
@@ -362,7 +362,7 @@ export const seoPages: SeoPage[] = [
     steps: [
       "Pick a mixed image folder with several repeated categories.",
       "Run Galoria locally and inspect the initial category plan.",
-      "Review the proposed names and destination folders carefully.",
+      "Review the proposed categories and destination folders carefully; original filenames normally remain unchanged.",
       "Apply only the parts of the plan that match your search habits.",
     ],
     examples: [
@@ -784,7 +784,7 @@ export const seoPages: SeoPage[] = [
     steps: [
       "Choose the image folder that feels hardest to browse.",
       "Let Galoria propose a structure based on local signals.",
-      "Check the preview and edit any folders you do not want.",
+      "Check the preview and choose Keep for images whose proposed folders you do not want.",
       "Apply the changes once the categories feel natural.",
     ],
     examples: [
@@ -1235,7 +1235,7 @@ if (privatePhotoBase) {
     },
     faqs: [
       { question: "Does Galoria upload my photos?", answer: "Galoria is designed around local image analysis and planning, so photos do not need to be uploaded to a cloud organizer for the organization workflow." },
-      { question: "Can I review photo categories before moving anything?", answer: "Yes. Galoria shows proposed categories and destinations, and lets you reassign or exclude images before applying changes." },
+      { question: "Can I review photo categories before moving anything?", answer: "Yes. Galoria shows proposed categories and destinations, and lets you choose Move or Keep for each image before applying changes. The current review screen does not reassign categories." },
       { question: "Which images can Galoria organize?", answer: "Galoria supports JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF files, subject to the workflow's local analysis capabilities." },
     ],
     related: ["ai-photo-organizer", "offline-ai-photo-organizer", "photo-organizer-vs-cloud", "organize-screenshots-automatically"],

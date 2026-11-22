@@ -4,7 +4,7 @@ import { Cpu, Eye, FolderOpen, Sparkles } from "lucide-react";
 const steps = [
   { icon: FolderOpen, step: "01", title: "Select a Folder", desc: "Choose any image folder on your computer you want organized." },
   { icon: Cpu, step: "02", title: "Analyze Locally", desc: "Galoria reviews filenames and supported image content on your device." },
-  { icon: Eye, step: "03", title: "Preview Suggestions", desc: "Inspect proposed folders and filenames before anything changes." },
+  { icon: Eye, step: "03", title: "Preview Suggestions", desc: "Inspect proposed folders and choose which images move before anything changes." },
   { icon: Sparkles, step: "04", title: "Apply Approved Changes", desc: "Move images only after the folder structure fits how you browse them." },
 ];
 

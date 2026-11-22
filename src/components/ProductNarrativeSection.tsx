@@ -11,7 +11,7 @@ const narrative = [
     icon: Search,
     label: "Mechanism",
     title: "Galoria analyzes local context",
-    text: "Galoria reviews filenames and supported image content locally to propose folders and clearer names.",
+    text: "Galoria uses filenames and supported image signals locally to propose category folders. It normally keeps original filenames.",
   },
   {
     icon: Eye,
@@ -23,7 +23,7 @@ const narrative = [
     icon: Wand2,
     label: "Outcome",
     title: "Photos become easier to find and reuse",
-    text: "A messy folder turns into a structure based on purpose, project, image type, and useful filenames.",
+    text: "Approved images move into ordinary category folders that you can browse in Windows File Explorer.",
   },
 ];
 

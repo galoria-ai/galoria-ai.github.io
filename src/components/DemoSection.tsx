@@ -11,7 +11,7 @@ const workflow = [
   {
     icon: Eye,
     title: "Review the plan",
-    description: "Reassign categories, exclude images, and rename destination folders before applying.",
+    description: "Inspect proposed folders and choose Move or Keep for each image before applying.",
   },
   {
     icon: CheckCircle2,

@@ -104,7 +104,7 @@ export const docs = {
       },
       {
         title: "Preview the plan",
-        content: `Review each proposed category and exact destination path. Reassign a suggestion or choose Keep for an image that should stay where it is. The preview is a plan, not evidence that a move has happened.`,
+        content: `Review each proposed category and destination path. Choose Move or Keep for an image that should stay where it is; category filters do not edit its destination. The preview is a plan, not evidence that a move has happened.`,
       },
       {
         title: "Apply approved changes",

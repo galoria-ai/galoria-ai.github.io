@@ -25,10 +25,10 @@ No internet connection is required for organization workflows after installation
   },
 
   "editable-photo-categories": {
-    title: "Editable Photo Categories",
+    title: "Review Photo Categories",
 
     description:
-      "Review category suggestions and adjust the destination structure before files move.",
+      "Review category suggestions and select which images move before applying a plan.",
 
     sections: [
       {
@@ -39,9 +39,9 @@ Mixed folders can contain ambiguous images that do not belong in the first sugge
       },
 
       {
-        title: "Galoria keeps the plan editable",
+        title: "Choose which images move",
         content: `
-Reassign images, exclude individual items, and rename destination folders before applying the reviewed moves.
+Inspect each image's proposed category and destination. Choose Move or Keep for individual images; the current review screen does not reassign categories or rename destination folders.
         `,
       },
     ],

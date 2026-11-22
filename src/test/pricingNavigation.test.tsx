@@ -45,7 +45,7 @@ describe("content-page pricing navigation", () => {
       expect(document.querySelector("main .cta"), url).toBeNull();
       expect(document.querySelector('link[rel="canonical"]')?.getAttribute("href"), url).toBe(url);
     }
-    expect(affected).toBe(19);
+    expect(affected).toBe(20);
   });
 
   it.each([

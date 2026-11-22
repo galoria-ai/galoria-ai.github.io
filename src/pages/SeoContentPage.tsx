@@ -241,7 +241,7 @@ const SeoContentPage = () => {
           <section className="rounded-3xl border border-primary/30 bg-card p-8 text-center">
             <h2 className="text-3xl font-bold">Organize a photo folder with Galoria</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              Run local AI on Windows, review proposed folders and filenames, then apply the image changes you approve.
+              Run local AI on Windows, review proposed folders, choose Move or Keep for each image, then apply the approved moves.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <a

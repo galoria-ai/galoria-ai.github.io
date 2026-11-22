@@ -15,7 +15,7 @@ const comparisons = [
     title: "Galoria vs manual sorting",
     bestFor: "Messy image folders with repeated cleanup work",
     difference:
-      "Galoria proposes folders and filenames in a batch, then you review the plan before applying changes.",
+      "Galoria proposes category folders for a selected batch, then you choose which images move before applying changes.",
   },
   {
     title: "Galoria vs rules-based tools",
