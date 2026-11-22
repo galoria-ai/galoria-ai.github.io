@@ -362,7 +362,7 @@ export const seoPages: SeoPage[] = [
     steps: [
       "Pick a mixed image folder with several repeated categories.",
       "Run Galoria locally and inspect the initial category plan.",
-      "Review the proposed categories and destination folders carefully; original filenames normally remain unchanged.",
+      "Review the proposed categories and destination folders carefully.",
       "Apply only the parts of the plan that match your search habits.",
     ],
     examples: [
@@ -632,7 +632,7 @@ export const seoPages: SeoPage[] = [
     "The classifier gives weight to screenshot-like filenames and some screen-like dimensions/formats, while considering camera metadata. A cropped capture, renamed export or ordinary graphic can lack or mimic those signals. Optional local captions can influence categories, but a visual description does not guarantee extraction of an error message, receipt total, application name or conversation.",
     "The image planner applies captions selectively and limits them to a bounded subset, rather than promising a model read of every picture. It can still propose categories from metadata and filenames when a caption is absent. That is a reason to inspect each proposed folder and exclude mismatches, not evidence of a classification accuracy percentage.",
     "Galoria does not expose an OCR/text-search workflow or a persistent screenshot knowledge library. If you need to copy the words visible in a capture, Microsoft documents OCR in PowerToys Text Extractor. Snipping Tool handles capture, saving and editing, with text actions in supported versions. Those are different tasks from approving image-file moves.",
-    "The review interface shows images and proposed folders and lets you toggle Move or Keep. Category filters change what you are reviewing; do not assume they edit destinations or generate custom Errors, Work and Notes hierarchies. Exclude a wrong suggestion and file it manually if the proposed category does not suit the image.",
+    "The review interface shows images and proposed folders and lets you choose Move or Keep. Category filters help you inspect groups of suggestions. Keep an image in its current folder if the proposed category does not suit it, then file it manually if needed.",
     "Approval physically moves selected supported images under Image Organizer Output inside the chosen folder. Original filenames are retained unless a collision requires a numbered suffix. Keep an independent backup: history-based undo can be limited by files changed or paths occupied after organization. No automatic deletion, disk-space saving or reliable duplicate identification is claimed by this workflow.",
     "PNG, JPG/JPEG, WEBP, GIF, BMP, TIFF, HEIC and HEIF are supported image formats; screen recordings such as MP4 are not image entries in this workflow. Read the format documentation for decoder and analysis limits. Installation downloads, activation and periodic license checks require internet; optional image captions use the packaged local model.",
     "Publisher disclosure: Computora AI publishes Galoria. Microsoft documentation and application source were checked November 6, 2026. Examples are illustrative, not observed classification tests, and no comparative speed, recognition or OCR accuracy result is claimed."
@@ -702,7 +702,7 @@ export const seoPages: SeoPage[] = [
     },
     {
       "question": "Can I correct a wrong screenshot suggestion?",
-      "answer": "The current review interface lets you exclude the image using Keep. Category filtering is not destination editing. File an excluded mismatch manually rather than assuming automatic custom Errors or Notes subfolders."
+      "answer": "Yes. Choose Keep for that image during review, then file it manually if you prefer another folder. Category filters help you inspect the suggestions before approval."
     }
   ],
   "related": [
@@ -1222,7 +1222,7 @@ if (privatePhotoBase) {
     ],
     examples: [
       { title: "Private screenshots", before: "Work captures, receipts, and reference images mixed in Screenshots", after: "Reviewable local categories for work, receipts, and reference" },
-      { title: "Camera archive", before: "Phone exports with years of images and inconsistent folders", after: "A proposed structure that remains editable before any move" },
+      { title: "Camera archive", before: "Phone exports with years of images and inconsistent folders", after: "A proposed structure to review before any move" },
     ],
     comparison: {
       title: "Private photo organizer options",
@@ -1235,7 +1235,7 @@ if (privatePhotoBase) {
     },
     faqs: [
       { question: "Does Galoria upload my photos?", answer: "Galoria is designed around local image analysis and planning, so photos do not need to be uploaded to a cloud organizer for the organization workflow." },
-      { question: "Can I review photo categories before moving anything?", answer: "Yes. Galoria shows proposed categories and destinations, and lets you choose Move or Keep for each image before applying changes. The current review screen does not reassign categories." },
+      { question: "Can I review photo categories before moving anything?", answer: "Yes. Galoria shows proposed categories and destinations, then lets you choose Move or Keep for each image before applying changes." },
       { question: "Which images can Galoria organize?", answer: "Galoria supports JPG, JPEG, PNG, WEBP, GIF, BMP, TIFF, HEIC, and HEIF files, subject to the workflow's local analysis capabilities." },
     ],
     related: ["ai-photo-organizer", "offline-ai-photo-organizer", "photo-organizer-vs-cloud", "organize-screenshots-automatically"],
@@ -1264,14 +1264,14 @@ seoPages.push({
     steps: [
     "Decide whether your priority is local privacy, cloud access, or detailed library management.",
     "Check image-format support and whether analysis requires an upload.",
-    "Compare category editing, exclusions, destination previews, conflicts, history, and undo.",
+    "Compare image selection, destination previews, conflicts, history, and undo.",
     "Test the preferred approach on a copied mixed-image folder before an important archive.",
   ],
   examples: [
     {
       title: "Private mixed image folder",
       before: "Screenshots, camera photos, receipts, memes, and design references together",
-      after: "Galoria proposes local categories that remain editable before moving images",
+      after: "Galoria proposes local categories for review before moving images",
     },
     {
       title: "Shared family library",

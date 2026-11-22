@@ -41,7 +41,7 @@ Mixed folders can contain ambiguous images that do not belong in the first sugge
       {
         title: "Choose which images move",
         content: `
-Inspect each image's proposed category and destination. Choose Move or Keep for individual images; the current review screen does not reassign categories or rename destination folders.
+Inspect each image's proposed category and destination. Choose Move or Keep before applying the reviewed moves.
         `,
       },
     ],

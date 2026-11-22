@@ -11,7 +11,7 @@ const narrative = [
     icon: Search,
     label: "Mechanism",
     title: "Galoria analyzes local context",
-    text: "Galoria uses filenames and supported image signals locally to propose category folders. It normally keeps original filenames.",
+    text: "Galoria uses filenames and supported image signals locally to propose category folders.",
   },
   {
     icon: Eye,

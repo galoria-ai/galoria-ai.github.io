@@ -7,7 +7,7 @@ export const homepageFaqs = [
   },
   {
     q: "Can I preview changes before images move?",
-    a: "Yes. Galoria shows each image and its proposed folder. You can choose Move or Keep before applying changes. Original filenames normally stay the same; a collision may add a numbered suffix.",
+    a: "Yes. Galoria shows each image with its proposed folder and lets you choose Move or Keep before applying changes.",
   },
   {
     q: "Can I undo changes?",
