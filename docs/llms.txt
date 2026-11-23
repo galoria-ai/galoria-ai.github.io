@@ -18,16 +18,17 @@
 ## Core pages
 
 - [AI Photo Organizer for Windows](https://galoriaai.com/ai-photo-organizer/): Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.
-- [Photo Organizer for Windows](https://galoriaai.com/photo-organizer-windows/): Sort photo folders on Windows with local AI, straightforward preview steps, and destinations that help you browse mixed image libraries later.
+- [Photo Organizer for Windows](https://galoriaai.com/photo-organizer-windows/): Compare Galoria, Microsoft Photos, digiKam, and Google Photos for mixed folders, family collections, people search, duplicates, and cost.
 - [Automatic Photo Organizer](https://galoriaai.com/automatic-photo-organizer/): Organize photos into ordinary Windows folders with Galoria. Review physical file moves, understand what happens to originals, and compare folders with catalogs.
 - [Automatic Photo Sorting](https://galoriaai.com/automatic-photo-sorting/): Sort screenshots, exports, and mixed image folders automatically on Windows with local AI and a preview before any move happens.
 - [Windows Photo Organizer](https://galoriaai.com/windows-photo-organizer/): A Windows photo organizer for local image libraries, screenshot folders, and mixed downloads that need a preview-first sort order.
-- [Local AI Photo Sorting: What Works Offline?](https://galoriaai.com/offline-ai-photo-organizer/): Sort image folders locally on Windows. Check Galoria's model setup, seven-day license window and preview limits before choosing an offline photo organizer.
+- [Local AI Photo Sorting: What Works Offline?](https://galoriaai.com/offline-ai-photo-organizer/): Organize image folders locally on Windows with Galoria. Review destinations before moving photos, with setup and license guidance for the local workflow.
 - [Galoria vs Cloud AI Photo Organizers](https://galoriaai.com/photo-organizer-vs-cloud/): Compare local Windows photo sorting with cloud-based AI organizers by privacy, control, setup effort, and whether image uploads are required.
 - [Automatic vs Manual Photo Organization](https://galoriaai.com/photo-organizer-vs-manual/): Compare automatic and manual photo organization by setup time, review, control, scale, and whether you want repeated cleanup work.
 - [Best Private AI Photo Organizer for Windows](https://galoriaai.com/best-private-ai-photo-organizer/): Compare private photo organization approaches and see how Galoria categorizes image folders locally with a review-first workflow.
 - [Private Photo Organizer Alternatives](https://galoriaai.com/alternatives/): Compare Galoria with cloud photo services, manual folders, and traditional library managers for private photo organization on Windows.
 - [Galoria vs digiKam: Which Photo Workflow Fits?](https://galoriaai.com/alternatives/digikam/): Choose between Galoria folder-move previews and digiKam collection management. Compare local AI, albums, editing, formats, setup, price, and recovery.
+- [Galoria vs Microsoft Photos for Windows Folders](https://galoriaai.com/alternatives/microsoft-photos/): Microsoft Photos can browse and manually move pictures. Compare its Windows and Copilot+ features with Galoria's reviewed folder proposals before buying.
 
 ## Documentation
 

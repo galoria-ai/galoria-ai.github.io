@@ -24,7 +24,7 @@
   <meta name="twitter:title" content="How to Organize Photos with AI on Windows">
   <meta name="twitter:image" content="https://galoriaai.com/social-preview.png">
   <meta name="twitter:description" content="Use local AI to sort mixed photo folders on Windows, then review the proposed layout before moving screenshots, camera photos, and image exports.">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://galoriaai.com/#organization","name":"Galoria AI","url":"https://galoriaai.com/","sameAs":["https://github.com/galoria-ai"],"parentOrganization":{"@type":"Organization","@id":"https://computoraai.com/#organization","name":"Computora AI","url":"https://computoraai.com/"}},{"@type":"WebSite","@id":"https://galoriaai.com/#website","name":"Galoria AI","url":"https://galoriaai.com/","publisher":{"@id":"https://galoriaai.com/#organization"}},{"@type":"Article","@id":"https://galoriaai.com/organize-photos-with-ai/#page","url":"https://galoriaai.com/organize-photos-with-ai/","headline":"Organize Photos with AI","name":"How to Organize Photos with AI on Windows","description":"Use local AI to sort mixed photo folders on Windows, then review the proposed layout before moving screenshots, camera photos, and image exports.","dateModified":"2026-09-08","inLanguage":"en","author":{"@id":"https://galoriaai.com/#organization"},"publisher":{"@id":"https://galoriaai.com/#organization"},"isPartOf":{"@id":"https://galoriaai.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://galoriaai.com/"},{"@type":"ListItem","position":2,"name":"Organize Photos with AI","item":"https://galoriaai.com/organize-photos-with-ai/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the safest way to start?","acceptedAnswer":{"@type":"Answer","text":"Start with a copy or a small representative image folder, then compare the proposed layout with how you retrieve images."}},{"@type":"Question","name":"Can AI sort screenshots and photos together?","acceptedAnswer":{"@type":"Answer","text":"Yes, but it is usually better to split screenshots, camera photos, and exports into separate top-level folders."}},{"@type":"Question","name":"Do I need to move every file?","acceptedAnswer":{"@type":"Answer","text":"No. Exclude images that already sit in the right place or that you want to keep in the current folder."}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://galoriaai.com/#organization","name":"Galoria AI","url":"https://galoriaai.com/","sameAs":["https://github.com/galoria-ai"],"parentOrganization":{"@type":"Organization","@id":"https://computoraai.com/#organization","name":"Computora AI","url":"https://computoraai.com/"}},{"@type":"WebSite","@id":"https://galoriaai.com/#website","name":"Galoria AI","url":"https://galoriaai.com/","publisher":{"@id":"https://galoriaai.com/#organization"}},{"@type":"Article","@id":"https://galoriaai.com/organize-photos-with-ai/#page","url":"https://galoriaai.com/organize-photos-with-ai/","headline":"Organize Photos with AI","name":"How to Organize Photos with AI on Windows","description":"Use local AI to sort mixed photo folders on Windows, then review the proposed layout before moving screenshots, camera photos, and image exports.","dateModified":"2026-11-23","inLanguage":"en","author":{"@id":"https://galoriaai.com/#organization"},"publisher":{"@id":"https://galoriaai.com/#organization"},"isPartOf":{"@id":"https://galoriaai.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://galoriaai.com/"},{"@type":"ListItem","position":2,"name":"Organize Photos with AI","item":"https://galoriaai.com/organize-photos-with-ai/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the safest way to start?","acceptedAnswer":{"@type":"Answer","text":"Start with a copy or a small representative image folder, then compare the proposed layout with how you retrieve images."}},{"@type":"Question","name":"Can AI sort screenshots and photos together?","acceptedAnswer":{"@type":"Answer","text":"Yes, but it is usually better to split screenshots, camera photos, and exports into separate top-level folders."}},{"@type":"Question","name":"Do I need to move every file?","acceptedAnswer":{"@type":"Answer","text":"No. Exclude images that already sit in the right place or that you want to keep in the current folder."}}]}]}</script>
 <script src="/privacy-consent.js"></script>
   <style>
     :root{color-scheme:dark;--bg:#0d0b12;--card:#191521;--line:#332d3e;--text:#f5f1f7;--muted:#b8aebf;--primary:#bb8ff0;--accent:#ed83bb;--gradient:linear-gradient(135deg,var(--primary),var(--accent))}
@@ -61,6 +61,10 @@
     th,td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
     tr:last-child th,tr:last-child td{border-bottom:0}th{color:white;font-size:.9rem}
     td{color:var(--muted)}
+    .comparison-sources{margin-top:10px;font-size:.82rem;line-height:1.5}
+    .comparison-sources a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    .table-hint{color:var(--muted);font-size:.85rem}
+    @media(min-width:701px){.table-hint{display:none}}
     .faq{padding:22px 0;border-bottom:1px solid var(--line)}
     .faq h3{margin:0 0 8px}
     .faq p{margin:0;color:var(--muted)}
@@ -104,16 +108,17 @@
     <section class="answer" aria-labelledby="direct-answer">
       <h2 id="direct-answer">Direct answer</h2>
       <p>To organize photos with AI, pick one mixed folder, let the app infer useful categories from local signals, and only apply the result after you review the preview.</p>
-      <div class="updated">Reviewed and updated 2026-09-08</div>
+      <div class="updated">Reviewed and updated 2026-11-23</div>
     </section>
+
 
     <section>
       <h2>AI sorting works best when the folder is messy but still meaningful</h2>
-      <p>A mixed image folder usually has enough context to sort, but not enough context to sort manually at speed. That is where a preview-first AI workflow helps.</p><p>The goal is not to erase human judgment. It is to reduce the number of repetitive choices when the same folder keeps filling up with screenshots, exports, and photos.</p><p>Before applying the plan, check <a href="/automatic-photo-organizer/">where Galoria puts approved images and how ordinary folders differ from a photo catalog</a>.</p>
+      <p>A mixed image folder usually has enough context to sort, but not enough context to sort manually at speed. That is where a preview-first AI workflow helps.</p><p>The goal is not to erase human judgment. It is to reduce the number of repetitive choices when the same folder keeps filling up with screenshots, exports, and photos.</p><p>See <a href="/ai-photo-organizer/#evidence-title">Galoria&#39;s genuine app and output screenshots</a>, then review supported image formats, Windows requirements, and the $14.99 one-time purchase on the same page.</p><p>Before applying the plan, check <a href="/automatic-photo-organizer/">where Galoria puts approved images and how ordinary folders differ from a photo catalog</a>.</p>
     </section>
     <section>
       <h2>Step-by-step workflow</h2>
-      <ol><li>Pick a mixed image folder with several repeated categories.</li><li>Run Galoria locally and inspect the initial category plan.</li><li>Review the proposed names and destination folders carefully.</li><li>Apply only the parts of the plan that match your search habits.</li></ol>
+      <ol><li>Pick a mixed image folder with several repeated categories.</li><li>Run Galoria locally and inspect the initial category plan.</li><li>Review the proposed categories and destination folders carefully.</li><li>Apply only the parts of the plan that match your search habits.</li></ol>
     </section>
     <section>
       <h2>Use-case examples</h2>
@@ -133,10 +138,11 @@
             </article>
       </div>
     </section>
-    <section>
+<section aria-label="Photo organizer decision table">
       <h2>AI sorting versus manual cleanup</h2>
       <p>AI is useful when the folder is too mixed for a quick manual pass, but still predictable enough to review.</p>
-      <div class="table-wrap">
+
+      <div class="table-wrap" role="region" aria-label="Compare photo organizers" tabindex="0">
         <table>
           <thead><tr><th>Option</th><th>Best for</th><th>Tradeoff</th></tr></thead>
           <tbody>

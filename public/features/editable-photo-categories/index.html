@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Editable Photo Categories | Galoria AI</title>
-  <meta name="description" content="Review category suggestions and adjust the destination structure before files move.">
+  <title>Review Photo Categories | Galoria AI</title>
+  <meta name="description" content="Review category suggestions and select which images move before applying a plan.">
   <meta name="robots" content="noindex,follow">
   <link rel="canonical" href="https://galoriaai.com/organize-photos-with-ai/">
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Editable Photo Categories">
-  <meta property="og:description" content="Review category suggestions and adjust the destination structure before files move.">
+  <meta property="og:title" content="Review Photo Categories">
+  <meta property="og:description" content="Review category suggestions and select which images move before applying a plan.">
   <meta property="og:url" content="https://galoriaai.com/organize-photos-with-ai/">
   <meta property="og:site_name" content="Galoria AI">
   <meta property="og:image" content="https://galoriaai.com/social-preview.png">
@@ -20,10 +20,10 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Editable Photo Categories">
+  <meta name="twitter:title" content="Review Photo Categories">
   <meta name="twitter:image" content="https://galoriaai.com/social-preview.png">
-  <meta name="twitter:description" content="Review category suggestions and adjust the destination structure before files move.">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://galoriaai.com/#organization","name":"Galoria AI","url":"https://galoriaai.com/","sameAs":["https://github.com/galoria-ai"],"parentOrganization":{"@type":"Organization","@id":"https://computoraai.com/#organization","name":"Computora AI","url":"https://computoraai.com/"}},{"@type":"WebSite","@id":"https://galoriaai.com/#website","name":"Galoria AI","url":"https://galoriaai.com/","publisher":{"@id":"https://galoriaai.com/#organization"}},{"@type":"WebPage","@id":"https://galoriaai.com/features/editable-photo-categories/#page","url":"https://galoriaai.com/features/editable-photo-categories/","name":"Editable Photo Categories","description":"Review category suggestions and adjust the destination structure before files move.","dateModified":"2026-09-08","inLanguage":"en","isPartOf":{"@id":"https://galoriaai.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://galoriaai.com/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://galoriaai.com/ai-photo-organizer/"},{"@type":"ListItem","position":3,"name":"Editable Photo Categories","item":"https://galoriaai.com/features/editable-photo-categories/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does editable photo categories mean in Galoria?","acceptedAnswer":{"@type":"Answer","text":"Review category suggestions and adjust the destination structure before files move."}},{"@type":"Question","name":"Can I review the result before applying changes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Galoria is designed to show proposed organization and naming changes for review."}},{"@type":"Question","name":"Does this workflow require cloud file uploads?","acceptedAnswer":{"@type":"Answer","text":"No. Galoria performs its file organization workflow locally."}}]}]}</script>
+  <meta name="twitter:description" content="Review category suggestions and select which images move before applying a plan.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://galoriaai.com/#organization","name":"Galoria AI","url":"https://galoriaai.com/","sameAs":["https://github.com/galoria-ai"],"parentOrganization":{"@type":"Organization","@id":"https://computoraai.com/#organization","name":"Computora AI","url":"https://computoraai.com/"}},{"@type":"WebSite","@id":"https://galoriaai.com/#website","name":"Galoria AI","url":"https://galoriaai.com/","publisher":{"@id":"https://galoriaai.com/#organization"}},{"@type":"WebPage","@id":"https://galoriaai.com/features/editable-photo-categories/#page","url":"https://galoriaai.com/features/editable-photo-categories/","name":"Review Photo Categories","description":"Review category suggestions and select which images move before applying a plan.","dateModified":"2026-09-08","inLanguage":"en","isPartOf":{"@id":"https://galoriaai.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://galoriaai.com/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://galoriaai.com/ai-photo-organizer/"},{"@type":"ListItem","position":3,"name":"Review Photo Categories","item":"https://galoriaai.com/features/editable-photo-categories/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does review photo categories mean in Galoria?","acceptedAnswer":{"@type":"Answer","text":"Review category suggestions and select which images move before applying a plan."}},{"@type":"Question","name":"Can I review the result before applying changes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Galoria is designed to show proposed organization and naming changes for review."}},{"@type":"Question","name":"Does this workflow require cloud file uploads?","acceptedAnswer":{"@type":"Answer","text":"No. Galoria performs its file organization workflow locally."}}]}]}</script>
 <script src="/privacy-consent.js"></script>
   <style>
     :root{color-scheme:dark;--bg:#0d0b12;--card:#191521;--line:#332d3e;--text:#f5f1f7;--muted:#b8aebf;--primary:#bb8ff0;--accent:#ed83bb;--gradient:linear-gradient(135deg,var(--primary),var(--accent))}
@@ -60,6 +60,10 @@
     th,td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
     tr:last-child th,tr:last-child td{border-bottom:0}th{color:white;font-size:.9rem}
     td{color:var(--muted)}
+    .comparison-sources{margin-top:10px;font-size:.82rem;line-height:1.5}
+    .comparison-sources a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    .table-hint{color:var(--muted);font-size:.85rem}
+    @media(min-width:701px){.table-hint{display:none}}
     .faq{padding:22px 0;border-bottom:1px solid var(--line)}
     .faq h3{margin:0 0 8px}
     .faq p{margin:0;color:var(--muted)}
@@ -89,14 +93,15 @@
     <a class="mobile-menu" href="/#download" aria-label="Open download section">&#9776;</a>
     <a class="nav-cta" href="/#download">Download for Windows</a>
   </nav></header>
-  <div class="container breadcrumbs"><a href="/">Home</a> / <span>Editable Photo Categories</span></div>
-  <section class="hero"><div class="container"><div class="eyebrow">feature</div><h1>Editable Photo Categories</h1><p class="lede">Review category suggestions and adjust the destination structure before files move.</p></div></section>
+  <div class="container breadcrumbs"><a href="/">Home</a> / <span>Review Photo Categories</span></div>
+  <section class="hero"><div class="container"><div class="eyebrow">feature</div><h1>Review Photo Categories</h1><p class="lede">Review category suggestions and select which images move before applying a plan.</p></div></section>
   <main class="container">
-    <section class="answer"><h2>Direct answer</h2><p>Review category suggestions and adjust the destination structure before files move. Galoria keeps the organization workflow local and lets you review changes before applying them.</p></section>
-    <section><h2>What to know</h2><h3>Automatic suggestions still need review</h3><p>Mixed folders can contain ambiguous images that do not belong in the first suggested category.</p><h3>Galoria keeps the plan editable</h3><p>Reassign images, exclude individual items, and rename destination folders before applying the reviewed moves.</p></section>
-    <section><h2>Step-by-step</h2><ol><li>Mixed folders can contain ambiguous images that do not belong in the first suggested category.</li><li>Reassign images, exclude individual items, and rename destination folders before applying the reviewed moves.</li><li>Review the proposed result before applying changes to important files.</li></ol></section>
+    <section class="answer"><h2>Direct answer</h2><p>Review category suggestions and select which images move before applying a plan. Galoria keeps the organization workflow local and lets you review changes before applying them.</p></section>
+    <section><h2>What to know</h2><h3>Automatic suggestions still need review</h3><p>Mixed folders can contain ambiguous images that do not belong in the first suggested category.</p><h3>Choose which images move</h3><p>Inspect each image&#39;s proposed category and destination. Choose Move or Keep before applying the reviewed moves.</p></section>
+    <section><h2>Step-by-step</h2><ol><li>Mixed folders can contain ambiguous images that do not belong in the first suggested category.</li><li>Inspect each image&#39;s proposed category and destination. Choose Move or Keep before applying the reviewed moves.</li></ol></section>
+
     <section><h2>Example</h2><div class="card"><p>Start with a small representative folder, confirm that the resulting names and locations match your workflow, and only then process a larger collection.</p></div></section>
-    <section><h2>Frequently asked questions</h2><article class="faq"><h3>What does editable photo categories mean in Galoria?</h3><p>Review category suggestions and adjust the destination structure before files move.</p></article><article class="faq"><h3>Can I review the result before applying changes?</h3><p>Yes. Galoria is designed to show proposed organization and naming changes for review.</p></article><article class="faq"><h3>Does this workflow require cloud file uploads?</h3><p>No. Galoria performs its file organization workflow locally.</p></article></section>
+    <section><h2>Frequently asked questions</h2><article class="faq"><h3>What does review photo categories mean in Galoria?</h3><p>Review category suggestions and select which images move before applying a plan.</p></article><article class="faq"><h3>Can I review the result before applying changes?</h3><p>Yes. Galoria is designed to show proposed organization and naming changes for review.</p></article><article class="faq"><h3>Does this workflow require cloud file uploads?</h3><p>No. Galoria performs its file organization workflow locally.</p></article></section>
     <section><h2>Related resources</h2><div class="related"><a href="/ai-photo-organizer/">AI Photo Organizer</a><a href="/photo-organizer-windows/">Photo Organizer for Windows</a><a href="/features/offline-processing/">Offline Processing</a><a href="/docs/privacy/">Galoria Privacy</a></div></section>
   </main>
   <footer><div class="container"><div class="footer-inner"><a class="brand" href="/"><img src="/icon-192.png" alt="" width="32" height="32">Galoria AI</a><a class="publisher" href="https://computoraai.com/">By Computora AI</a><div class="footer-links"><a href="/#download">Download</a><a href="/#features">Features</a><a href="/category/photos/">Photo guides</a><a href="/category/screenshots/">Screenshot guides</a><a href="/category/windows/">Windows guides</a><a href="/category/privacy/">Privacy guides</a><a href="/docs/install/">Install</a><a href="/docs/how-it-works/">How it works</a><a href="/docs/supported-file-types/">Supported types</a><a href="/docs/privacy/">Privacy</a><a href="/docs/troubleshooting/">Support</a><a href="https://computoraai.com/">Computora AI</a><a href="https://foldoraai.com/">Foldora AI</a><a href="https://cleanoraai.com/">Cleanora AI</a></div></div><p class="copyright">Copyright 2026 Galoria AI. All rights reserved.</p></div><button type="button" data-galoria-privacy-open style="display:block;margin:12px auto 0;background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline">Privacy settings</button></footer>

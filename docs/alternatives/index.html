@@ -61,6 +61,10 @@
     th,td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
     tr:last-child th,tr:last-child td{border-bottom:0}th{color:white;font-size:.9rem}
     td{color:var(--muted)}
+    .comparison-sources{margin-top:10px;font-size:.82rem;line-height:1.5}
+    .comparison-sources a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    .table-hint{color:var(--muted);font-size:.85rem}
+    @media(min-width:701px){.table-hint{display:none}}
     .faq{padding:22px 0;border-bottom:1px solid var(--line)}
     .faq h3{margin:0 0 8px}
     .faq p{margin:0;color:var(--muted)}
@@ -107,13 +111,14 @@
       <div class="updated">Reviewed and updated 2026-09-08</div>
     </section>
 
+
     <section>
       <h2>Photo organizers solve different library problems</h2>
       <p>A local sorter, cloud gallery, and digital asset manager may all be called photo organizers, but they serve different needs. Compare storage location, supported formats, visual analysis, category editing, destination preview, backup, and recovery before choosing.</p><p>Irreplaceable photos deserve a cautious workflow. Keep an independent backup, test with copied images, and review uncertain screenshots, scans, receipts, and design assets before allowing any organizer to change the folder structure.</p><p>For a specific local collection manager, compare <a href="/alternatives/digikam/">Galoria vs digiKam: collection management or folder proposals</a>. Both use ordinary folders and local AI; the comparison covers editing, face recognition, setup, and recovery.</p>
     </section>
     <section>
       <h2>Step-by-step workflow</h2>
-      <ol><li>Decide whether your priority is local privacy, cloud access, or detailed library management.</li><li>Check image-format support and whether analysis requires an upload.</li><li>Compare category editing, exclusions, destination previews, conflicts, history, and undo.</li><li>Test the preferred approach on a copied mixed-image folder before an important archive.</li></ol>
+      <ol><li>Decide whether your priority is local privacy, cloud access, or detailed library management.</li><li>Check image-format support and whether analysis requires an upload.</li><li>Compare image selection, destination previews, conflicts, history, and undo.</li><li>Test the preferred approach on a copied mixed-image folder before an important archive.</li></ol>
     </section>
     <section>
       <h2>Use-case examples</h2>
@@ -123,7 +128,7 @@
               <div class="label">Before</div>
               <p>Screenshots, camera photos, receipts, memes, and design references together</p>
               <div class="label">After</div>
-              <p>Galoria proposes local categories that remain editable before moving images</p>
+              <p>Galoria proposes local categories for review before moving images</p>
             </article><article class="card">
               <h3>Shared family library</h3>
               <div class="label">Before</div>
@@ -133,10 +138,11 @@
             </article>
       </div>
     </section>
-    <section>
+<section aria-label="Photo organizer decision table">
       <h2>Galoria alternatives by priority</h2>
       <p>Choose by where your photos should live and how much control you need before organization changes are applied.</p>
-      <div class="table-wrap">
+
+      <div class="table-wrap" role="region" aria-label="Compare photo organizers" tabindex="0">
         <table>
           <thead><tr><th>Option</th><th>Best for</th><th>Tradeoff</th></tr></thead>
           <tbody>

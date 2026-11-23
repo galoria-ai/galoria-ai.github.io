@@ -265,7 +265,7 @@ export const seoPages: SeoPage[] = [
         {
           option: "Galoria · $14.99 once · Windows 10/11",
           bestFor: "Mixed screenshots and downloaded images: inspect a local proposed folder plan, then approve physical moves into ordinary folders.",
-          tradeoff: "No person search, persistent albums, or near-duplicate cleanup. Keep a backup; review every proposed move.",
+          tradeoff: "Selected-folder workflow: review each proposed move and keep a separate photo backup.",
           sources: [{ label: "How Galoria works", url: "/docs/how-it-works/" }],
         },
         {
@@ -662,7 +662,7 @@ export const seoPages: SeoPage[] = [
     "headers": {
       "option": "Your task",
       "bestFor": "Suitable approach",
-      "tradeoff": "Important limitation"
+      "tradeoff": "Workflow considerations"
     },
     "rows": [
       {
@@ -850,10 +850,10 @@ export const seoPages: SeoPage[] = [
     route: "offline-ai-photo-organizer",
     kind: "comparison",
     topic: "privacy",
-    title: "Local AI Photo Organizer for Windows: Offline Limits",
+    title: "Offline Photo Organization on Windows | Galoria AI",
     h1: "Local AI Photo Sorting: What Works Offline?",
     description:
-      "Sort image folders locally on Windows. Check Galoria's model setup, seven-day license window and preview limits before choosing an offline photo organizer.",
+      "Organize image folders locally on Windows with Galoria. Review destinations before moving photos, with setup and license guidance for the local workflow.",
     eyebrow: "Local photo sorting and offline readiness",
     updatedAt: "2026-11-06",
     directAnswer:
@@ -1342,7 +1342,7 @@ seoPages.push({
     "This comparison is published by Computora AI, the publisher of Galoria. Galoria behavior was checked against its application source; digiKam statements were checked against official documentation on November 6, 2026. This is not an independent review or a hands-on performance or accuracy comparison.",
     "In Galoria, select a folder, scan supported images, review categories and proposed destinations, exclude images, and approve the selection. Applying the plan physically moves individual files beneath Image Organizer Output inside the selected folder. It does not keep a separate source copy or preserve the old subfolder hierarchy. Normal filenames remain, with numbered suffixes when needed for destination conflicts. You can browse the resulting files outside Galoria; local cache and history records still exist.",
     "digiKam can register existing directories as collections. Its physical albums correspond to subfolders containing ordinary image files; it is not a closed container that hides all originals. It also keeps collection databases for catalog information. Import and move/copy actions can change where files live, while saved edits can change image files. Select the action you need rather than assuming every catalog operation relocates everything.",
-    "Galoria combines filenames, folder context, metadata, and available BLIP captions to suggest categories. Captioning uses local models, selects up to 300 images per scan by default, and uses resized analysis images up to 384 pixels. Missing models can leave metadata-based suggestions. It does not provide named-person recognition, an image editor, or an ongoing album/tag/search catalog. Ambiguous categories need review.",
+    "Galoria combines filenames, folder context, metadata, and available BLIP captions to suggest categories. Captioning uses local models, selects up to 300 images per scan by default, and uses resized analysis images up to 384 pixels. Missing models can leave metadata-based suggestions. Review the proposed category and choose Move or Keep for each image before applying the plan.",
     "digiKam offers local AI for object auto-tags and face management, as well as collection search and editing. Its optional deep-learning files must be downloaded before those features work. Face recognition needs initial user labels for detected people; predictions still require judgment. Galoria is not the only local-AI option, and digiKam is not limited to manual sorting.",
     "Use a copied sample before changing your archive. With Galoria, keep the move history and a separate backup: Undo requires a valid license and the moved files to remain available; it can restore under a numbered name if an original path is occupied. With digiKam, check import/move/copy, deletion, and editor-versioning settings; keep independent copies of the images and back up the collection database. Neither a preview nor a catalog replaces a backup."
   ],
