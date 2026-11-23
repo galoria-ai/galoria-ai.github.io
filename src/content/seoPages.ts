@@ -348,7 +348,7 @@ export const seoPages: SeoPage[] = [
     description:
       "Use local AI to sort mixed photo folders on Windows, then review the proposed layout before moving screenshots, camera photos, and image exports.",
     eyebrow: "Photo organization guide",
-    updatedAt,
+    updatedAt: "2026-11-23",
     directAnswer:
       "To organize photos with AI, pick one mixed folder, let the app infer useful categories from local signals, and only apply the result after you review the preview.",
     problemTitle: "AI sorting works best when the folder is messy but still meaningful",
@@ -357,6 +357,7 @@ export const seoPages: SeoPage[] = [
       "The goal is not to erase human judgment. It is to reduce the number of repetitive choices when the same folder keeps filling up with screenshots, exports, and photos.",
     ],
     contextualLinks: [
+      { before: "See ", anchor: "Galoria's genuine app and output screenshots", href: "/ai-photo-organizer/#evidence-title", after: ", then review supported image formats, Windows requirements, and the $14.99 one-time purchase on the same page." },
       { before: "Before applying the plan, check ", anchor: "where Galoria puts approved images and how ordinary folders differ from a photo catalog", href: "/automatic-photo-organizer/", after: "." },
     ],
     steps: [
