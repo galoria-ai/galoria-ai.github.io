@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import { homepageFaqs } from "../src/content/homepageFaqs";
+import { syncHomepageFaqs } from "./sync-homepage-faqs";
 
 import { categories } from "../src/content/categories";
 import { docs } from "../src/content/docs";
@@ -18,7 +20,7 @@ const OUTPUT_DIR = path.resolve("public");
 const SOCIAL_IMAGE_PATH = "/social-preview.png";
 const SOCIAL_IMAGE_URL = `${SITE_URL}${SOCIAL_IMAGE_PATH}`;
 const UPDATED_AT = "2026-09-08";
-const HOMEPAGE_UPDATED_AT = "2026-11-21";
+const HOMEPAGE_UPDATED_AT = "2026-11-25";
 
 interface SupportPage {
   route: string;
@@ -1059,6 +1061,7 @@ ${featured}
   fs.writeFileSync(path.join(OUTPUT_DIR, "llms.txt"), content, "utf8");
 }
 
+syncHomepageFaqs(homepageFaqs);
 validatePages();
 
 cleanGeneratedDirectories();

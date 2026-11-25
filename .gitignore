@@ -10,3 +10,6 @@ dist/
 Thumbs.db
 .idea/
 .vscode/
+
+# Isolated local SEO verification builds
+/.seo-check-*/

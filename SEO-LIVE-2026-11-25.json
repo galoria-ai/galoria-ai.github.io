@@ -1,0 +1,666 @@
+{
+  "checkedAt": "2026-11-25T20:40:18.189Z",
+  "origin": "https://galoriaai.com",
+  "limits": "Public HTTP snapshot only; cannot prove Google indexing, rankings, traffic changes, consent rate, or browser rendering. Analytics IDs are detected only in returned HTML and directly linked JS/CSS.",
+  "sitemap": {
+    "status": 200,
+    "urlCount": 27
+  },
+  "pages": [
+    {
+      "url": "https://galoriaai.com/",
+      "finalUrl": "https://galoriaai.com/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "AI Photo Organizer for Windows | Galoria AI",
+      "canonical": "https://galoriaai.com/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Galoria organizes screenshots, camera photos, and mixed image folders on Windows with local analysis, exact destination previews, and undo.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "SoftwareApplication"
+      ],
+      "visibleWords": 342,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/ai-photo-organizer/",
+      "finalUrl": "https://galoriaai.com/ai-photo-organizer/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Local AI Photo Organizer for Windows | Galoria AI",
+      "canonical": "https://galoriaai.com/ai-photo-organizer/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Organize screenshots, camera photos, receipts, memes, and design assets on Windows with local AI. Review every destination before images move.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage",
+        "SoftwareApplication"
+      ],
+      "visibleWords": 898,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/alternatives/",
+      "finalUrl": "https://galoriaai.com/alternatives/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Best Private Photo Organizer Alternatives | Galoria AI",
+      "canonical": "https://galoriaai.com/alternatives/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Compare Galoria with cloud photo services, manual folders, and traditional library managers for private photo organization on Windows.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 579,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/alternatives/digikam/",
+      "finalUrl": "https://galoriaai.com/alternatives/digikam/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Galoria vs digiKam: Sorter or Photo Manager? | Galoria AI",
+      "canonical": "https://galoriaai.com/alternatives/digikam/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Choose between Galoria folder-move previews and digiKam collection management. Compare local AI, albums, editing, formats, setup, price, and recovery.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 1547,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/alternatives/microsoft-photos/",
+      "finalUrl": "https://galoriaai.com/alternatives/microsoft-photos/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Galoria vs Microsoft Photos: Do You Need Both? | Galoria AI",
+      "canonical": "https://galoriaai.com/alternatives/microsoft-photos/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Microsoft Photos can browse and manually move pictures. Compare its Windows and Copilot+ features with Galoria&#39;s reviewed folder proposals before buying.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 1295,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/automatic-photo-organizer/",
+      "finalUrl": "https://galoriaai.com/automatic-photo-organizer/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Automatic Photo Organizer for Windows | Galoria AI",
+      "canonical": "https://galoriaai.com/automatic-photo-organizer/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Organize photos into ordinary Windows folders with Galoria. Review physical file moves, understand what happens to originals, and compare folders with catalogs.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 1178,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/automatic-photo-sorting/",
+      "finalUrl": "https://galoriaai.com/automatic-photo-sorting/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Automatic Photo Sorting for Screenshots and Exports | Galoria AI",
+      "canonical": "https://galoriaai.com/automatic-photo-sorting/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Sort screenshots, exports, and mixed image folders automatically on Windows with local AI and a preview before any move happens.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 443,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/best-private-ai-photo-organizer/",
+      "finalUrl": "https://galoriaai.com/best-private-ai-photo-organizer/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Private AI Photo Organizer for Windows | Galoria AI",
+      "canonical": "https://galoriaai.com/best-private-ai-photo-organizer/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Compare private photo organization approaches and see how Galoria categorizes image folders locally with a review-first workflow.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 514,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/blog/ai-photo-organizer-classification-test/",
+      "finalUrl": "https://galoriaai.com/blog/ai-photo-organizer-classification-test/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "AI Photo Organizer Test | 12 Classification Cases | Galoria AI",
+      "canonical": "https://galoriaai.com/blog/ai-photo-organizer-classification-test/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Review Galoria&#39;s 12 representative photo-classification cases, 26 passing backend tests, Windows environment, real interface captures, and test limitations.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 680,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/category/photos/",
+      "finalUrl": "https://galoriaai.com/category/photos/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Photo Organization | Galoria AI",
+      "canonical": "https://galoriaai.com/category/photos/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Learn how to organize mixed photo collections, camera rolls, and image exports automatically. Find focused Galoria guides and comparisons.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "visibleWords": 326,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/category/privacy/",
+      "finalUrl": "https://galoriaai.com/category/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Offline AI &amp; Privacy | Galoria AI",
+      "canonical": "https://galoriaai.com/category/privacy/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Discover privacy-first offline AI photo organization. Find focused Galoria guides and comparisons.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "visibleWords": 270,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/category/screenshots/",
+      "finalUrl": "https://galoriaai.com/category/screenshots/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Screenshot Organization | Galoria AI",
+      "canonical": "https://galoriaai.com/category/screenshots/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Organize screenshots automatically into useful reviewed folders. Find focused Galoria guides and comparisons.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "visibleWords": 237,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/category/windows/",
+      "finalUrl": "https://galoriaai.com/category/windows/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Windows Photo Organization | Galoria AI",
+      "canonical": "https://galoriaai.com/category/windows/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Organize Windows image folders automatically using local AI. Find focused Galoria guides and comparisons.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "visibleWords": 264,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/docs/how-it-works/",
+      "finalUrl": "https://galoriaai.com/docs/how-it-works/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "How Galoria Works | Galoria AI",
+      "canonical": "https://galoriaai.com/docs/how-it-works/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Understand how Galoria analyzes local image files, proposes destination folders, and keeps you in control with a preview step.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 554,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/docs/install/",
+      "finalUrl": "https://galoriaai.com/docs/install/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "How to Install Galoria | Galoria AI",
+      "canonical": "https://galoriaai.com/docs/install/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Install Galoria on a supported Windows device and start with a small image folder before organizing larger collections.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 519,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/docs/privacy/",
+      "finalUrl": "https://galoriaai.com/docs/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Galoria Privacy | Galoria AI",
+      "canonical": "https://galoriaai.com/docs/privacy/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Learn how Galoria&#39;s local organization workflow reduces cloud exposure for image collections and sensitive photos.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 358,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/docs/supported-file-types/",
+      "finalUrl": "https://galoriaai.com/docs/supported-file-types/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Supported File Types | Galoria AI",
+      "canonical": "https://galoriaai.com/docs/supported-file-types/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "See the image formats Galoria can discover and organize in local folders. Review the verified formats before organizing an image folder.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 292,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/docs/troubleshooting/",
+      "finalUrl": "https://galoriaai.com/docs/troubleshooting/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Galoria Troubleshooting | Galoria AI",
+      "canonical": "https://galoriaai.com/docs/troubleshooting/",
+      "robots": "index,follow,max-snippet:-1",
+      "description": "Fix common Galoria installation, folder access, preview, and image-organizing issues.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 542,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/offline-ai-photo-organizer/",
+      "finalUrl": "https://galoriaai.com/offline-ai-photo-organizer/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Offline Photo Organization on Windows | Galoria AI | Galoria AI",
+      "canonical": "https://galoriaai.com/offline-ai-photo-organizer/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Organize image folders locally on Windows with Galoria. Review destinations before moving photos, with setup and license guidance for the local workflow.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 1173,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/organize-photos-with-ai/",
+      "finalUrl": "https://galoriaai.com/organize-photos-with-ai/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "How to Organize Photos with AI on Windows | Galoria AI",
+      "canonical": "https://galoriaai.com/organize-photos-with-ai/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Use local AI to sort mixed photo folders on Windows, then review the proposed layout before moving screenshots, camera photos, and image exports.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 507,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/organize-screenshots-automatically/",
+      "finalUrl": "https://galoriaai.com/organize-screenshots-automatically/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Organize Screenshots: Folder Sorting or OCR Search? | Galoria AI",
+      "canonical": "https://galoriaai.com/organize-screenshots-automatically/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Choose screenshot folder organization or text extraction on Windows. See Galoria classification signals, review controls, limits and free Microsoft alternatives.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 1231,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/photo-organizer-vs-cloud/",
+      "finalUrl": "https://galoriaai.com/photo-organizer-vs-cloud/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Galoria vs Cloud AI Photo Organizers | Galoria AI",
+      "canonical": "https://galoriaai.com/photo-organizer-vs-cloud/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Compare local Windows photo sorting with cloud-based AI organizers by privacy, control, setup effort, and whether image uploads are required.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 461,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/photo-organizer-vs-manual/",
+      "finalUrl": "https://galoriaai.com/photo-organizer-vs-manual/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Galoria vs Manual Photo Organization | Galoria AI",
+      "canonical": "https://galoriaai.com/photo-organizer-vs-manual/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Compare automatic and manual photo organization by setup time, review, control, scale, and whether you want repeated cleanup work.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 467,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/photo-organizer-windows/",
+      "finalUrl": "https://galoriaai.com/photo-organizer-windows/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Photo Organizer for Windows: Choose the Right Tool | Galoria AI",
+      "canonical": "https://galoriaai.com/photo-organizer-windows/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "Compare Galoria, Microsoft Photos, digiKam, and Google Photos for mixed folders, family collections, people search, duplicates, and cost.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 1161,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/tools/",
+      "finalUrl": "https://galoriaai.com/tools/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Free Photo Folder Cleanup Checklist and Guides | Galoria",
+      "canonical": "https://galoriaai.com/tools/",
+      "robots": "index,follow",
+      "description": "Plan a safer cleanup of screenshots, camera photos, scans, and mixed image folders with a free checklist. Review each step before moving anything.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "WebPage"
+      ],
+      "visibleWords": 407,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/tools/photo-folder-planner/",
+      "finalUrl": "https://galoriaai.com/tools/photo-folder-planner/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Free Photo Folder Planner | Galoria AI",
+      "canonical": "https://galoriaai.com/tools/photo-folder-planner/",
+      "robots": "index,follow",
+      "description": "Preview possible folders from photo filenames in your browser. Review uncertain images yourself before moving anything on Windows.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "WebPage"
+      ],
+      "visibleWords": 252,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/windows-photo-organizer/",
+      "finalUrl": "https://galoriaai.com/windows-photo-organizer/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "issues": [],
+      "title": "Windows Photo Organizer for Local Image Libraries | Galoria AI",
+      "canonical": "https://galoriaai.com/windows-photo-organizer/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "description": "A Windows photo organizer for local image libraries, screenshot folders, and mixed downloads that need a preview-first sort order.",
+      "h1Count": 1,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "visibleWords": 435,
+      "analyticsIds": []
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://galoriaai.com/assets/animation-BRsySF4U.js",
+      "finalUrl": "https://galoriaai.com/assets/animation-BRsySF4U.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "xRobotsTag": null,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/assets/charts-C_KtFLeW.js",
+      "finalUrl": "https://galoriaai.com/assets/charts-C_KtFLeW.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "xRobotsTag": null,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/assets/index-Bq7VcPw4.js",
+      "finalUrl": "https://galoriaai.com/assets/index-Bq7VcPw4.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "xRobotsTag": null,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/assets/index-jmgyiLVF.css",
+      "finalUrl": "https://galoriaai.com/assets/index-jmgyiLVF.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "xRobotsTag": null,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/assets/react-DK_JcHL8.js",
+      "finalUrl": "https://galoriaai.com/assets/react-DK_JcHL8.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "xRobotsTag": null,
+      "analyticsIds": []
+    },
+    {
+      "url": "https://galoriaai.com/privacy-consent.js",
+      "finalUrl": "https://galoriaai.com/privacy-consent.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "xRobotsTag": null,
+      "analyticsIds": []
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://galoriaai.com/robots.txt",
+      "finalUrl": "https://galoriaai.com/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "xRobotsTag": null,
+      "body": "User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: https://galoriaai.com/sitemap.xml\n"
+    },
+    {
+      "url": "https://galoriaai.com/llms.txt",
+      "finalUrl": "https://galoriaai.com/llms.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://galoriaai.com/seo-audit-missing-page-20261125/",
+      "finalUrl": "https://galoriaai.com/seo-audit-missing-page-20261125/",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null
+    }
+  ]
+}

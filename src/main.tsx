@@ -11,9 +11,12 @@ if (redirect) {
   window.history.replaceState(null, "", redirect);
 }
 
-createRoot(document.getElementById("root")!).render(
+const root = document.getElementById("root")!;
+const initialPage = { pathname: window.location.pathname, html: root.innerHTML };
+
+createRoot(root).render(
   <HelmetProvider>
-    <App />
+    <App initialPage={initialPage} />
   </HelmetProvider>
 );
 

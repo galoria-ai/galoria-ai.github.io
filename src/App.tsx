@@ -36,14 +36,26 @@ const RouteAnalytics = () => {
   return null;
 };
 
-const App = () => (
+type InitialPage = { pathname: string; html: string };
+
+const InitialPageFallback = ({ page }: { page?: InitialPage }) => {
+  const { pathname } = useLocation();
+  // Reuse only the trusted server HTML for the route that supplied it.
+  return page?.pathname === pathname ? (
+    <div dangerouslySetInnerHTML={{ __html: page.html }} />
+  ) : (
+    <div className="min-h-screen bg-background" />
+  );
+};
+
+const App = ({ initialPage }: { initialPage?: InitialPage }) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
         <RouteAnalytics />
-        <Suspense fallback={<div className="min-h-screen bg-background" />}>
+        <Suspense fallback={<InitialPageFallback page={initialPage} />}>
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
