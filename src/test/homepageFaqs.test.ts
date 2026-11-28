@@ -12,7 +12,22 @@ describe("crawlable homepage answers", () => {
     expect(document.querySelectorAll("#faq")).toHaveLength(1);
     const schemas = (Array.from(document.querySelectorAll('script[type="application/ld+json"]')) as Element[])
       .map(script => JSON.parse(script.textContent || "{}"));
-    const faq = schemas.find(schema => schema["@type"] === "FAQPage");
+    expect(schemas).toHaveLength(1);
+    const nodes = schemas.flatMap(schema => schema["@graph"] || [schema]);
+    const faqs = nodes.filter(node => node["@type"] === "FAQPage");
+    expect(faqs).toHaveLength(1);
+    const faq = faqs[0];
+    const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute("href");
+    expect(document.querySelectorAll('link[rel="canonical"]')).toHaveLength(1);
+    expect(document.querySelectorAll('meta[name="description"]')).toHaveLength(1);
+    expect(document.querySelectorAll('meta[name="robots"]')).toHaveLength(1);
+    expect(faq["@id"]).toBe(`${canonical}#faq`);
+    expect(faq.isPartOf).toEqual({ "@id": `${canonical}#webpage` });
+    const page = nodes.find(node => node["@type"] === "WebPage");
+    expect(page.name).toBe(document.title);
+    expect(page.description).toBe(document.querySelector('meta[name="description"]')?.getAttribute("content"));
+    const ids = nodes.map(node => node["@id"]).filter(Boolean);
+    expect(new Set(ids).size).toBe(ids.length);
     expect(faq.mainEntity).toHaveLength(homepageFaqs.length);
     homepageFaqs.forEach(({ q, a }, index) => {
       expect(section?.textContent).toContain(q);

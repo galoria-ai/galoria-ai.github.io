@@ -5,6 +5,12 @@ export interface FaqItem {
   a: string;
 }
 
+export const homepageMetadata = {
+  title: "AI Photo Organizer for Windows | Galoria AI",
+  description:
+    "Galoria organizes screenshots, camera photos, and mixed image folders on Windows with local analysis, exact destination previews, and undo.",
+};
+
 export function organizationSchema() {
   return {
     "@type": "Organization",
@@ -12,6 +18,11 @@ export function organizationSchema() {
     name: site.name,
     url: `${site.url}/`,
     sameAs: ["https://github.com/galoria-ai"],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: site.supportEmail,
+      contactType: "customer support",
+    },
     parentOrganization: {
       "@type": "Organization",
       "@id": "https://computoraai.com/#organization",
@@ -28,6 +39,20 @@ export function websiteSchema() {
     name: site.name,
     url: `${site.url}/`,
     publisher: { "@id": `${site.url}/#organization` },
+    inLanguage: "en",
+  };
+}
+
+export function homepagePageSchema() {
+  return {
+    "@type": "WebPage",
+    "@id": `${site.url}/#webpage`,
+    url: `${site.url}/`,
+    name: homepageMetadata.title,
+    description: homepageMetadata.description,
+    isPartOf: { "@id": `${site.url}/#website` },
+    about: { "@id": `${site.url}/#software` },
+    inLanguage: "en",
   };
 }
 
@@ -53,9 +78,10 @@ export function softwareApplicationSchema() {
   };
 }
 
-export function faqSchema(faqs: FaqItem[]) {
+export function faqSchema(faqs: FaqItem[], id?: string) {
   return {
     "@type": "FAQPage",
+    ...(id ? { "@id": id } : {}),
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.q,
@@ -85,8 +111,9 @@ export function homepageSchema(faqs: FaqItem[]) {
     "@graph": [
       organizationSchema(),
       websiteSchema(),
+      homepagePageSchema(),
       softwareApplicationSchema(),
-      faqSchema(faqs),
+      { ...faqSchema(faqs, `${site.url}/#faq`), isPartOf: { "@id": `${site.url}/#webpage` } },
     ],
   };
 }

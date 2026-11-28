@@ -23,6 +23,7 @@ const SeoHead = ({
 
       <meta name="description" content={description} />
       <meta name="robots" content={robots} />
+      <meta name="author" content="Galoria AI" />
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -44,7 +45,7 @@ const SeoHead = ({
       {canonical && <link rel="canonical" href={canonical} />}
       {schema && (
         <script type="application/ld+json">
-          {JSON.stringify(schema).replaceAll("<", "\\u003c")}
+          {JSON.stringify(schema).replace(/</g, "\\u003c")}
         </script>
       )}
     </Helmet>
